@@ -67,6 +67,7 @@ const multiply = (x, y) => {
 const getRemainder = (x, y) => {
   // return the remainder from dividing x by y
   // code here
+  return x % y;
 };
 
 const isEven = (num) => {
