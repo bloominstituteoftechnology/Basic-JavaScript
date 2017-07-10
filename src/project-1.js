@@ -3,6 +3,7 @@
 const multiplyByTen = (num) => {
   // return num after multiplying it by ten
   // code here
+  return num * 10;
 };
 
 const subtractFive = (num) => {
