@@ -30,6 +30,7 @@ const lessThanNinety = (num) => {
   // return true if num is less than ninety
   // otherwise return false
   // code here
+  return num < 90;
 };
 
 const greaterThanFifty = (num) => {
