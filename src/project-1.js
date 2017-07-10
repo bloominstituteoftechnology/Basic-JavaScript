@@ -81,6 +81,7 @@ const isOdd = (num) => {
   // return true if num is false
   // otherwise return false
   // code here
+  return num % 2 !== 0;
 };
 
 const square = (num) => {
