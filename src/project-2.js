@@ -123,13 +123,16 @@ const incrementByOne = (arr) => {
 const addItemToArray = (arr, item) => {
   // add the item to the end of the array
   // return the array
-
+  arr.push(item);
+  return arr;
 };
 
 const addItemToFront = (arr, item) => {
   // add the item to the front of the array
   // return the array
   // hint: use the array method .unshift
+  arr.unshift(item);
+  return arr;
 };
 
 const wordsToSentence = (words) => {
@@ -137,26 +140,44 @@ const wordsToSentence = (words) => {
   // return a string that is all of the words concatenated together
   // spaces need to be between each word
   // example: ['Hello', 'world!'] -> 'Hello world!'
+  return words.join(' ');
 };
 
 const contains = (arr, item) => {
   // check to see if item is inside of arr
   // return true if it is, otherwise return false
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === item) {
+      return true;
+    }
+  }
+  return false;
 };
 
 const addNumbers = (numbers) => {
   // numbers is an array of integers.
   // add all of the integers and return the value
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  return sum;
 };
 
 const averageTestScore = (testScores) => {
   // testScores is an array.  Iterate over testScores and compute the average.
   // return the average
+  let average = 0;
+  for (let i = 0; i < testScores.length; i++) {
+    average += testScores[i];
+  }
+  return average / testScores.length;
 };
 
 const largestNumber = (numbers) => {
   // numbers is an array of integers
   // return the largest integer
+  return Math.max.apply(0, numbers);
 };
 
 // Do not modify code below this line.

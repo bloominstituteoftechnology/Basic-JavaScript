@@ -3,26 +3,16 @@
 const multiplyByTen = (num) => {
   // return num after multiplying it by ten
   // code here
-
   num *= 10;
   return num;
 };
 
-const subtractFive = (num) => {
+const subtractFive = num => num - 5;
   // return num after subtracting five
-  // code here
-
-  num -= 5;
-  return num;
-};
 
 const areSameLength = (str1, str2) => {
   // return true if the two strings have the same length
   // otherwise return false
-  // code here
-
-  // if (str1 === str2) { return true; } else { return false; }
-
   if (str1.length === str2.length) {
     return true;
   }
@@ -140,11 +130,7 @@ const square = (num) => {
 
 const cube = (num) => {
   // cube num and return the new value
-  // code here
-
-  const cubed = num ** 3;
-
-  return cubed;
+  return num ** 3;
 };
 
 const raiseToPower = (num, exponent) => {
