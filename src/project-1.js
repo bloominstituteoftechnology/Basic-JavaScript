@@ -140,6 +140,7 @@ const getGreeting = (name) => {
   // Take the name string and concatenate other strings onto it so it takes the following form:
   // 'Sam' -> 'Hello Sam!'
   // code here
+  return `Hello ${name}!`;
 };
 
 // If you can't remember these area formulas then head over to Google or look at the test code.
