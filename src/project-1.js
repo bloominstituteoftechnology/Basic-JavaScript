@@ -9,6 +9,7 @@ const multiplyByTen = (num) => {
 const subtractFive = (num) => {
   // return num after subtracting five
   // code here
+  return num - 5;
 };
 
 const areSameLength = (str1, str2) => {
