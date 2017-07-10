@@ -43,6 +43,7 @@ const greaterThanFifty = (num) => {
 const add = (x, y) => {
   // add x and y together and return the value
   // code here
+  return x + y;
 };
 
 const subtract = (x, y) => {
