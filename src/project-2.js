@@ -50,6 +50,10 @@ const isInteger = (num) => {
   // -10 -> true
   // otherwise return false
   // hint: you can solve this using Math.floor
+  if (Math.floor(num) === num) {
+    return true;
+  } return false;
+  // try isInteger
 };
 
 const fizzBuzz = (num) => {
