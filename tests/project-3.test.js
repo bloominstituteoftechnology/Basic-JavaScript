@@ -33,7 +33,7 @@ describe('Project 3', () => {
     it('should invoke the method on the object', () => {
       const object = {
         x: 0,
-        incrementX: () => {
+        incrementX() {
           this.x++;
         }
       };
