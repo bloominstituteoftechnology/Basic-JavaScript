@@ -100,12 +100,14 @@ const cube = (num) => {
 const raiseToPower = (num, exponent) => {
   // raise num to whatever power is passed in as exponent
   // code here
+  /*
   let result = 1;
   for (let i = 0; i <= exponent; i++) {
     i = num;
     result += num * i;
   }
   return result;
+  */
 };
 
 const roundNumber = (num) => {
@@ -124,6 +126,7 @@ const addExclamationPoint = (str) => {
   // add an exclamation point to the end of str and return the new string
   // 'hello world' -> 'hello world!'
   // code here
+  return `${str}!`;
 };
 
 const combineNames = (firstName, lastName) => {
