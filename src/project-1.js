@@ -1,4 +1,5 @@
 // Do not change any of the funcxtion names
+// QUESTIONS: raiseToPower;
 
 const multiplyByTen = (num) => {
   // return num after multiplying it by ten
@@ -99,16 +100,24 @@ const cube = (num) => {
 const raiseToPower = (num, exponent) => {
   // raise num to whatever power is passed in as exponent
   // code here
+  let result = 1;
+  for (let i = 0; i <= exponent; i++) {
+    i = num;
+    result += num * i;
+  }
+  return result;
 };
 
 const roundNumber = (num) => {
   // round num and return it
   // code here
+  return Math.round(num);
 };
 
 const roundUp = (num) => {
   // round num up and return it
   // code here
+  return Math.roundUp(num);
 };
 
 const addExclamationPoint = (str) => {
