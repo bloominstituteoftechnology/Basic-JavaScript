@@ -117,7 +117,7 @@ const roundNumber = (num) => {
 const roundUp = (num) => {
   // round num up and return it
   // code here
-  return Math.roundUp(num);
+  return Math.ceil(num);
 };
 
 const addExclamationPoint = (str) => {
