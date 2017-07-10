@@ -30,6 +30,10 @@ const greeting = (language) => {
 const isTenOrFive = (num) => {
   // return true if num is 10 or 5
   // otherwise return false
+  return (num === 10 || num === 5);
+  // if (num === 10 || num === 5) {
+  //   return true
+  // }
 };
 
 const isInRange = (num) => {
