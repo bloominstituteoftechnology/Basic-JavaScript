@@ -108,6 +108,11 @@ const raiseToPower = (num, exponent) => {
   }
   return result;
   */
+  // return num ** exponent;
+  if (exponent === 0) {
+    return 1;
+  }
+  return num * raiseToPower(num, exponent - 1);
 };
 
 const roundNumber = (num) => {
@@ -148,11 +153,13 @@ const getGreeting = (name) => {
 const getRectangleArea = (length, width) => {
   // return the area of the rectangle by using length and width
   // code here
+  return length * width;
 };
 
 const getTriangleArea = (base, height) => {
   // return the area of the triangle by using base and height
   // code here
+  return (base * height) * 0.5;
 };
 
 const getCircleArea = (radius) => {
