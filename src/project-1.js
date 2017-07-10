@@ -133,6 +133,7 @@ const combineNames = (firstName, lastName) => {
   // return firstName and lastName combined as one string and separated by a space.
   // 'Lambda', 'School' -> 'Lambda School'
   // code here
+  return `${firstName} ${lastName}`;
 };
 
 const getGreeting = (name) => {
