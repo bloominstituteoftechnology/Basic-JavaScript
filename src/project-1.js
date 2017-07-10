@@ -87,11 +87,13 @@ const isOdd = (num) => {
 const square = (num) => {
   // square num and return the new value
   // code here
+  return num * num;
 };
 
 const cube = (num) => {
   // cube num and return the new value
   // code here
+  return num * num * num;
 };
 
 const raiseToPower = (num, exponent) => {
