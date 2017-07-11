@@ -134,16 +134,26 @@ const wordsToSentence = (words) => {
   // return a string that is all of the words concatenated together
   // spaces need to be between each word
   // example: ['Hello', 'world!'] -> 'Hello world!'
+  // let sentence = '';
+  // for (let i = 0; i < words.length; i++) {
+  //   if (i === words.length - 1) {
+  //     sentence += `${words[i]}`;
+  //   } else sentence += `${words[i]} `;
+  // }
+  // return sentence;
+  return words.join(' ');
 };
 
 const contains = (arr, item) => {
   // check to see if item is inside of arr
   // return true if it is, otherwise return false
+  return arr.includes(item);
 };
 
 const addNumbers = (numbers) => {
   // numbers is an array of integers.
   // add all of the integers and return the value
+
 };
 
 const averageTestScore = (testScores) => {
