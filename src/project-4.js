@@ -1,13 +1,13 @@
 // Do not change any of the function names
 
-const multiplyArguments = () => {
+const multiplyArguments = (...args) => {
   // use the arguments keyword to multiply all of the arguments together and return the product
   // if no arguments are passed in return 0
   // if one argument is passed in just return it
-  if (arguments.length === 0) return 0;
-  if (arguments.length < 2) return arguments[0];
+  if (args.length === 0) return 0;
+  if (args.length === 1) return args[0];
   let sum = 1;
-  for (let i = 0; i < arguments.length; i++) sum *= arguments[i];
+  for (let i = 0; i < args.length; i++) sum *= args[i];
   return sum;
 };
 
@@ -105,7 +105,7 @@ const cacheFunction = (cb) => {
   // and return 25 directly and will not invoke cb again
   const cache = {};
   return (arg) => {
-    if (cache[arg]) return cache[arg];
+    if (Object.prototype.hasOwnProperty.call(cache, arg)) return cache[arg];
     cache[arg] = cb(arg);
     return cache[arg];
   };
