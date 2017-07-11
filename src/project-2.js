@@ -117,6 +117,8 @@ const incrementByOne = (arr) => {
 const addItemToArray = (arr, item) => {
   // add the item to the end of the array
   // return the array
+  arr.push(item);
+  return arr;
 };
 
 const addItemToFront = (arr, item) => {
