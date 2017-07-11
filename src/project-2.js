@@ -18,24 +18,22 @@ const isTenOrFive = (num) => {
   // otherwise return false
 };
 
-const isInRange = (num) => {
-  // return true if num is less than 50 and greater than 20
-};
+const isInRange = num => num > 20 && num < 50;
 
-const isInteger = (num) => {
-  // return true if num is an integer
-  // 0.8 -> false
-  // 1 -> true
-  // -10 -> true
-  // otherwise return false
-  // hint: you can solve this using Math.floor
-};
+const isInteger = num => num % 1 === 0;
 
 const fizzBuzz = (num) => {
-  // if num is divisible by 3 return 'fizz'
-  // if num is divisible by 5 return 'buzz'
-  // if num is divisible by 3 & 5 return 'fizzbuzz'
-  // otherwise return num
+  const isDivisible = () => {
+    this.by3 = num % 3 === 0;
+    this.by5 = num % 5 === 0;
+    this.bitmap = [this.by5 && this.by3 ? 'fizzbuzz' : false, this.by5 === true ? 'buzz' : false, this.by3 === true ? 'fizz' : false];
+    let result = num;
+    this.bitmap.forEach((t, i) => {
+      result = t !== false && (result.length < t.length || result.length === undefined) ? t : result;
+    });
+    return result;
+  };
+  return isDivisible();
 };
 
 const isPrime = (num) => {
