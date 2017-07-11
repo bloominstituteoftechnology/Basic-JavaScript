@@ -32,7 +32,7 @@ describe('Project 1', () => {
   });
 
   describe('lessThanNinety(num)', () => {
-    it('should return true if the argument is greater than fifty', () => {
+    it('should return true if the argument is less than ninety', () => {
       expect(exercises.lessThanNinety(15)).toBe(true);
       expect(exercises.lessThanNinety(90)).toBe(false);
       expect(exercises.lessThanNinety(100)).toBe(false);
