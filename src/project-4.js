@@ -1,7 +1,7 @@
 // Do not change any of the function names
 
 const multiplyArguments = () => {
-  // use the arguments keyword to multiply all of the arguments together and return the product
+  // use the spread operator (...args) to multiply all of the arguments together and return the product
   // if no arguments are passed in return 0
   // if one argument is passed in just return it
 };
