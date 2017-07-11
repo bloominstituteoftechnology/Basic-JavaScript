@@ -66,7 +66,7 @@ const isEven = (num) => {
 };
 
 const isOdd = (num) => {
-  // return true if num is false
+  // return true if num is odd
   // otherwise return false
   // code here
 };
