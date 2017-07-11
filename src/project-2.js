@@ -153,17 +153,27 @@ const contains = (arr, item) => {
 const addNumbers = (numbers) => {
   // numbers is an array of integers.
   // add all of the integers and return the value
-
+  let total = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    total += numbers[i];
+  }
+  return total;
 };
 
 const averageTestScore = (testScores) => {
   // testScores is an array.  Iterate over testScores and compute the average.
   // return the average
+  let total = 0;
+  for (let i = 0; i < testScores.length; i++) {
+    total += testScores[i];
+  }
+  return total / testScores.length;
 };
 
 const largestNumber = (numbers) => {
   // numbers is an array of integers
   // return the largest integer
+  return Math.max(...numbers);
 };
 
 // Do not modify code below this line.
