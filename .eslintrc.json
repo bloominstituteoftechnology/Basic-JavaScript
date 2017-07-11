@@ -17,6 +17,7 @@
       "max-len": 0,
       "no-unused-vars": 0,
       "no-useless-constructor": 0,
+      "no-extend-native": 0,
       "import/no-unresolved": 0
     }
 }
