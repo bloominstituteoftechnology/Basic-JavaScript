@@ -24,12 +24,20 @@ const areEqual = (x, y) => {
   // return true if x and y are the same
   // otherwise return false
   // code here
+  if (x === y) {
+    return true;
+  }
+  return false;
 };
 
 const lessThanNinety = (num) => {
   // return true if num is less than ninety
   // otherwise return false
   // code here
+  if (num < 90) {
+    return true;
+  }
+  return false;
 };
 
 const greaterThanFifty = (num) => {
