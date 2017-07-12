@@ -89,25 +89,36 @@ const isPrime = (num) => {
 
 const returnFirst = (arr) => {
   // return the first item from the array
+  return arr[0];
 };
 
 const returnLast = (arr) => {
   // return the last item of the array
+  const bucket = arr.pop();
+  return bucket;
 };
 
 const getArrayLength = (arr) => {
   // return the length of the array
+  return arr.length;
 };
 
 const incrementByOne = (arr) => {
   // arr is an array of integers
   // increase each integer by one
   // return the array
+  let i = 0;
+  const arrayLength = arr.length;
+  for (i; i < arrayLength; i++) {
+    arr[i] += 1;
+  }
+  return arr;
 };
 
 const addItemToArray = (arr, item) => {
   // add the item to the end of the array
   // return the array
+  return arr.push(item);
 };
 
 const addItemToFront = (arr, item) => {
