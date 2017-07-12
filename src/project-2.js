@@ -21,9 +21,9 @@ const isInteger = num => num % 1 === 0;
 const fizzBuzz = (num) => {
   const by3 = num % 3 === 0;
   const by5 = num % 5 === 0;
-  this.bitmap = [by5 && by3 ? 'fizzbuzz' : false, by5 === true ? 'buzz' : false, by3 === true ? 'fizz' : false];
+  const bitmap = [by5 && by3 ? 'fizzbuzz' : false, by5 === true ? 'buzz' : false, by3 === true ? 'fizz' : false];
   let result = num;
-  this.bitmap.forEach((t, i) => {
+  bitmap.forEach((t, i) => {
     result = t !== false && (result.length < t.length || result.length === undefined) ? t : result;
   });
   return result;
