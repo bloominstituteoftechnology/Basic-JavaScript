@@ -6,6 +6,14 @@ const getBiggest = (x, y) => {
 };
 
 const greeting = (language) => {
+  if (language === 'German') {
+    return ('Guten Tag!');
+  } else if (language === 'English') {
+    return ('Hello!');
+  } else if (language === 'Spanish') {
+    return ('Hola!');
+  }
+  return ('Hello!');
   // return a greeting for three different languages:
   // language: 'German' -> 'Guten Tag!'
   // language: 'English' -> 'Hello!'
@@ -19,6 +27,10 @@ const isTenOrFive = (num) => {
 };
 
 const isInRange = (num) => {
+  if (num < 50 && num > 20) {
+    return true;
+  }
+  return false;
   // return true if num is less than 50 and greater than 20
 };
 
@@ -32,6 +44,14 @@ const isInteger = (num) => {
 };
 
 const fizzBuzz = (num) => {
+  if (num % 3 === 0 && num % 5 === 0) {
+    return ('fizzbuzz');
+  } else if (num % 3 === 0) {
+    return ('fizz');
+  } else if (num % 5 === 0) {
+    return ('buzz');
+  }
+  return num;
   // if num is divisible by 3 return 'fizz'
   // if num is divisible by 5 return 'buzz'
   // if num is divisible by 3 & 5 return 'fizzbuzz'
@@ -47,6 +67,7 @@ const isPrime = (num) => {
 };
 
 const returnFirst = (arr) => {
+  return (arr[0]);
   // return the first item from the array
 };
 
@@ -55,6 +76,7 @@ const returnLast = (arr) => {
 };
 
 const getArrayLength = (arr) => {
+  return (arr.length);
   // return the length of the array
 };
 
@@ -65,6 +87,8 @@ const incrementByOne = (arr) => {
 };
 
 const addItemToArray = (arr, item) => {
+  arr.push(item);
+  return (arr);
   // add the item to the end of the array
   // return the array
 };
@@ -76,6 +100,7 @@ const addItemToFront = (arr, item) => {
 };
 
 const wordsToSentence = (words) => {
+  return (words.join(' '));
   // words is an array of strings
   // return a string that is all of the words concatenated together
   // spaces need to be between each word
@@ -88,6 +113,12 @@ const contains = (arr, item) => {
 };
 
 const addNumbers = (numbers) => {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  numbers = sum;
+  return numbers;
   // numbers is an array of integers.
   // add all of the integers and return the value
 };
@@ -98,6 +129,8 @@ const averageTestScore = (testScores) => {
 };
 
 const largestNumber = (numbers) => {
+  const max = Math.max.apply(null, numbers);
+  return max;
   // numbers is an array of integers
   // return the largest integer
 };
