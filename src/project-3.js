@@ -15,24 +15,28 @@ const addProperty = (object, property) => {
   // add the property to the object with a value of null
   // return the object
   // note: the property name is NOT 'property'.  The name is the value of the argument called property (a string)
-
-
+  object[property] = null;
+  return object;
 };
 
 const invokeMethod = (object, method) => {
   // method is a string that contains the name of a method on the object
   // invoke this method
-  // nothing needs to be returned
+  // nothing needs to be returned]
+  object[method]();
 };
 
 const multiplyMysteryNumberByFive = (mysteryNumberObject) => {
   // mysteryNumberObject has a property called mysteryNumber
   // multiply the mysteryNumber property by 5 and return the product
+  return mysteryNumberObject.mysteryNumber * 5;
 };
 
 const deleteProperty = (object, property) => {
   // remove the property from the object
   // return the object
+  delete object[property];
+  return object;
 };
 
 const newUser = (name, email, password) => {
@@ -72,24 +76,23 @@ const updatePassword = (user, newPassword) => {
 
 
 const addFriend = (user, newFriend) => {
-  // user has a property called friends that is an array
-  // add newFriend to the end of the friends array
-  // return the user object
+  user.friends.push(newFriend);
+  return user;
 };
 
 const setUsersToPremium = (users) => {
-  // users is an array of user objects.
-  // each user object has the property 'isPremium'
-  // set each user's isPremium property to true
-  // return the users array
+  users.forEach((t, i) => {
+    t.isPremium = true;
+  });
+  return users;
 };
 
 const sumUserPostLikes = (user) => {
-  // user has an array property called 'posts'
-  // posts is an array of post objects
-  // each post object has an integer property called 'likes'
-  // sum together the likes from all the post objects
-  // return the sum
+  let total = 0;
+  user.posts.forEach((t, i) => {
+    total += t.likes;
+  });
+  return total;
 };
 
 const addCalculateDiscountPriceMethod = (storeItem) => {
@@ -100,6 +103,10 @@ const addCalculateDiscountPriceMethod = (storeItem) => {
   // price -> 20
   // discountPercentage -> .2
   // discountPrice = 20 - (20 * .2)
+  storeItem.calculateDiscountPrice = () => {
+    return storeItem.price - (storeItem.price * storeItem.discountPercentage);
+  };
+  return storeItem;
 };
 
 // Do not modify code below this line.
