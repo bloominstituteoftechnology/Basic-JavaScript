@@ -74,16 +74,16 @@ const fizzBuzz = (num) => {
 
 const isPrime = (num) => {
   for (let i = 2; i < num.length; i++) {
-    if (num % i === 0) {
-      return false;
+    if (num % i !== 0) {
+      return true;
     }
   }
+  return false;
   // return true if num is prime.
   // otherwise return false
   // hint: a prime number is only evenly divisible by itself and 1
   // hint2: you can solve this using a for loop
   // note: 0 and 1 are NOT considered prime numbers
-  return num > 1;
 };
 
 const returnFirst = (arr) => {
