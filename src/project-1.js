@@ -99,33 +99,33 @@ const isOdd = (num) => {
 
 const square = (num) => {
   // square num and return the new value
-  // code here
+  return Math.pow(num, 2);
 };
 
 const cube = (num) => {
   // cube num and return the new value
-  // code here
+  return Math.pow(num, 3);
 };
 
 const raiseToPower = (num, exponent) => {
   // raise num to whatever power is passed in as exponent
-  // code here
+  return Math.pow(num, exponent);
 };
 
 const roundNumber = (num) => {
   // round num and return it
-  // code here
+  return Math.round(num);
 };
 
 const roundUp = (num) => {
   // round num up and return it
-  // code here
+  return Math.ceil(num);
 };
 
 const addExclamationPoint = (str) => {
   // add an exclamation point to the end of str and return the new string
   // 'hello world' -> 'hello world!'
-  // code here
+  return `${str}!`;
 };
 
 const combineNames = (firstName, lastName) => {
