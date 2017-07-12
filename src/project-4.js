@@ -50,6 +50,14 @@ const map = (arr, cb) => {
 };
 
 const getUserConstructor = () => {
+  const User = function User(userObj) {
+    this.username = userObj.username;
+    this.name = userObj.name;
+    this.email = userObj.email;
+    this.password = userObj.password;
+    this.sayHi = () => `Hello, my name is ${this.name}`;
+  };
+  return User;
   // create a constructor called User
   // it should accept an options object with username, name, email, and password properties
   // in the constructor set the username, name, email, and password properties
