@@ -14,17 +14,9 @@ const greeting = (language) => {
 
 const isTenOrFive = num => num === 5 || num === 10;
 
-const isInRange = (num) => {
-  if (num < 50 && num > 20) {
-    return true;
-  } return false;
-};
+const isInRange = num => num < 50 && num > 20;
 
-const isInteger = (num) => {
-  if (num % 1 === 0) {
-    return true;
-  } return false;
-};
+const isInteger = num => num % 1 === 0;
 
 const fizzBuzz = (num) => {
   const by3 = num % 3 === 0;
@@ -54,9 +46,8 @@ const returnLast = (arr) => {
   return arr.slice(-1)[0];
 };
 
-const getArrayLength = (arr) => {
-  return arr.length;
-};
+const getArrayLength = arr => arr.length;
+
 const incrementByOne = (arr) => {
   for (let i = 0; i < arr.length; i++) {
     arr[i] += 1;
