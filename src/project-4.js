@@ -4,16 +4,53 @@ const multiplyArguments = () => {
   // use the arguments keyword to multiply all of the arguments together and return the product
   // if no arguments are passed in return 0
   // if one argument is passed in just return it
+  // const count = 0;
+  // const args = Array.from(arguments);
+  // if (arguments.length === 0) {
+  //   return 0;
+  // } else if (arguments.length === 1) {
+  //   return arguments[0];
+  // }
+  // args.reduce((total, value) => {
+  //   return total * value;
+  // }, 1);
+  // let total = 1;
+  // const args = Array.from(arguments);
+  // if (arguments.length === 0) {
+  //   return 0;
+  // } else if (arguments.length === 1) {
+  //   return arguments[0];
+  // }
+  // for (let i = 0; i < arguments.length; i++) {
+  //   total *= arguments[i];
+  //   console.log(arguments[i]);
+  // }
+  // return total;
+  const args = [...arguments];
+  if (args.length === 0) {
+    return 0;
+  } else if (args.length === 1) {
+    return args[0];
+  }
+  return args.reduce((previous, arg) => {
+    return previous *= arg;
+  }, 1);
 };
 
 const invokeCallback = (cb) => {
   // invoke cb
+  cb();
 };
 
 const sumArray = (numbers, cb) => {
   // sum up all of the integers in the numbers array
   // pass the result to cb
   // no return is necessary
+  let total;
+  for (let i = 0; i < numbers.length; i++) {
+    total += numbers[i];
+  }
+  cb(total);
 };
 
 const forEach = (arr, cb) => {
