@@ -1,8 +1,6 @@
 // Do not change any of the function names
 
-const getBiggest = (x, y) => {
-  return Math.max(x, y);
-};
+const getBiggest = (x, y) => Math.max(x, y);
 
 const greeting = (language) => {
   if (language === 'German') {
@@ -14,11 +12,7 @@ const greeting = (language) => {
   } return 'Hello!';
 };
 
-const isTenOrFive = (num) => {
-  if (num === 10 || num === 5) {
-    return true;
-  } return false;
-};
+const isTenOrFive = num => num === 5 || num === 10;
 
 const isInRange = (num) => {
   if (num < 50 && num > 20) {
