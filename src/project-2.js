@@ -73,30 +73,23 @@ const fizzBuzz = (num) => {
 };
 
 const isPrime = (num) => {
-  // for (let i = 0; i < num; i++) {
-  //   if (num === 0 || num === 1) {
-  //     return false;
-  //   } else if (num % i === 0 )
-  // }
+  if (num < 0) {
+    return false;
+  }
+  if (num === 1 || num === 0) {
+    return false;
+  }
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
   // return true if num is prime.
   // otherwise return false
   // hint: a prime number is only evenly divisible by itself and 1
   // hint2: you can solve this using a for loop
   // note: 0 and 1 are NOT considered prime numbers
-
-  // function is_prime(n)
-  //   if n ≤ 1
-  //       return false
-  //   else if n ≤ 3
-  //       return true
-  //   else if n mod 2 = 0 or n mod 3 = 0
-  //       return false
-  //   let i ← 5
-  //   while i * i ≤ n
-  //       if n mod i = 0 or n mod (i + 2) = 0
-  //           return false
-  //       i ← i + 6
-  //   return true
 };
 
 const returnFirst = (arr) => {
