@@ -43,17 +43,20 @@ const lessThanNinety = (num) => {
 const greaterThanFifty = (num) => {
   // return true if num is greater than fifty
   // otherwise return false
-  // code here
+  if (num > 50) {
+    return true;
+  }
+  return false;
 };
 
 const add = (x, y) => {
   // add x and y together and return the value
-  // code here
+  return x + y;
 };
 
 const subtract = (x, y) => {
   // subtract y from x and return the value
-  // code here
+  return x - y;
 };
 
 const divide = (x, y) => {
