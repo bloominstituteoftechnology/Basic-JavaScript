@@ -1,16 +1,22 @@
 // Do not change any of the function names
 
 const makeCat = (name, age) => {
-  // create a new object with a name property with the value set to the name argument
-  // add an age property to the object with the value set to the age argument
-  // add a method called meow that returns the string 'Meow!'
-  // return the object
+  class Cat {
+    constructor() {
+      this.name = name;
+      this.age = age;
+      this.meow = () => 'Meow!';
+    }
+  }
+  return new Cat();
 };
 
 const addProperty = (object, property) => {
   // add the property to the object with a value of null
   // return the object
   // note: the property name is NOT 'property'.  The name is the value of the argument called property (a string)
+
+
 };
 
 const invokeMethod = (object, method) => {
@@ -30,31 +36,40 @@ const deleteProperty = (object, property) => {
 };
 
 const newUser = (name, email, password) => {
-  // create a new object with properties matching the arguments passed in.
-  // return the new object
+  class User {
+    constructor() {
+      this.name = name;
+      this.email = email;
+      this.password = password;
+    }
+  }
+  return new User();
 };
 
-const hasEmail = (user) => {
+const hasEmail = user => typeof user.email !== 'undefined' && user.email !== '';
   // return true if the user has a value for the property 'email'
   // otherwise return false
-};
 
-const hasProperty = (object, property) => {
+
+const hasProperty = (object, property) => typeof object[property] !== 'undefined';
   // return true if the object has the value of the property argument
   // property is a string
   // otherwise return false
-};
 
-const verifyPassword = (user, password) => {
+
+const verifyPassword = (user, password) => user.password === password;
   // check to see if the provided password matches the password property on the user object
   // return true if they match
   // otherwise return false
-};
+
 
 const updatePassword = (user, newPassword) => {
+  user.password = newPassword;
+  return user;
+};
   // replace the existing password on the user object with the value of newPassword
   // return the object
-};
+
 
 const addFriend = (user, newFriend) => {
   // user has a property called friends that is an array
