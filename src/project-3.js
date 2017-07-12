@@ -24,7 +24,7 @@ const addProperty = (object, property) => {
 };
 
 const invokeMethod = (object, method) => {
-
+  object[method]();
   // method is a string that contains the name of a method on the object
   // invoke this method
   // nothing needs to be returned
