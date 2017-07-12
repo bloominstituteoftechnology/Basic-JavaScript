@@ -62,28 +62,39 @@ const subtract = (x, y) => {
 const divide = (x, y) => {
   // divide x by y and return the value
   // code here
+  return x / y;
 };
 
 const multiply = (x, y) => {
   // multiply x by y and return the value
   // code here
+  return x * y;
 };
 
 const getRemainder = (x, y) => {
   // return the remainder from dividing x by y
   // code here
+  return x % y;
 };
 
 const isEven = (num) => {
   // return true if num is even
   // otherwise return false
   // code here
+  if (num % 2 === 0) {
+    return true;
+  }
+  return false;
 };
 
 const isOdd = (num) => {
   // return true if num is false
   // otherwise return false
   // code here
+  if (num % 2 === 1) {
+    return true;
+  }
+  return false;
 };
 
 const square = (num) => {
