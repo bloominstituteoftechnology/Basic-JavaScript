@@ -33,13 +33,14 @@ const isInteger = (num) => {
 };
 
 const fizzBuzz = (num) => {
-  if (num % 3 === 0 && num % 5 !== 0) {
-    return 'fizz';
-  } else if (num % 5 === 0 && num % 3 !== 0) {
-    return 'buzz';
-  } else if (num % 3 === 0 && num % 5 === 0) {
-    return 'fizzbuzz';
-  } return num;
+  const by3 = num % 3 === 0;
+  const by5 = num % 5 === 0;
+  this.bitmap = [by5 && by3 ? 'fizzbuzz' : false, by5 === true ? 'buzz' : false, by3 === true ? 'fizz' : false];
+  let result = num;
+  this.bitmap.forEach((t, i) => {
+    result = t !== false && (result.length < t.length || result.length === undefined) ? t : result;
+  });
+  return result;
 };
 
 const isPrime = (num) => {
