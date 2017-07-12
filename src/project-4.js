@@ -95,16 +95,16 @@ const getUserConstructor = () => {
   // {{name}} should be the name set on each instance
   // return the constructor
   //
-  // FIRST ATTEMPT
-  const User = (options) => {
+  // FIRST ATTEMPT: USE 'function' when using 'this'?
+  const User = function(options) {
     this.username = options.username,
     this.name = options.name,
     this.email = options.email,
     this.password = options.password
-   };
-    User.prototype.sayHi = () => {
-      return `Hello, my name is ${this.name}`;
-    };
+  };
+  User.prototype.sayHi = () => {
+    return `Hello, my name is ${this.name}`;
+  };
   return User;
 };
 
