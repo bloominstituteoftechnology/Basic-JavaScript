@@ -1,18 +1,19 @@
 // Do not change any of the function names
 
 const makeCat = (name, age) => {
-  // create a new object with a name property with the value set to the name argument
-  // add an age property to the object with the value set to the age argument
-  // add a method called meow that returns the string 'Meow!'
-  // return the object
-  const cat = {
+  const newObj = {
     name,
     age,
     meow() {
       return 'Meow!';
     }
   };
+  return newObj;
 };
+  // create a new object with a name property with the value set to the name argument
+  // add an age property to the object with the value set to the age argument
+  // add a method called meow that returns the string 'Meow!'
+  // return the object
 
 const addProperty = (object, property) => {
   object[property] = null;
@@ -39,39 +40,63 @@ const multiplyMysteryNumberByFive = (mysteryNumberObject) => {
 const deleteProperty = (object, property) => {
   // remove the property from the object
   // return the object
+  delete object[property];
+  return object;
 };
 
 const newUser = (name, email, password) => {
   // create a new object with properties matching the arguments passed in.
   // return the new object
+  const newObj = {
+    name,
+    email,
+    password
+  };
+  return newObj;
 };
 
 const hasEmail = (user) => {
   // return true if the user has a value for the property 'email'
   // otherwise return false
+  if (user.email) {
+    return true;
+  }
+  return false;
 };
 
 const hasProperty = (object, property) => {
   // return true if the object has the value of the property argument
   // property is a string
   // otherwise return false
+  if (object[property]) {
+    return true;
+  }
+  return false;
 };
 
 const verifyPassword = (user, password) => {
   // check to see if the provided password matches the password property on the user object
   // return true if they match
   // otherwise return false
+  if (user.password === password) {
+    return true;
+  }
+  return false;
 };
 
 const updatePassword = (user, newPassword) => {
   // replace the existing password on the user object with the value of newPassword
   // return the object
+  user.password = newPassword;
+  return user;
 };
 
 const addFriend = (user, newFriend) => {
   // user has a property called friends that is an array
   // add newFriend to the end of the friends array
   // return the user object
+  user.friends.push(newFriend);
+  return user;
 };
 
 const setUsersToPremium = (users) => {
@@ -79,6 +104,10 @@ const setUsersToPremium = (users) => {
   // each user object has the property 'isPremium'
   // set each user's isPremium property to true
   // return the users array
+  for (let i = 0; i < users.length; i++) {
+    users[i].isPremium = true;
+  }
+  return users;
 };
 
 const sumUserPostLikes = (user) => {

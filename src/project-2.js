@@ -45,6 +45,10 @@ const isInRange = (num) => {
 };
 
 const isInteger = (num) => {
+  if (num === Math.floor(num)) {
+    return true;
+  }
+  return false;
   // return true if num is an integer
   // 0.8 -> false
   // 1 -> true
@@ -58,22 +62,28 @@ const fizzBuzz = (num) => {
   // if num is divisible by 5 return 'buzz'
   // if num is divisible by 3 & 5 return 'fizzbuzz'
   // otherwise return num
-  if (num % 3 === 0) {
-    return 'fizz';
+  if (num % 3 === 0 && num % 5 === 0) {
+    return 'fizzbuzz';
   } else if (num % 5 === 0) {
     return 'buzz';
-  } else if (num % 3 === 0 && num % 5 === 0) {
-    return 'fizzbuzz';
+  } else if (num % 3 === 0) {
+    return 'fizz';
   }
   return num;
 };
 
 const isPrime = (num) => {
+  for (let i = 2; i < num.length; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
   // return true if num is prime.
   // otherwise return false
   // hint: a prime number is only evenly divisible by itself and 1
   // hint2: you can solve this using a for loop
   // note: 0 and 1 are NOT considered prime numbers
+  return num > 1;
 };
 
 const returnFirst = (arr) => {
@@ -96,21 +106,24 @@ const incrementByOne = (arr) => {
   // increase each integer by one
   // return the array
   for (let i = 0; i < arr.length; i++) {
-    return arr += 1;
+    arr[i] += 1;
   }
+  return arr;
 };
 
 const addItemToArray = (arr, item) => {
   // add the item to the end of the array
   // return the array
-  return arr.push[item];
+  arr.push(item);
+  return arr;
 };
 
 const addItemToFront = (arr, item) => {
   // add the item to the front of the array
   // return the array
   // hint: use the array method .unshift
-  return arr.unshift[item];
+  arr.unshift(item);
+  return arr;
 };
 
 const wordsToSentence = (words) => {
@@ -118,7 +131,7 @@ const wordsToSentence = (words) => {
   // return a string that is all of the words concatenated together
   // spaces need to be between each word
   // example: ['Hello', 'world!'] -> 'Hello world!'
-  return words.join();
+  return words.join(' ');
 };
 
 const contains = (arr, item) => {
