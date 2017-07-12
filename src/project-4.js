@@ -1,27 +1,49 @@
 // Do not change any of the function names
 
-const multiplyArguments = () => {
+const multiplyArguments = (...args) => {
+  let argumentsSum = 1;
+  if (args.length === 0) {
+    return 0;
+  }
+  for (let i = 0; i < args.length; i++) {
+    argumentsSum *= args[i];
+  }
+  return argumentsSum;
   // use the arguments keyword to multiply all of the arguments together and return the product
   // if no arguments are passed in return 0
   // if one argument is passed in just return it
 };
 
 const invokeCallback = (cb) => {
+  cb();
   // invoke cb
 };
 
 const sumArray = (numbers, cb) => {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  cb(sum);
   // sum up all of the integers in the numbers array
   // pass the result to cb
   // no return is necessary
 };
 
 const forEach = (arr, cb) => {
+  for (let i = 0; i < arr.length; i++) {
+    cb(arr[i]);
+  }
   // iterate over arr and pass its values to cb one by one
   // hint: you will be invoking cb multiple times (once for each value in the array)
 };
 
 const map = (arr, cb) => {
+  const newArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    newArray.push(cb(arr[i]));
+  }
+  return newArray;
   // create a new array
   // iterate over each value in arr, pass it to cb, then place the value returned from cb into the new arr
   // the new array should be the same length as the array argument
