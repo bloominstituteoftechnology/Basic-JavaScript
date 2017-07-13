@@ -1,6 +1,16 @@
 // Do not change any of the function names
 
 const multiplyArguments = () => {
+  if (arguments === 0) {
+    return 0;
+  }
+  if (arguments === 1) {
+    return arguments;
+  }
+  let product = 1;
+  arguments.forEach((item) => {
+    product *= item;
+  });
   // use the arguments keyword to multiply all of the arguments together and return the product
   // if no arguments are passed in return 0
   // if one argument is passed in just return it
@@ -80,6 +90,10 @@ const addReverseString = () => {
 };
 
 const nFactorial = (n) => {
+  if (n === 1) {
+    return 1;
+  }
+  return n * nFactorial(n - 1);
   // return the factorial for n
   // solve this recursively
   // example:
