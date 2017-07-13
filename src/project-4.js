@@ -67,11 +67,17 @@ const getUserConstructor = () => {
 };
 
 const addPrototypeMethod = (Constructor) => {
+  Constructor.prototype.sayHi = function () {
+    return `Hello World!`;
+  };
   // add a method to the constructor's prototype
   // the method should be called 'sayHi' and should return the string 'Hello World!'
 };
 
 const addReverseString = () => {
+  String.prototype.reverse = function () {
+    return this.split('').reverse().join('');
+  };
   // add a method to the string constructor's prototype that returns a reversed copy of the string
   // name this method reverse
   // hint:
@@ -79,6 +85,10 @@ const addReverseString = () => {
 };
 
 const nFactorial = (n) => {
+  if(n < 1) {
+    return 1;
+  }
+  return n * nFactorial (n-1);
   // return the factorial for n
   // solve this recursively
   // example:
@@ -86,6 +96,13 @@ const nFactorial = (n) => {
 };
 
 const cacheFunction = (cb) => {
+  let savedArgument; 
+  const returnFunction = (x) => {
+    savedArgument = x * 2;
+    return cb;
+  };
+  return returnFunction();
+  
   // Extra Credit
   // use closure to create a cache for the cb function
   // the function that you return should accept a single argument and invoke cb with that argument
