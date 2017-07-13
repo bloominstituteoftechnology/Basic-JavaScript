@@ -8,12 +8,17 @@ const multiplyArguments = () => {
 
 const invokeCallback = (cb) => {
   // invoke cb
+  cb();
 };
 
 const sumArray = (numbers, cb) => {
   // sum up all of the integers in the numbers array
   // pass the result to cb
   // no return is necessary
+  for (let i = 0; i < numbers.length; i++) {
+    const sum = numbers.reduce((total, num) => total + num, 0);
+    cb(sum);
+  }
 };
 
 const forEach = (arr, cb) => {
