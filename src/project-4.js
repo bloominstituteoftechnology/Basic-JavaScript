@@ -42,9 +42,9 @@ const getUserConstructor = () => {
       this.name = user.name;
       this.email = user.email;
       this.password = user.password;
-    }
-    sayHi() {
-      return `Hello, my name is ${this.name}`;
+      this.sayHi = function () {
+        return `Hello, my name is ${this.name}`;
+      };
     }
   }
   return User;

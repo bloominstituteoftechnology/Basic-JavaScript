@@ -1,14 +1,12 @@
 // Do not change any of the function names
 
 const makeCat = (name, age) => {
-  class Cat {
-    constructor() {
-      this.name = name;
-      this.age = age;
-      this.meow = () => 'Meow!';
-    }
-  }
-  return new Cat();
+  const cat = {
+    name,
+    age,
+    meow: () => 'Meow!',
+  };
+  return cat;
 };
 
 const addProperty = (object, property) => {

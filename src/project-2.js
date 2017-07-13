@@ -3,13 +3,14 @@
 const getBiggest = (x, y) => Math.max(x, y);
 
 const greeting = (language) => {
-  if (language === 'German') {
-    return 'Guten Tag!';
-  } else if (language === 'English') {
-    return 'Hello!';
-  } else if (language === 'Spanish') {
-    return 'Hola!';
-  } return 'Hello!';
+  switch (language) {
+    case 'German':
+      return 'Guten Tag!';
+    case 'Spanish':
+      return 'Hola!';
+    default:
+      return 'Hello!';
+  }
 };
 
 const isTenOrFive = num => num === 5 || num === 10;
