@@ -120,14 +120,15 @@ const sumUserPostLikes = (user) => {
   for (let i = 0; i < user.posts.length; i++) {
     sum += user.posts[i].likes;
   }
-  return sum
+  return sum;
 };
 
 const addCalculateDiscountPriceMethod = (storeItem) => {
-  storeItem.calculateDiscountPrice = function(){
-    return (storeItem.price - (storeItem.price * storeItem.discountPercentage));
-  }
-  return store.Item;
+  storeItem.calculateDiscountPrice = () => {
+    const discount = storeItem.price * storeItem.discountPercentage;
+    return storeItem.price - discount;
+  };
+  return storeItem;
   // add a method to the storeItem object called 'calculateDiscountPrice'
   // this method should multiply the storeItem's 'price' and 'discountPercentage' to get the discount
   // the method then subtracts the discount from the price and returns the discounted price
