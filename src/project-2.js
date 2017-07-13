@@ -89,9 +89,7 @@ const averageTestScore = (testScores) => {
   } return sum / testScores.length;
 };
 
-const largestNumber = (numbers) => {
-  return Math.max.apply(null, numbers);
-};
+const largestNumber = numbers => Math.max.apply(null, numbers);
 
 // Do not modify code below this line.
 // --------------------------------
