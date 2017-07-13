@@ -1,6 +1,11 @@
 // Do not change any of the function names
 
-const multiplyArguments = () => {
+const multiplyArguments = (...args) => {
+  let sum = 0;
+  args.forEach((t, i) => {
+    sum = i === 0 ? t : sum *= t;
+  });
+  return sum;
   // use the arguments keyword to multiply all of the arguments together and return the product
   // if no arguments are passed in return 0
   // if one argument is passed in just return it
@@ -8,37 +13,61 @@ const multiplyArguments = () => {
 
 const invokeCallback = (cb) => {
   // invoke cb
+  cb();
 };
 
 const sumArray = (numbers, cb) => {
   // sum up all of the integers in the numbers array
   // pass the result to cb
   // no return is necessary
+  let sum = 0;
+  numbers.forEach((t, i) => {
+    sum += t;
+  });
+  cb(sum);
 };
 
 const forEach = (arr, cb) => {
   // iterate over arr and pass its values to cb one by one
   // hint: you will be invoking cb multiple times (once for each value in the array)
+  arr.forEach((t, i) => {
+    cb(t);
+  });
 };
 
 const map = (arr, cb) => {
   // create a new array
   // iterate over each value in arr, pass it to cb, then place the value returned from cb into the new arr
   // the new array should be the same length as the array argument
+  const newArr = [];
+  arr.forEach((t, i) => {
+    cb(t);
+    newArr.push(cb(t));
+  });
+  return newArr;
 };
 
 const getUserConstructor = () => {
-  // create a constructor called User
-  // it should accept an options object with username, name, email, and password properties
-  // in the constructor set the username, name, email, and password properties
-  // the constructor should have a method 'sayHi' on its prototype that returns the string 'Hello, my name is {{name}}'
-  // {{name}} should be the name set on each instance
-  // return the constructor
+  class User {
+    constructor(user) {
+      this.username = user.username;
+      this.name = user.name;
+      this.email = user.email;
+      this.password = user.password;
+    }
+    sayHi() {
+      return `Hello, my name is ${this.name}`;
+    }
+  }
+  return User;
 };
 
 const addPrototypeMethod = (Constructor) => {
   // add a method to the constructor's prototype
   // the method should be called 'sayHi' and should return the string 'Hello World!'
+  Constructor.prototype.sayHi = () => {
+    return 'Hello World!';
+  };
 };
 
 const addReverseString = () => {
@@ -46,6 +75,9 @@ const addReverseString = () => {
   // name this method reverse
   // hint:
   // you will need to use 'this' inside of reverse
+  String.prototype.reverse = function () {
+    return this.split('').reverse().join('');
+  };
 };
 
 const nFactorial = (n) => {
@@ -53,6 +85,14 @@ const nFactorial = (n) => {
   // solve this recursively
   // example:
   // the factorial of 3 is 6 (3 * 2 * 1)
+  let tmp = n;
+  if (n < 0) {
+    return -1;
+  } else if (n === 0) {
+    return 1;
+  } while (n-- > 2) {
+    tmp *= n;
+  } return tmp;
 };
 
 const cacheFunction = (cb) => {

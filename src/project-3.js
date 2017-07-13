@@ -63,9 +63,6 @@ const updatePassword = (user, newPassword) => {
   user.password = newPassword;
   return user;
 };
-  // replace the existing password on the user object with the value of newPassword
-  // return the object
-
 
 const addFriend = (user, newFriend) => {
   user.friends.push(newFriend);
