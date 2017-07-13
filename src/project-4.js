@@ -1,16 +1,16 @@
 // Do not change any of the function names
 
 const multiplyArguments = () => {
-  if (arguments === 0) {
+  if (arguments.length === 0) {
     return 0;
   }
-  if (arguments === 1) {
-    return arguments;
+  if (arguments.length === 1) {
+    return arguments[0];
   }
-  let product = 1;
-  arguments.forEach((item) => {
-    product *= item;
-  });
+  let product = 0;
+  for (let i = 0; i < arguments.length; i++) {
+    product *= arguments[i];
+  }
   // use the arguments keyword to multiply all of the arguments together and return the product
   // if no arguments are passed in return 0
   // if one argument is passed in just return it
