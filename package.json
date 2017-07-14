@@ -19,9 +19,11 @@
   "homepage": "https://github.com/SunJieMing/basic-javascript#readme",
   "devDependencies": {
     "babel-jest": "^19.0.0",
-    "eslint": "^3.17.1",
+    "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.1.3",
     "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.1.0",
     "jest": "^19.0.2",
     "regenerator-runtime": "^0.10.3"
   },
