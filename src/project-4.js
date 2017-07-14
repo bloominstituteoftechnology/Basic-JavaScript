@@ -75,7 +75,7 @@ const addPrototypeMethod = (Constructor) => {
 };
 
 const addReverseString = () => {
-  String.prototype.reverse = function reverse() {
+  String.prototype.reverse = function () {
     return this.split('').reverse().join('');
   };
   // add a method to the string constructor's prototype that returns a reversed copy of the string
@@ -96,12 +96,16 @@ const nFactorial = (n) => {
 };
 
 const cacheFunction = (cb) => {
-  let savedArgument;
+  const cache = {};
   const returnFunction = (x) => {
-    savedArgument = x * 2;
-    return cb;
+    if (typeof cache[x] === 'undefined') {
+      const result = cb(x);
+      cache[x] = result;
+      return result;
+    }
+    return cache[x];
   };
-  return returnFunction();
+  return returnFunction;
   // Extra Credit
   // use closure to create a cache for the cb function
   // the function that you return should accept a single argument and invoke cb with that argument
