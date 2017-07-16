@@ -129,6 +129,11 @@ const addCalculateDiscountPriceMethod = (storeItem) => {
   // price -> 20
   // discountPercentage -> .2
   // discountPrice = 20 - (20 * .2)
+  storeItem.calculateDiscountPrice = () => {
+    const discount = storeItem.price - (storeItem.price * storeItem.discountPercentage);
+    return discount;
+  };
+  return storeItem;
 };
 
 // Do not modify code below this line.

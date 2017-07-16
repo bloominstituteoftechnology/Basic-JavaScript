@@ -1,9 +1,15 @@
 // Do not change any of the function names
 
-const multiplyArguments = () => {
+const multiplyArguments = (...args) => {
   // use the arguments keyword to multiply all of the arguments together and return the product
   // if no arguments are passed in return 0
   // if one argument is passed in just return it
+  if (args.length === 0) {
+    return 0;
+  } else if (args.length === 1) {
+    return 1;
+  }
+  return args.reduce((sum, value) => sum * value);
 };
 
 const invokeCallback = (cb) => {
@@ -69,10 +75,14 @@ const addPrototypeMethod = (Constructor) => {
 };
 
 const addReverseString = () => {
-  // add a method to the string constructor's prototype that returns a reversed copy of the string
-  // name this method reverse
-  // hint:
-  // you will need to use 'this' inside of reverse
+  String.prototype.reverse = function () {
+    return this.split('').reverse().join('');
+    /*
+      had to add no-extend-native=0 to linter to get this to pass
+      multiple sources specify this to be the correct answer
+      short hand fat rocket does not work here, not sure why
+    */
+  };
 };
 
 const nFactorial = (n) => {
@@ -80,6 +90,8 @@ const nFactorial = (n) => {
   // solve this recursively
   // example:
   // the factorial of 3 is 6 (3 * 2 * 1)
+  if (n === 0) return 1;
+  return n * nFactorial(n - 1);
 };
 
 const cacheFunction = (cb) => {
