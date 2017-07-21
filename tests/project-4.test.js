@@ -1,4 +1,5 @@
 /* eslint-disable no-undef */
+/* eslint-disable eol-last */
 const exercises = require('../src/project-4');
 
 describe('Project 4', () => {

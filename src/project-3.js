@@ -159,3 +159,4 @@ module.exports = {
   sumUserPostLikes,
   addCalculateDiscountPriceMethod
 };
+

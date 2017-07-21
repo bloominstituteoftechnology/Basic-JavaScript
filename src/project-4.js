@@ -3,8 +3,13 @@
 //  Could not figure out 'error  Parsing error: Unexpected token'
 // always on the last line of the program
 // which did not allow us to run the last several tests..
-
-const multiplyArguments = () => {
+  const multiplyArguments = (...args) => {
+  if (args.length < 2) return args;
+  let total = 1;
+  for (let i = 0; i < args.length; i++) {
+    total *= args[i];
+  }
+  return total;
   // use the arguments keyword to multiply all of the arguments together and return the product
   // if no arguments are passed in return 0
   // if one argument is passed in just return it
@@ -40,17 +45,17 @@ const multiplyArguments = () => {
   // return args.reduce((previous, arg) => {
   //   return previous *= arg;
   // }, 1);
-  const argsProduct = (...args) => {
-    if (args.length === 0) {
-      return 0;
-    } else if (args.length === 1) {
-      return args[0];
-    }
-    let total = 1;
-    for (let i = 0; i < args.length; i++) {
-      total *= args[i];
-    }
-    return total;
+  // const argsProduct = (...args) => {
+  //   if (args.length === 0) {
+  //     return 0;
+  //   } else if (args.length === 1) {
+  //     return args[0];
+  //   }
+  //   let total = 1;
+  //   for (let i = 0; i < args.length; i++) {
+  //     total *= args[i];
+  //   }
+  //   return total;
 };
 
 const invokeCallback = (cb) => {
@@ -62,29 +67,29 @@ const sumArray = (numbers, cb) => {
   // sum up all of the integers in the numbers array
   // pass the result to cb
   // no return is necessary
-  let total = 0;
-  for (let i = 0; i < numbers.length; i++) {
-    total += numbers[i];
-  }
-  cb(total);
+  // let total = 0;
+  // for (let i = 0; i < numbers.length; i++) {
+  //   total += numbers[i];
+  // }
+  // cb(total);
 };
 
 const forEach = (arr, cb) => {
   // iterate over arr and pass its values to cb one by one
   // hint: you will be invoking cb multiple times (once for each value in the array)
-  arr.forEach((num) => {
-    cb(num);
-  });
+  // arr.forEach((num) => {
+  //   cb(num);
+  // });
 };
 
 const map = (arr, cb) => {
   // create a new array
   // iterate over each value in arr, pass it to cb, then place the value returned from cb into the new arr
   // the new array should be the same length as the array argument
-  const newArray = arr.map((index) => {
-    return cb(index);
-  });
-  return newArray;
+  // const newArray = arr.map((index) => {
+  //   return cb(index);
+  // });
+  // return newArray;
 };
 
 const getUserConstructor = () => {
@@ -96,24 +101,24 @@ const getUserConstructor = () => {
   // return the constructor
   //
   // FIRST ATTEMPT: USE 'function' when using 'this'?
-  const User = function(options) {
-    this.username = options.username,
-    this.name = options.name,
-    this.email = options.email,
-    this.password = options.password
-  };
-  User.prototype.sayHi = () => {
-    return `Hello, my name is ${this.name}`;
-  };
-  return User;
+  // const User = function(options) {
+  //   this.username = options.username,
+  //   this.name = options.name,
+  //   this.email = options.email,
+  //   this.password = options.password
+  // };
+  // User.prototype.sayHi = () => {
+  //   return `Hello, my name is ${this.name}`;
+  // };
+  // return User;
 };
 
 const addPrototypeMethod = (Constructor) => {
   // add a method to the constructor's prototype
   // the method should be called 'sayHi' and should return the string 'Hello World!'
-  Constructor.prototype.sayHi = () => {
-    return 'Hello World!';
-  }
+  // Constructor.prototype.sayHi = () => {
+  //   return 'Hello World!';
+  // }
 };
 
 const addReverseString = () => {
@@ -121,9 +126,9 @@ const addReverseString = () => {
   // name this method reverse
   // hint:
   // you will need to use 'this' inside of reverse
-  String.prototype.reverse = (string) => {
-    this.string.split().reverse().join();
-  }
+  // String.prototype.reverse = (string) => {
+  //   this.string.split().reverse().join();
+  // }
 };
 
 const nFactorial = (n) => {
@@ -131,9 +136,9 @@ const nFactorial = (n) => {
   // solve this recursively
   // example:
   // the factorial of 3 is 6 (3 * 2 * 1)
-  if (n < 2) {
-    return 1;
-  } return n * nFactorial(n - 1);
+  // if (n < 2) {
+  //   return 1;
+  // } return n * nFactorial(n - 1);
 };
 
 const cacheFunction = (cb) => {
@@ -149,7 +154,6 @@ const cacheFunction = (cb) => {
   // if the function you return is invoked again with 5 it will look on an object in the closure scope
   // and return 25 directly and will not invoke cb again
 };
-
 // Do not modify code below this line.
 // --------------------------------
 
