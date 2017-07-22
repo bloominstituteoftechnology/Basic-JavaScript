@@ -5,14 +5,12 @@ const makeCat = (name, age) => {
   // add an age property to the object with the value set to the age argument
   // add a method called meow that returns the string 'Meow!'
   // return the object
-  const someObject = {
+  const catObject = {
     name,
     age,
-    meow() {
-      return 'Meow!';
-    }
+    meow: () => 'Meow!',
   };
-  return someObject;
+  return catObject;
 };
 
 const addProperty = (object, property) => {
@@ -29,11 +27,13 @@ const invokeMethod = (object, method) => {
   // nothing needs to be returned
   object[method]();
 };
-
+// Up until this point watched LambdaPro Video "LS2-PT-JSBasics" for help
+// Rest written by A.Novak
 const multiplyMysteryNumberByFive = (mysteryNumberObject) => {
   // mysteryNumberObject has a property called mysteryNumber
   // multiply the mysteryNumber property by 5 and return the product
-  return mysteryNumberObject.mysteryNumber * 5;
+  const product = mysteryNumberObject.mysteryNumber * 5;
+  return product;
 };
 
 const deleteProperty = (object, property) => {
@@ -46,12 +46,12 @@ const deleteProperty = (object, property) => {
 const newUser = (name, email, password) => {
   // create a new object with properties matching the arguments passed in.
   // return the new object
-  const user = {
+  const newObject = {
     name,
     email,
     password,
   };
-  return user;
+  return newObject;
 };
 
 const hasEmail = (user) => {
@@ -59,25 +59,24 @@ const hasEmail = (user) => {
   // otherwise return false
   if (user.email) {
     return true;
-  }
-  return false;
+  } return false;
 };
 
 const hasProperty = (object, property) => {
   // return true if the object has the value of the property argument
   // property is a string
   // otherwise return false
-  return Object.prototype.hasOwnProperty.call(object, property);
+  const checkProp = Object.prototype.hasOwnProperty.call(object, property);
+  return checkProp;
 };
 
 const verifyPassword = (user, password) => {
   // check to see if the provided password matches the password property on the user object
   // return true if they match
   // otherwise return false
-  if (user.password === password) {
+  if (password === user.password) {
     return true;
-  }
-  return false;
+  } return false;
 };
 
 const updatePassword = (user, newPassword) => {
@@ -100,9 +99,9 @@ const setUsersToPremium = (users) => {
   // each user object has the property 'isPremium'
   // set each user's isPremium property to true
   // return the users array
-  Object.keys(users).forEach((key) => {
-    users[key].isPremium = true;
-  });
+  for (let i = 0; i < users.length; i++) {
+    users[i].isPremium = true;
+  }
   return users;
 };
 
@@ -113,14 +112,12 @@ const sumUserPostLikes = (user) => {
   // sum together the likes from all the post objects
   // return the sum
   let sum = 0;
-  let i = 0;
-  const userPostsLength = user.posts.length;
-  for (i; i < userPostsLength; i++) {
+  for (let i = 0; i < user.posts.length; i++) {
     sum += user.posts[i].likes;
   }
   return sum;
 };
-
+// Tai the Thai helped me with this problem
 const addCalculateDiscountPriceMethod = (storeItem) => {
   // add a method to the storeItem object called 'calculateDiscountPrice'
   // this method should multiply the storeItem's 'price' and 'discountPercentage' to get the discount
@@ -129,6 +126,11 @@ const addCalculateDiscountPriceMethod = (storeItem) => {
   // price -> 20
   // discountPercentage -> .2
   // discountPrice = 20 - (20 * .2)
+  storeItem.calculateDiscountPrice = () => {
+    const discountPrice = storeItem.price - (storeItem.price * storeItem.discountPercentage);
+    return discountPrice;
+  };
+  return storeItem;
 };
 
 // Do not modify code below this line.
