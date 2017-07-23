@@ -78,7 +78,9 @@ const addReverseString = () => {
   // name this method reverse
   // hint:
   // you will need to use 'this' inside of reverse
-  String.prototype.reverse = () => {
+  // for some reason this doesn't work with arrow function notation???
+  // eslint-disable-next-line no-extend-native
+  String.prototype.reverse = function () {
     return this.split('').reverse().join('');
   };
 };
@@ -88,6 +90,11 @@ const nFactorial = (n) => {
   // solve this recursively
   // example:
   // the factorial of 3 is 6 (3 * 2 * 1)
+  let factorial = 1;
+  for (let i = 0; i < n; i++) {
+    factorial *= n - i;
+  }
+  return factorial;
 };
 
 const cacheFunction = (cb) => {
@@ -102,6 +109,12 @@ const cacheFunction = (cb) => {
   // if the function you return is invoked with 5 it would pass 5 to cb(5) and return 25
   // if the function you return is invoked again with 5 it will look on an object in the closure scope
   // and return 25 directly and will not invoke cb again
+  const cache = {};
+  return function (arg) {
+    if (Object.prototype.hasOwnProperty.call(cache, arg)) {
+      return cache[arg];
+    } return cache[arg] = cb(arg);
+  };
 };
 
 
