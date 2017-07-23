@@ -135,7 +135,16 @@ const wordsToSentence = (words) => {
   // return a string that is all of the words concatenated together
   // spaces need to be between each word
   // example: ['Hello', 'world!'] -> 'Hello world!'
-  return words.join(' ');
+  let i = 0;
+  let newSentence = '';
+  for (i; i < words.length; i++) {
+    if (words.indexOf(words[i]) !== words.length - 1) {
+      newSentence += `${words[i]} `;
+    } else {
+      newSentence += `${words[i]}`;
+    }
+  }
+  return newSentence;
 };
 
 const contains = (arr, item) => {
@@ -150,31 +159,34 @@ const contains = (arr, item) => {
 const addNumbers = (numbers) => {
   // numbers is an array of integers.
   // add all of the integers and return the value
-  const arrayLength = numbers.length;
-  let i = 0;
-  let sum = 0;
-  for (i; i < arrayLength; i++) {
-    sum += numbers[i];
+  let addUp = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    addUp += numbers[i];
   }
-  return sum;
+  return addUp;
 };
 
 const averageTestScore = (testScores) => {
   // testScores is an array.  Iterate over testScores and compute the average.
   // return the average
-  const arrayLength = testScores.length;
-  let i = 0;
   let sum = 0;
-  for (i; i < arrayLength; i++) {
+  for (let i = 0; i < testScores.length; i++) {
     sum += testScores[i];
   }
-  return sum / arrayLength;
+  const average = sum / testScores.length;
+  return average;
 };
 
 const largestNumber = (numbers) => {
   // numbers is an array of integers
   // return the largest integer
-  return Math.max.apply(null, numbers);
+  let largestNum = numbers[0];
+  for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] > largestNum) {
+      largestNum = numbers[i];
+    }
+  }
+  return largestNum;
 };
 
 // Do not modify code below this line.
