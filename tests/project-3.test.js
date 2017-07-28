@@ -1,16 +1,31 @@
 /* eslint-disable no-undef */
-const exercises = require('../src/project-3');
+const {
+  makeCat,
+  addProperty,
+  invokeMethod,
+  multiplyMysteryNumberByFive,
+  deleteProperty,
+  newUser,
+  hasEmail,
+  hasProperty,
+  verifyPassword,
+  updatePassword,
+  addFriend,
+  setUsersToPremium,
+  sumUserPostLikes,
+  addCalculateDiscountPriceMethod
+} = require('../src/project-3');
 
 describe('Project 3', () => {
   describe('makeCat(name, age)', () => {
     it('should create a new cat with the name and age properties set', () => {
-      expect(exercises.makeCat('Snowball', 1).name).toBe('Snowball');
-      expect(exercises.makeCat('Snowball', 1).age).toBe(1);
-      expect(exercises.makeCat('Snowball II', 5).name).toBe('Snowball II');
-      expect(exercises.makeCat('Snowball II', 5).age).toBe(5);
+      expect(makeCat('Snowball', 1).name).toBe('Snowball');
+      expect(makeCat('Snowball', 1).age).toBe(1);
+      expect(makeCat('Snowball II', 5).name).toBe('Snowball II');
+      expect(makeCat('Snowball II', 5).age).toBe(5);
     });
     it('should add a method called meow to the new cat object', () => {
-      expect(exercises.makeCat('Snowball III', 2).meow()).toBe('Meow!');
+      expect(makeCat('Snowball III', 2).meow()).toBe('Meow!');
     });
   });
 
@@ -25,7 +40,7 @@ describe('Project 3', () => {
         y: 2,
         z: null
       };
-      expect(exercises.addProperty(object, 'z')).toEqual(updatedObject);
+      expect(addProperty(object, 'z')).toEqual(updatedObject);
     });
   });
 
@@ -37,7 +52,7 @@ describe('Project 3', () => {
           this.x++;
         }
       };
-      exercises.invokeMethod(object, 'incrementX');
+      invokeMethod(object, 'incrementX');
       expect(object.x).toBe(1);
     });
   });
@@ -47,9 +62,9 @@ describe('Project 3', () => {
       const mysteryBox = {
         mysteryNumber: 999
       };
-      expect(exercises.multiplyMysteryNumberByFive(mysteryBox)).toBe(4995);
+      expect(multiplyMysteryNumberByFive(mysteryBox)).toBe(4995);
       mysteryBox.mysteryNumber = -5;
-      expect(exercises.multiplyMysteryNumberByFive(mysteryBox)).toBe(-25);
+      expect(multiplyMysteryNumberByFive(mysteryBox)).toBe(-25);
     });
   });
 
@@ -64,7 +79,7 @@ describe('Project 3', () => {
         y: 2,
         z: null
       };
-      expect(exercises.deleteProperty(object, 'z')).toEqual(updatedObject);
+      expect(deleteProperty(object, 'z')).toEqual(updatedObject);
     });
   });
 
@@ -75,21 +90,21 @@ describe('Project 3', () => {
         email: 'ben@lambdaschool.com',
         password: 'correcthorsebatterystaple'
       };
-      expect(exercises.newUser(user1.name, user1.email, user1.password)).toEqual(user1);
+      expect(newUser(user1.name, user1.email, user1.password)).toEqual(user1);
       const user2 = {
         name: 'Austen',
         email: 'austen@lambdaschool.com',
         password: 'password'
       };
-      expect(exercises.newUser(user2.name, user2.email, user2.password)).toEqual(user2);
+      expect(newUser(user2.name, user2.email, user2.password)).toEqual(user2);
     });
   });
 
   describe('hasEmail(user)', () => {
     it('should return true if the user object has a value for its email property', () => {
-      expect(exercises.hasEmail({ username: 'SunJieMing', email: 'ben@lambdaschool.com' })).toEqual(true);
-      expect(exercises.hasEmail({ username: 'Austen', email: '' })).toEqual(false);
-      expect(exercises.hasEmail({ username: 'Ryan' })).toEqual(false);
+      expect(hasEmail({ username: 'SunJieMing', email: 'ben@lambdaschool.com' })).toEqual(true);
+      expect(hasEmail({ username: 'Austen', email: '' })).toEqual(false);
+      expect(hasEmail({ username: 'Ryan' })).toEqual(false);
     });
   });
 
@@ -98,8 +113,8 @@ describe('Project 3', () => {
       const obj = {
         x: true
       };
-      expect(exercises.hasProperty(obj, 'x')).toEqual(true);
-      expect(exercises.hasProperty(obj, 'y')).toEqual(false);
+      expect(hasProperty(obj, 'x')).toEqual(true);
+      expect(hasProperty(obj, 'y')).toEqual(false);
     });
   });
 
@@ -109,14 +124,14 @@ describe('Project 3', () => {
         password: 'I love js!'
       };
       const password = 'I love js!';
-      expect(exercises.verifyPassword(user, password)).toBe(true);
+      expect(verifyPassword(user, password)).toBe(true);
     });
     it('should return false if passwords do not match', () => {
       const user = {
         password: 'I love js!'
       };
       const password = 'Hack this guy!';
-      expect(exercises.verifyPassword(user, password)).toBe(false);
+      expect(verifyPassword(user, password)).toBe(false);
     });
   });
 
@@ -126,7 +141,7 @@ describe('Project 3', () => {
         password: 'I love js!'
       };
       const password = 'I love js even more!';
-      expect(exercises.updatePassword(user, password).password).toBe(password);
+      expect(updatePassword(user, password).password).toBe(password);
     });
   });
 
@@ -136,7 +151,7 @@ describe('Project 3', () => {
         friends: ['Ben', 'Austen', 'Ryan', 'Mike', 'Young']
       };
       const newFriend = 'Shay';
-      expect(exercises.addFriend(user, 'Shay').friends.pop()).toBe('Shay');
+      expect(addFriend(user, 'Shay').friends.pop()).toBe('Shay');
     });
   });
 
@@ -156,7 +171,7 @@ describe('Project 3', () => {
         { isPremium: true },
         { isPremium: true },
       ];
-      expect(exercises.setUsersToPremium(users)).toEqual(updatedUsers);
+      expect(setUsersToPremium(users)).toEqual(updatedUsers);
     });
   });
 
@@ -193,7 +208,7 @@ describe('Project 3', () => {
           }
         ]
       };
-      expect(exercises.sumUserPostLikes(user)).toBe(286);
+      expect(sumUserPostLikes(user)).toBe(286);
     });
   });
 
@@ -208,12 +223,12 @@ describe('Project 3', () => {
     };
 
     it('should add the method \'calculateDiscountPrice\' to the store item object', () => {
-      expect(exercises.addCalculateDiscountPriceMethod(storeItem).calculateDiscountPrice).toBeDefined();
-      expect(exercises.addCalculateDiscountPriceMethod(storeItem2).calculateDiscountPrice).toBeDefined();
+      expect(addCalculateDiscountPriceMethod(storeItem).calculateDiscountPrice).toBeDefined();
+      expect(addCalculateDiscountPriceMethod(storeItem2).calculateDiscountPrice).toBeDefined();
     });
     it('should return the discount price from the new \'calculateDiscountPrice\' method', () => {
-      expect(exercises.addCalculateDiscountPriceMethod(storeItem).calculateDiscountPrice()).toBe(72);
-      expect(exercises.addCalculateDiscountPriceMethod(storeItem2).calculateDiscountPrice()).toBe(2.5);
+      expect(addCalculateDiscountPriceMethod(storeItem).calculateDiscountPrice()).toBe(72);
+      expect(addCalculateDiscountPriceMethod(storeItem2).calculateDiscountPrice()).toBe(2.5);
     });
   });
 });

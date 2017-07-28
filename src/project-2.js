@@ -8,8 +8,8 @@ const getBiggest = (x, y) => {
 const greeting = (language) => {
   // return a greeting for three different languages:
   // language: 'German' -> 'Guten Tag!'
-  // language: 'English' -> 'Hello!'
   // language: 'Spanish' -> 'Hola!'
+  // language: 'Chinese' -> 'Ni Hao!'
   // if language is undefined return 'Hello!'
 };
 

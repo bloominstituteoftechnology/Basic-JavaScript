@@ -1,120 +1,133 @@
 /* eslint-disable no-undef */
-const exercises = require('../src/project-4');
+const {
+  getFirstItem,
+  getLength,
+  getLastItem,
+  sumNums,
+  multiplyNums,
+  contains,
+  removeDuplicates
+} = require('../src/project-4');
 
 describe('Project 4', () => {
-  describe('multiplyArguments()', () => {
-    it('should return the product of all the arguments', () => {
-      const product = exercises.multiplyArguments(5, 5);
-      const product2 = exercises.multiplyArguments();
-      const product3 = exercises.multiplyArguments(3, 3, 3, 3);
-      const product4 = exercises.multiplyArguments(1);
-      const product5 = exercises.multiplyArguments(10, 0, 10);
-      expect(product).toBe(25);
-      expect(product2).toBe(0);
-      expect(product3).toBe(81);
-      expect(product4).toBe(1);
-      expect(product5).toBe(0);
-    });
-  });
-
-  describe('invokeCallback(cb)', () => {
-    it('should invoke the callback that is passed in', () => {
-      const cb = jest.fn();
-      exercises.invokeCallback(cb);
-      expect(cb).toHaveBeenCalled();
-    });
-  });
-
-  describe('sumArray(cb)', () => {
-    it('should pass the sum of all array numbers to cb', (done) => {
-      exercises.sumArray([1, 2, 3, 4, 5], (sum) => {
-        expect(sum).toBe(15);
-        done();
+  describe('getFirstItem', () => {
+    it('should pass the first item from the collection to the cb', () => {
+      const collection = ['a', 'b', 'c', 'd'];
+      let firstItem;
+      getFirstItem(collection, (first) => {
+        firstItem = first;
       });
+      expect(firstItem).toBe('a');
     });
   });
 
-  describe('forEach(arr, cb)', () => {
-    it('should pass all array items one by one to cb', () => {
-      const nums = [];
-      exercises.forEach([1, 2, 3, 4, 5], (num) => {
-        nums.push(num);
+  describe('getLength', () => {
+    it('should pass the length of the collection to the cb', () => {
+      const collection = [true, false, {}, []];
+      let collectionLength;
+      getLength(collection, (length) => {
+        collectionLength = length;
       });
-      expect(nums).toEqual([1, 2, 3, 4, 5]);
+      expect(collectionLength).toBe(4);
     });
   });
 
-  describe('map(arr, cb)', () => {
-    it('should return an array of all the processed array elements', () => {
-      const squares = exercises.map([1, 2, 3, 4, 5], (num) => {
-        return num * num;
+  describe('getLastItem', () => {
+    it('should pass the last item from an array into the provided cb', () => {
+      const collection1 = [1, 2, 3];
+      const collection2 = ['a', 'b'];
+      const collection3 = [true, false, true, null];
+      const lastItems = [];
+      getLastItem(collection1, (lastItem) => {
+        lastItems.push(lastItem);
       });
-      expect(squares).toEqual([1, 4, 9, 16, 25]);
+      getLastItem(collection2, (lastItem) => {
+        lastItems.push(lastItem);
+      });
+      getLastItem(collection3, (lastItem) => {
+        lastItems.push(lastItem);
+      });
+      expect(lastItems).toEqual([3, 'b', null]);
     });
   });
 
-  describe('getUserConstructor()', () => {
-    it('should return a user constructor that correctly builds user objects', () => {
-      const User = exercises.getUserConstructor();
-      const user = new User({ username: 'SunJieMing', name: 'Ben', email: 'ben@lambdaschool.com', password: 'LS Rocks!' });
-      expect(user.username).toBe('SunJieMing');
-      expect(user.name).toBe('Ben');
-      expect(user.email).toBe('ben@lambdaschool.com');
-      expect(user.password).toBe('LS Rocks!');
+  describe('sumNums', () => {
+    it('should sum the numbers together and pass the sum to the cb', () => {
+      let sum;
+      sumNums(5, 10, (result) => {
+        sum = result;
+      });
+      expect(sum).toBe(15);
+      sumNums(-5, 5, (result) => {
+        sum = result;
+      });
+      expect(sum).toBe(0);
     });
   });
 
-  describe('addPrototypeMethod(Constructor)', () => {
-    it('should add the method sayHi to the constructor', () => {
-      function Test() {
-        this.test = true;
-      }
-      exercises.addPrototypeMethod(Test);
-      const test = new Test();
-      expect(test.sayHi()).toBe('Hello World!');
+  describe('multiplyNums', () => {
+    it('should multiply the numbers together and pass the product to the cb', () => {
+      let product;
+      multiplyNums(5, 10, (result) => {
+        product = result;
+      });
+      expect(product).toBe(50);
+      multiplyNums(-5, 5, (result) => {
+        product = result;
+      });
+      expect(product).toBe(-25);
     });
   });
 
-  describe('addReverseString(StringPrototype)', () => {
-    it('should add a reverse string method to the String prototype that returns a reversed version of the string', () => {
-      exercises.addReverseString();
-      const str = 'Hello';
-      expect(str.reverse()).toBe('olleH');
+  describe('contains', () => {
+    it('should pass true to cb is the collection contains the specified item', () => {
+      const collection = ['a', 'b', 'c', 'd'];
+      let containsItem;
+      contains(collection, 'd', (result) => {
+        containsItem = result;
+      });
+      expect(containsItem).toBe(true);
+    });
+    it('should return false if the item is not contained in the array', () => {
+      const collection = ['a', 'b', 'c', 'd'];
+      let containsItem;
+      contains(collection, 55, (result) => {
+        containsItem = result;
+      });
+      expect(containsItem).toBe(false);
+    });
+    it('should work with array references', () => {
+      const nestedArray = [];
+      const collection = ['a', 'b', 'c', 'd', nestedArray];
+      let containsItem;
+      contains(collection, nestedArray, (result) => {
+        containsItem = result;
+      });
+      expect(containsItem).toBe(true);
+      contains(collection, [], (result) => {
+        containsItem = result;
+      });
+      expect(containsItem).toBe(false);
     });
   });
 
-  describe('nFactorial(n)', () => {
-    it('should return the factorial of n', () => {
-      expect(exercises.nFactorial(5)).toBe(120);
-      expect(exercises.nFactorial(15)).toBe(1307674368000);
+  describe('removeDuplicates', () => {
+    it('should remove duplicates from an array', () => {
+      const arr = ['a', 'b', 'c', 'c'];
+      let duplicateFreeArray;
+      removeDuplicates(arr, (result) => {
+        duplicateFreeArray = result;
+      });
+      expect(duplicateFreeArray).toEqual(['a', 'b', 'c']);
     });
-  });
-
-  describe('cacheFunction(cb)', () => {
-    it('should return the callback function', () => {
-      const cb = () => {};
-      expect(typeof exercises.cacheFunction(cb)).toEqual('function');
-    });
-    it('should return the callback functions result when the cached function is invoked', () => {
-      const cb = (x) => {
-        return x * 2;
-      };
-      const cachedFunction = exercises.cacheFunction(cb);
-      expect(cachedFunction(5)).toBe(10);
-    });
-    it('should cache function results', () => {
-      const cb = jest.fn();
-      const cachedFunction = exercises.cacheFunction(cb);
-      cachedFunction(true);
-      cachedFunction(true);
-      cachedFunction(true);
-      cachedFunction(true);
-      cachedFunction(true);
-      cachedFunction(10);
-      cachedFunction(10);
-      cachedFunction(10);
-      cachedFunction(10);
-      expect(cb).toHaveBeenCalledTimes(2);
+    it('should not mutate the original array', () => {
+      const arr = ['a', 'b', 'c', 'c'];
+      let duplicateFreeArray;
+      removeDuplicates(arr, (result) => {
+        duplicateFreeArray = result;
+      });
+      expect(Array.isArray(duplicateFreeArray)).toBe(true);
+      expect(duplicateFreeArray).not.toBe(arr);
     });
   });
 });
