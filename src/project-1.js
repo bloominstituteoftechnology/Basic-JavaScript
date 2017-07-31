@@ -1,6 +1,7 @@
 // Do not change any of the funcxtion names
 
 const multiplyByTen = (num) => {
+  return (num * 10);
   // return num after multiplying it by ten
   // code here
 };
@@ -11,6 +12,10 @@ const subtractFive = (num) => {
 };
 
 const areSameLength = (str1, str2) => {
+  if (str1.length === str2.length) {
+    return true;
+  }
+  return false;
   // return true if the two strings have the same length
   // otherwise return false
   // code here
@@ -23,6 +28,10 @@ const areEqual = (x, y) => {
 };
 
 const lessThanNinety = (num) => {
+  if (num < 90) {
+    return true;
+  }
+  return false;
   // return true if num is less than ninety
   // otherwise return false
   // code here
@@ -35,6 +44,7 @@ const greaterThanFifty = (num) => {
 };
 
 const add = (x, y) => {
+  return (x + y);
   // add x and y together and return the value
   // code here
 };
@@ -45,6 +55,7 @@ const subtract = (x, y) => {
 };
 
 const divide = (x, y) => {
+  return (x / y);
   // divide x by y and return the value
   // code here
 };
@@ -55,6 +66,7 @@ const multiply = (x, y) => {
 };
 
 const getRemainder = (x, y) => {
+  return (x % y);
   // return the remainder from dividing x by y
   // code here
 };
@@ -66,7 +78,11 @@ const isEven = (num) => {
 };
 
 const isOdd = (num) => {
-  // return true if num is odd
+  if (num % 2 !== 0) {
+    return true;
+  }
+  return false;
+  // return true if num is false
   // otherwise return false
   // code here
 };
@@ -77,6 +93,7 @@ const square = (num) => {
 };
 
 const cube = (num) => {
+  return (num * num * num);
   // cube num and return the new value
   // code here
 };
@@ -87,6 +104,7 @@ const raiseToPower = (num, exponent) => {
 };
 
 const roundNumber = (num) => {
+  return (Math.round(num));
   // round num and return it
   // code here
 };
@@ -97,12 +115,14 @@ const roundUp = (num) => {
 };
 
 const addExclamationPoint = (str) => {
+  return (str.concat('!'));
   // add an exclamation point to the end of str and return the new string
   // 'hello world' -> 'hello world!'
   // code here
 };
 
 const combineNames = (firstName, lastName) => {
+  return (firstName.concat(' ', lastName));
   // return firstName and lastName combined as one string and separated by a space.
   // 'Lambda', 'School' -> 'Lambda School'
   // code here
@@ -122,6 +142,7 @@ const getRectangleArea = (length, width) => {
 };
 
 const getTriangleArea = (base, height) => {
+  return ((base * height) / 2);
   // return the area of the triangle by using base and height
   // code here
 };
@@ -132,6 +153,7 @@ const getCircleArea = (radius) => {
 };
 
 const getRectangularPrismVolume = (length, width, height) => {
+  return (length * width * height);
   // return the volume of the 3D rectangular prism given the length, width, and height
   // code here
 };
