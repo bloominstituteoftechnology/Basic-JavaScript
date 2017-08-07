@@ -2,24 +2,42 @@
 
 const multiplyByTen = (num) => {
   // return num after multiplying it by ten
-  // code here
+  const byTen = num * 10;
+  return byTen;
 };
+const numByTen = multiplyByTen (5);
 
-const subtractFive = (num) => {
+console.log (numByTen);
+
+onst subtractFive = (num) => {
   // return num after subtracting five
-  // code here
+  const minusFive = num - 5;
+  return minusFive;
 };
+const numMinusFive = subtractFive (5);
+
+console.log (numMinusFive);
 
 const areSameLength = (str1, str2) => {
   // return true if the two strings have the same length
   // otherwise return false
   // code here
+  if (str1.length === str2.length) {
+    return true; 
+  } else {
+    return false;
+  }
 };
+
+const checkLength = areSameLength ('boat', 'school');
+
+console.log (checkLength);
 
 const areEqual = (x, y) => {
   // return true if x and y are the same
   // otherwise return false
   // code here
+  
 };
 
 const lessThanNinety = (num) => {
