@@ -79,7 +79,7 @@ const roundNumber = num => Math.round(num);
   // round num and return it
   // code here
 
-const roundUp = num => Math.roundUp(num);
+const roundUp = num => Math.ceil(num);
   // round num up and return it
   // code here
 
@@ -94,33 +94,28 @@ const combineNames = (firstName, lastName) => `${firstName} ${lastName}`;
   // 'Lambda', 'School' -> 'Lambda School'
   // code here
 
-const getGreeting = (name) => {
+const getGreeting = name => `Hello ${name}!`;
   // Take the name string and concatenate other strings onto it so it takes the following form:
   // 'Sam' -> 'Hello Sam!'
   // code here
-};
 
 // If you can't remember these area formulas then head over to Google or look at the test code.
 
-const getRectangleArea = (length, width) => {
+const getRectangleArea = (length, width) => length * width;
   // return the area of the rectangle by using length and width
   // code here
-};
 
-const getTriangleArea = (base, height) => {
+const getTriangleArea = (base, height) => base * (height / 2);
   // return the area of the triangle by using base and height
   // code here
-};
 
-const getCircleArea = (radius) => {
+const getCircleArea = radius => Math.round(Math.PI * Math.pow(radius, 2));
   // return the rounded area of the circle given the radius
   // code here
-};
 
-const getRectangularPrismVolume = (length, width, height) => {
+const getRectangularPrismVolume = (length, width, height) => length * width * height;
   // return the volume of the 3D rectangular prism given the length, width, and height
   // code here
-};
 
 // Do not modify code below this line.
 // --------------------------------
