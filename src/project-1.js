@@ -18,10 +18,8 @@ const areSameLength = (str1, str2) => {
   // code here
   if (str1.length === str2.length) {
     return true;
-  } else {
-    return false;
   }
-
+  return false;
   // return str1.length === str2.length
 };
 
