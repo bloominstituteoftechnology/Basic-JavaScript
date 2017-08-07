@@ -1,43 +1,40 @@
 // Do not change any of the funcxtion names
 
-const multiplyByTen = (num) => {
+const multiplyByTen = num => num * 10;
   // return num after multiplying it by ten
   // code here
-};
 
-const subtractFive = (num) => {
+const subtractFive = num => num - 5;
   // return num after subtracting five
   // code here
-};
 
-const areSameLength = (str1, str2) => {
+const areSameLength = (str1, str2) => str1.length === str2.length;
   // return true if the two strings have the same length
   // otherwise return false
   // code here
-};
 
-const areEqual = (x, y) => {
+const areEqual = (x, y) => x === y;
   // return true if x and y are the same
   // otherwise return false
   // code here
-};
 
-const lessThanNinety = (num) => {
+
+const lessThanNinety = num => num < 90;
   // return true if num is less than ninety
   // otherwise return false
   // code here
-};
 
-const greaterThanFifty = (num) => {
+
+const greaterThanFifty = num => num > 50;
   // return true if num is greater than fifty
   // otherwise return false
   // code here
-};
 
-const add = (x, y) => {
+
+const add = (x, y) => x + y  
   // add x and y together and return the value
   // code here
-};
+
 
 const subtract = (x, y) => {
   // subtract y from x and return the value
