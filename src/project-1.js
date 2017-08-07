@@ -88,11 +88,11 @@ const addExclamationPoint = str => `${str}!`;
   // 'hello world' -> 'hello world!'
   // code here
 
-const combineNames = (firstName, lastName) => {
-  // return firstName and lastName combined as one string and separated by a space.
+const combineNames = (firstName, lastName) => `${firstName} ${lastName}`;
+  // return firstName and lastName combined as one
+  // string and separated by a space.
   // 'Lambda', 'School' -> 'Lambda School'
   // code here
-};
 
 const getGreeting = (name) => {
   // Take the name string and concatenate other strings onto it so it takes the following form:
