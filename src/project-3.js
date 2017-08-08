@@ -5,34 +5,84 @@ const makeCat = (name, age) => {
   // add an age property to the object with the value set to the age argument
   // add a method called meow that returns the string 'Meow!'
   // return the object
+  const cat = {
+    name: "Spike",
+    age: 10,
+    const meow: () => {
+      console.log("Meow!");
+    }
+  }
+  return cat;
 };
+
+const pet = makeCat();
+console.log(pet);
 
 const addProperty = (object, property) => {
   // add the property to the object with a value of null
   // return the object
   // note: the property name is NOT 'property'.  The name is the value of the argument called property (a string)
+  const prop = {
+    car: "Honda",
+  } 
+  prop.truck = "Chevy"; // New property
+  return prop;
 };
+
+const auto = addProperty();
+console.log(auto);
 
 const invokeMethod = (object, method) => {
   // method is a string that contains the name of a method on the object
   // invoke this method
   // nothing needs to be returned
+  const meth = {
+    symptom1: "munchies",
+    symptom2: () => {
+      console.log("High");
+    }
+  }
+  meth.symptom2(); // Will return "High"
 };
+  const usage = invokeMethod();
+  console.log(usage);
 
 const multiplyMysteryNumberByFive = (mysteryNumberObject) => {
   // mysteryNumberObject has a property called mysteryNumber
   // multiply the mysteryNumber property by 5 and return the product
+  const mult = {
+    mysteryNumber: mysteryNumberObject * 5,
+  }
+  return mult;
 };
+  const multip = multiplyMysteryNumberByFive(4);
+  console.log(multip);
 
 const deleteProperty = (object, property) => {
   // remove the property from the object
   // return the object
+  const food = {
+    item1: "fries",
+    item2: "burger",
+  }
+  delete food.item2;
+  return food;
 };
+  const meal = deleteProperty();
+  console.log(meal);
 
 const newUser = (name, email, password) => {
   // create a new object with properties matching the arguments passed in.
   // return the new object
+  const user ={
+    name: name,
+    email: email,
+    password,
+  }
+  return user;
 };
+  const person = newUser("Allan", "al@al.com", "pwd1");
+  console.log(person);
 
 const hasEmail = (user) => {
   // return true if the user has a value for the property 'email'
