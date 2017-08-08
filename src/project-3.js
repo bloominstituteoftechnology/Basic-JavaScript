@@ -70,23 +70,28 @@ const addFriend = (user, newFriend) => {
   // return the user object
 
 const setUsersToPremium = (users) => {
-  for (let i = 0; i < users.length; i++) {
-    users[i].isPremium = true;
-  }
+  users.map(x => x.isPremium = true);
   return users;
 };
+//   for (let i = 0; i < users.length; i++) {
+//     users[i].isPremium = true;
+//   }
+//   return users;
+// };
+
   // users is an array of user objects.
   // each user object has the property 'isPremium'
   // set each user's isPremium property to true
   // return the users array
 
-const sumUserPostLikes = (user) => {
-  let sum = 0;
-  for (let i = 0; i < user.posts.length; i++) {
-    sum += user.posts[i].likes;
-  }
-  return sum;
-};
+const sumUserPostLikes = user => user.posts.map(x => x.likes).reduce((a, b) => a + b);
+//   let sum = 0;
+//   for (let i = 0; i < user.posts.length; i++) {
+//     sum += user.posts[i].likes;
+//   }
+//   return sum;
+// };
+
   // user has an array property called 'posts'
   // posts is an array of post objects
   // each post object has an integer property called 'likes'
