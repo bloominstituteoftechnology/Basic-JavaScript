@@ -5,13 +5,11 @@ const makeCat = (name, age) => {
   // add an age property to the object with the value set to the age argument
   // add a method called meow that returns the string 'Meow!'
   // return the object
-  const cat = {};
-  cat.name = name;
-  cat.age = age;
-  cat.meow = () => {
-    return 'Meow!';
+  return {
+    name,
+    age,
+    meow: () => 'Meow!'
   };
-  return cat;
 };
 
 const addProperty = (object, property) => {
@@ -45,11 +43,16 @@ const deleteProperty = (object, property) => {
 const newUser = (name, email, password) => {
   // create a new object with properties matching the arguments passed in.
   // return the new object
-  const user = {};
-  user.name = name;
-  user.email = email;
-  user.password = password;
-  return user;
+  // const user = {};
+  // user.name = name;
+  // user.email = email;
+  // user.password = password;
+  // return user;
+  return {
+    name,
+    email,
+    password,
+  };
 };
 
 const hasEmail = (user) => {
