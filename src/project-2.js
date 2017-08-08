@@ -43,11 +43,9 @@ const isInteger = num => Math.floor(num) === num;
 const fizzBuzz = (num) => {
   if (num % 3 === 0 && num % 5 === 0) {
     return 'fizzbuzz';
-  }
-  else if (num % 3 === 0) {
+  } else if (num % 3 === 0) {
     return 'fizz';
-  }
-  else if (num % 5 === 0) {
+  } else if (num % 5 === 0) {
     return 'buzz';
   }
   return num;
@@ -78,22 +76,20 @@ const isPrime = (num) => {
 };
 
 const returnFirst = (arr) => {
+  return arr[0];
   // return the first item from the array
 };
 
-const returnLast = (arr) => {
+const returnLast = arr => arr.pop();
   // return the last item of the array
-};
 
-const getArrayLength = (arr) => {
+const getArrayLength = arr => arr.length;
   // return the length of the array
-};
 
-const incrementByOne = (arr) => {
+const incrementByOne = arr => arr.map(item => item + 1);
   // arr is an array of integers
   // increase each integer by one
   // return the array
-};
 
 const addItemToArray = (arr, item) => {
   // add the item to the end of the array
