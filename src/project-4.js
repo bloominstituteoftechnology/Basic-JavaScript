@@ -18,6 +18,9 @@ const contains = (collection, item, cb) => cb(collection.indexOf(item) > -1);
   // Pass true to the callback if it is, otherwise pass false
 
 const removeDuplicates = (collection, cb) => cb(Array.from(new Set(collection)));
+  // Set object lets you store *unique* values of any type
+  // Array.from() creates a new Array instance from an array-like or iterable object
+
   // cb(collection.filter((item, pos) => collection.indexOf(item) === pos));
 
   // Write a function called removeDuplicates that removes all duplicate values from the given array.
