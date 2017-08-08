@@ -1,32 +1,78 @@
 // Do not change any of the function names
 
 const makeCat = (name, age) => {
-  // create a new object with a name property with the value set to the name argument
-  // add an age property to the object with the value set to the age argument
-  // add a method called meow that returns the string 'Meow!'
-  // return the object
+    // create a new object with a name property with the value set to the name argument
+    // add an age property to the object with the value set to the age argument
+    // add a method called meow that returns the string 'Meow!'
+    // return the object
+  //
+    // in: name = "Sylvester", age = 1
+    // out: {name: 'Sylvester',
+    // age: 1,
+    // meow: function(){return "Meow!"}
+    // }
+
+    // const myCat = makeCat("Sylvester", 1);
+    // myCat.name = "Sylvester"
+    // myCat.meow() = 'Meow!'
+    // myCat.meow() = 'Meow!'
+    // myCat.meow() = 'Meow!'
+
+    // const name = prompt('What\'s your cat\'s name?');
+    // const age = prompt ....
+    // const cat = makeCat(name, age);
+  // alert(cat.meow())
+  //
+  //
+  //
+  //  const obj = {}
+  //  obj.name = name;
+  //  obj.age = age;
+  //  obj.meow = function(){...};
+  //
+  const newObject = {
+    name,
+    age,
+    meow: () => {
+      return 'Meow!';
+    }
+  };
+
+  return newObject;
 };
 
 const addProperty = (object, property) => {
   // add the property to the object with a value of null
   // return the object
   // note: the property name is NOT 'property'.  The name is the value of the argument called property (a string)
+  /*
+   * in: object, property
+   * +in: {nationality: 'Canadian'}, "name"
+   * out: {name: null, nationality: 'Canadian'}
+   */
+  object[property] = null;
+  return object;
 };
 
 const invokeMethod = (object, method) => {
   // method is a string that contains the name of a method on the object
   // invoke this method
   // nothing needs to be returned
+  object[method]();
 };
 
 const multiplyMysteryNumberByFive = (mysteryNumberObject) => {
   // mysteryNumberObject has a property called mysteryNumber
   // multiply the mysteryNumber property by 5 and return the product
+  const product = mysteryNumberObject.mysteryNumber * 5;
+  return product;
 };
 
 const deleteProperty = (object, property) => {
   // remove the property from the object
   // return the object
+  delete object[property];
+  return object;
 };
 
 const newUser = (name, email, password) => {
