@@ -1,0 +1,156 @@
+'use strict'; // Do not change any of the function names
+
+var getBiggest = function getBiggest(x, y) {
+  if (x > y) {
+    return x;
+  }
+  return y;
+};
+
+var greeting = function greeting(language) {
+  if (language === 'German') {
+    return 'Guten Tag!';
+  }if (language === 'Chinese') {
+    return 'Ni Hao!';
+  }if (language === 'Spanish') {
+    return 'Hola!';
+  }
+  return 'Hello!';
+};
+
+var isTenOrFive = function isTenOrFive(num) {
+  if (num === 10 || num === 5) {
+    return true;
+  }
+  return false;
+};
+
+var isInRange = function isInRange(num) {
+  if (num < 50 && num > 20) {
+    return true;
+  }
+  return false;
+};
+
+var isInteger = function isInteger(num) {
+  if (num === Math.floor(num)) {
+    return true;
+  }
+  return false;
+};
+
+var fizzBuzz = function fizzBuzz(num) {
+  if (num % 3 === 0 && num % 5 === 0) {
+    return 'fizzbuzz';
+  }if (num % 3 === 0 && num % 5 !== 0) {
+    return 'fizz';
+  }if (num % 3 !== 0 && num % 5 === 0) {
+    return 'buzz';
+  }
+  return num;
+};
+
+var isPrime = function isPrime(num) {
+  if (num < 2) {
+    return false;
+  }
+  for (var i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+};
+
+var returnFirst = function returnFirst(arr) {return arr[0];};
+
+var returnLast = function returnLast(arr) {return arr[arr.length - 1];};
+
+var getArrayLength = function getArrayLength(arr) {return arr.length;};
+
+var incrementByOne = function incrementByOne(arr) {
+  for (var i = 0; i < arr.length; i++) {
+    arr[i] += 1;
+  }
+  return arr;
+};
+
+var addItemToArray = function addItemToArray(arr, item) {
+  arr.push(item);
+  return arr;
+};
+
+var addItemToFront = function addItemToFront(arr, item) {
+  arr.unshift(item);
+  return arr;
+};
+
+var wordsToSentence = function wordsToSentence(words) {
+  var allWords = '';
+  for (var i = 0; i < words.length; i++) {
+    if (i === words.length - 1) {
+      allWords += words[i];
+    } else {
+      allWords += words[i] + ' ';
+    }
+  }
+  return allWords;
+};
+
+var contains = function contains(arr, item) {
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] === item) {
+      return true;
+    }
+  }
+  return false;
+};
+
+var addNumbers = function addNumbers(numbers) {
+  var allNumbers = 0;
+  for (var i = 0; i < numbers.length; i++) {
+    allNumbers += numbers[i];
+  }
+  return allNumbers;
+};
+
+var averageTestScore = function averageTestScore(testScores) {
+  var allNumbers = 0;
+  for (var i = 0; i < testScores.length; i++) {
+    allNumbers += testScores[i];
+  }
+  return allNumbers / testScores.length;
+};
+
+var largestNumber = function largestNumber(numbers) {
+  var maxNumber = 0;
+  for (var i = 0; i < numbers.length; i++) {
+    if (numbers[i] > maxNumber) {
+      maxNumber = numbers[i];
+    }
+  }
+  return maxNumber;
+};
+
+// Do not modify code below this line.
+// --------------------------------
+
+module.exports = {
+  getBiggest: getBiggest,
+  greeting: greeting,
+  isTenOrFive: isTenOrFive,
+  isInRange: isInRange,
+  isInteger: isInteger,
+  fizzBuzz: fizzBuzz,
+  isPrime: isPrime,
+  returnFirst: returnFirst,
+  returnLast: returnLast,
+  getArrayLength: getArrayLength,
+  incrementByOne: incrementByOne,
+  addItemToArray: addItemToArray,
+  addItemToFront: addItemToFront,
+  wordsToSentence: wordsToSentence,
+  contains: contains,
+  addNumbers: addNumbers,
+  averageTestScore: averageTestScore,
+  largestNumber: largestNumber };

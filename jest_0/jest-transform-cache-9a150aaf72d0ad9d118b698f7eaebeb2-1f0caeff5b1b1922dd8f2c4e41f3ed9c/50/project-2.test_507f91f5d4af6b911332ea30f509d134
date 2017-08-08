@@ -1,0 +1,207 @@
+'use strict'; /* eslint-disable no-undef */var _require =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+require('../src/project-2'),getBiggest = _require.getBiggest,greeting = _require.greeting,isTenOrFive = _require.isTenOrFive,isInRange = _require.isInRange,isInteger = _require.isInteger,fizzBuzz = _require.fizzBuzz,isPrime = _require.isPrime,returnFirst = _require.returnFirst,returnLast = _require.returnLast,getArrayLength = _require.getArrayLength,incrementByOne = _require.incrementByOne,addItemToArray = _require.addItemToArray,addItemToFront = _require.addItemToFront,wordsToSentence = _require.wordsToSentence,contains = _require.contains,addNumbers = _require.addNumbers,averageTestScore = _require.averageTestScore,largestNumber = _require.largestNumber;
+
+describe('Project 2', function () {
+  describe('getBiggest(x, y)', function () {
+    it('should return x if it is larger than y', function () {
+      expect(getBiggest(10, 5)).toBe(10);
+    });
+    it('should return y if it is larger than x', function () {
+      expect(getBiggest(50, 100)).toBe(100);
+    });
+    it('should return either one if they are the same', function () {
+      expect(getBiggest(1000, 1000)).toBe(1000);
+    });
+  });
+
+  describe('greeting(language)', function () {
+    it('should return \'Guten Tag!\' for German', function () {
+      expect(greeting('German')).toBe('Guten Tag!');
+    });
+    it('should return \'Hola!\' for Spanish', function () {
+      expect(greeting('Spanish')).toBe('Hola!');
+    });
+    it('should return \'Ni Hao!\' for Chinese', function () {
+      expect(greeting('Chinese')).toBe('Ni Hao!');
+    });
+    it('should return \'Hello!\' if no argument is passed in or if a language beyond Spanish, English, and German is passed in.', function () {
+      expect(greeting('French')).toBe('Hello!');
+      expect(greeting()).toBe('Hello!');
+    });
+  });
+
+  describe('isTenOrFive(num)', function () {
+    it('should return true if num is 10 or 5', function () {
+      expect(isTenOrFive(10)).toBe(true);
+      expect(isTenOrFive(5)).toBe(true);
+    });
+    it('should return false if num is not 10 or 5', function () {
+      expect(isTenOrFive(11)).toBe(false);
+      expect(isTenOrFive(6)).toBe(false);
+      expect(isTenOrFive(0)).toBe(false);
+      expect(isTenOrFive(5.01)).toBe(false);
+    });
+  });
+
+  describe('isInRange(num)', function () {
+    it('should return true if num is inside range', function () {
+      expect(isInRange(35.5)).toBe(true);
+      expect(isInRange(40)).toBe(true);
+      expect(isInRange(49)).toBe(true);
+      expect(isInRange(21)).toBe(true);
+    });
+    it('should return false if outside of range', function () {
+      expect(isInRange(10)).toBe(false);
+      expect(isInRange(20)).toBe(false);
+      expect(isInRange(50)).toBe(false);
+      expect(isInRange(100)).toBe(false);
+    });
+  });
+
+  describe('isInteger(num)', function () {
+    it('should return true if num is 5', function () {
+      expect(isInteger(5)).toBe(true);
+    });
+    it('should return false if num is 0.5', function () {
+      expect(isInteger(0.5)).toBe(false);
+    });
+    it('should return true if num is -20', function () {
+      expect(isInteger(-20)).toBe(true);
+    });
+    it('should return true for 0', function () {
+      expect(isInteger(0)).toBe(true);
+    });
+  });
+
+  describe('fizzBuzz(num)', function () {
+    it('should return fizz if divisible by 3', function () {
+      expect(fizzBuzz(9)).toBe('fizz');
+    });
+    it('should return buzz if divisible by 5', function () {
+      expect(fizzBuzz(10)).toBe('buzz');
+    });
+    it('should return fizzbuzz if divisible by 3 and 5', function () {
+      expect(fizzBuzz(15)).toBe('fizzbuzz');
+    });
+    it('should return num if not divisible by 3 or 5', function () {
+      expect(fizzBuzz(4)).toBe(4);
+    });
+  });
+
+  describe('isPrime(num)', function () {
+    it('should return true if num is prime', function () {
+      expect(isPrime(7)).toBe(true);
+      expect(isPrime(97)).toBe(true);
+    });
+    it('should return false if num is not prime', function () {
+      expect(isPrime(10)).toBe(false);
+      expect(isPrime(100)).toBe(false);
+      expect(isPrime(0)).toBe(false);
+      expect(isPrime(1)).toBe(false);
+    });
+  });
+
+  describe('returnFirst(arr)', function () {
+    it('should return the first item in the array', function () {
+      expect(returnFirst([10, 10, 16, 12])).toBe(10);
+      expect(returnFirst([97, 100, 80, 55, 72, 94])).toBe(97);
+    });
+  });
+
+  describe('returnLast(arr)', function () {
+    it('should return the last item in the array', function () {
+      expect(returnLast([10, 10, 16, 12])).toBe(12);
+      expect(returnLast([97, 100, 80, 55, 72, 94])).toBe(94);
+      expect(returnLast(['hi', 'there', 'how', 'are', 'you', 'doing?'])).toBe('doing?');
+    });
+  });
+
+  describe('getArrayLength(arr)', function () {
+    it('should return the length of the array', function () {
+      expect(getArrayLength([10, 10, 16, 12])).toBe(4);
+      expect(getArrayLength([97, 100, 80, 55, 72, 94])).toBe(6);
+      expect(getArrayLength(['hi', 'there', 'how', 'are', 'you', 'doing?'])).toBe(6);
+    });
+  });
+
+  describe('incrementByOne(arr)', function () {
+    it('should return the array with each value incremented by one', function () {
+      expect(incrementByOne([10, 10, 16, 12])).toEqual([11, 11, 17, 13]);
+      expect(incrementByOne([97, 100, 80, 55, 72, 94])).toEqual([98, 101, 81, 56, 73, 95]);
+      expect(incrementByOne([])).toEqual([]);
+    });
+  });
+
+  describe('addItemToArray(arr, item)', function () {
+    it('should return the array with the item added to the end', function () {
+      expect(addItemToArray([10, 10, 16, 12], 10)).toEqual([10, 10, 16, 12, 10]);
+      expect(addItemToArray([97, 100, 80, 55, 72, 94], 'Hello')).toEqual([97, 100, 80, 55, 72, 94, 'Hello']);
+      expect(addItemToArray([], true)).toEqual([true]);
+    });
+  });
+
+  describe('addItemToFront(arr, item)', function () {
+    it('should return the array with the item added to the front', function () {
+      expect(addItemToFront([10, 10, 16, 12], 10)).toEqual([10, 10, 10, 16, 12]);
+      expect(addItemToFront([97, 100, 80, 55, 72, 94], 'Hello')).toEqual(['Hello', 97, 100, 80, 55, 72, 94]);
+      expect(addItemToFront([], true)).toEqual([true]);
+    });
+  });
+
+  describe('wordsToSentence(words)', function () {
+    it('should return a string that has all of the words from the array separated by spaces', function () {
+      expect(wordsToSentence(['LambdaSchool', 'JavaScript', 'Class'])).toBe('LambdaSchool JavaScript Class');
+      expect(wordsToSentence(['LambdaSchool'])).toBe('LambdaSchool');
+    });
+  });
+
+  describe('contains(arr, item)', function () {
+    it('should return true if the array contains the item', function () {
+      expect(contains([10, 10, 16, 12], 10)).toBe(true);
+      expect(contains([97, 100, 80, 55, 72, 94], 'Hello')).toBe(false);
+      expect(contains([], true)).toBe(false);
+    });
+  });
+
+  describe('addNumbers(numbers)', function () {
+    it('should add all of the numbers in the array together and return the sum', function () {
+      expect(addNumbers([10, 10, 16])).toBe(36);
+      expect(addNumbers([97, 100])).toBe(197);
+      expect(addNumbers([0])).toBe(0);
+    });
+  });
+
+  describe('averageTestScore(testScores)', function () {
+    it('should return the average test score', function () {
+      expect(averageTestScore([10, 10, 16, 12])).toBe(12);
+      expect(averageTestScore([97, 100, 80, 55, 72, 94])).toBe(83);
+    });
+  });
+
+  describe('largestNumber(numbers)', function () {
+    it('should return the largest number', function () {
+      expect(largestNumber([10, 10, 16, 12])).toBe(16);
+      expect(largestNumber([97, 100, 80, 55, 72, 94])).toBe(100);
+      expect(largestNumber([97, 10000, 80, 55, 7.2, -94])).toBe(10000);
+    });
+  });
+});
