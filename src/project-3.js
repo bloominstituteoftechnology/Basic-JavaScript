@@ -100,8 +100,7 @@ const sumUserPostLikes = user => user.posts.map(x => x.likes).reduce((a, b) => a
 
 const addCalculateDiscountPriceMethod = (storeItem) => {
   storeItem.calculateDiscountPrice = () => {
-    const discountPrice = storeItem.price - (storeItem.price * storeItem.discountPercentage);
-    return discountPrice;
+    return storeItem.price - (storeItem.price * storeItem.discountPercentage);
   };
   return storeItem;
 };
