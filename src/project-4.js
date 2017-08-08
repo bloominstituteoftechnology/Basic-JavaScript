@@ -1,14 +1,11 @@
-const getFirstItem = (collection, cb) => {
+const getFirstItem = (collection, cb) => cb(collection[0]);
   // invoke the callback function and pass the first item from the collection in as an argument
-};
 
-const getLength = (collection, cb) => {
+const getLength = (collection, cb) => cb(collection.length);
   // Write a function called getLength that passes the length of the array into the callback
-};
 
-const getLastItem = (collection, cb) => {
+const getLastItem = (collection, cb) => cb(collection[collection.length - 1]);
   // Write a function called getLastItem which passes the getLastItem item of the array into the callback
-};
 
 const sumNums = (x, y, cb) => {
   // Write a function called sumNums that adds two numbers and passes the result to the callback
