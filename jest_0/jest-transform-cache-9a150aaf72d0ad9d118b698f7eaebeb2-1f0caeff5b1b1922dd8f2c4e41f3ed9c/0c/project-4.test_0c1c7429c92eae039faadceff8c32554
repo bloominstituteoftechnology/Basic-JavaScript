@@ -1,0 +1,133 @@
+'use strict'; /* eslint-disable no-undef */var _require =
+
+
+
+
+
+
+
+
+require('../src/project-4'),getFirstItem = _require.getFirstItem,getLength = _require.getLength,getLastItem = _require.getLastItem,sumNums = _require.sumNums,multiplyNums = _require.multiplyNums,contains = _require.contains,removeDuplicates = _require.removeDuplicates;
+
+describe('Project 4', function () {
+  describe('getFirstItem', function () {
+    it('should pass the first item from the collection to the cb', function () {
+      var collection = ['a', 'b', 'c', 'd'];
+      var firstItem = void 0;
+      getFirstItem(collection, function (first) {
+        firstItem = first;
+      });
+      expect(firstItem).toBe('a');
+    });
+  });
+
+  describe('getLength', function () {
+    it('should pass the length of the collection to the cb', function () {
+      var collection = [true, false, {}, []];
+      var collectionLength = void 0;
+      getLength(collection, function (length) {
+        collectionLength = length;
+      });
+      expect(collectionLength).toBe(4);
+    });
+  });
+
+  describe('getLastItem', function () {
+    it('should pass the last item from an array into the provided cb', function () {
+      var collection1 = [1, 2, 3];
+      var collection2 = ['a', 'b'];
+      var collection3 = [true, false, true, null];
+      var lastItems = [];
+      getLastItem(collection1, function (lastItem) {
+        lastItems.push(lastItem);
+      });
+      getLastItem(collection2, function (lastItem) {
+        lastItems.push(lastItem);
+      });
+      getLastItem(collection3, function (lastItem) {
+        lastItems.push(lastItem);
+      });
+      expect(lastItems).toEqual([3, 'b', null]);
+    });
+  });
+
+  describe('sumNums', function () {
+    it('should sum the numbers together and pass the sum to the cb', function () {
+      var sum = void 0;
+      sumNums(5, 10, function (result) {
+        sum = result;
+      });
+      expect(sum).toBe(15);
+      sumNums(-5, 5, function (result) {
+        sum = result;
+      });
+      expect(sum).toBe(0);
+    });
+  });
+
+  describe('multiplyNums', function () {
+    it('should multiply the numbers together and pass the product to the cb', function () {
+      var product = void 0;
+      multiplyNums(5, 10, function (result) {
+        product = result;
+      });
+      expect(product).toBe(50);
+      multiplyNums(-5, 5, function (result) {
+        product = result;
+      });
+      expect(product).toBe(-25);
+    });
+  });
+
+  describe('contains', function () {
+    it('should pass true to cb is the collection contains the specified item', function () {
+      var collection = ['a', 'b', 'c', 'd'];
+      var containsItem = void 0;
+      contains(collection, 'd', function (result) {
+        containsItem = result;
+      });
+      expect(containsItem).toBe(true);
+    });
+    it('should return false if the item is not contained in the array', function () {
+      var collection = ['a', 'b', 'c', 'd'];
+      var containsItem = void 0;
+      contains(collection, 55, function (result) {
+        containsItem = result;
+      });
+      expect(containsItem).toBe(false);
+    });
+    it('should work with array references', function () {
+      var nestedArray = [];
+      var collection = ['a', 'b', 'c', 'd', nestedArray];
+      var containsItem = void 0;
+      contains(collection, nestedArray, function (result) {
+        containsItem = result;
+      });
+      expect(containsItem).toBe(true);
+      contains(collection, [], function (result) {
+        containsItem = result;
+      });
+      expect(containsItem).toBe(false);
+    });
+  });
+
+  describe('removeDuplicates', function () {
+    it('should remove duplicates from an array', function () {
+      var arr = ['a', 'b', 'c', 'c'];
+      var duplicateFreeArray = void 0;
+      removeDuplicates(arr, function (result) {
+        duplicateFreeArray = result;
+      });
+      expect(duplicateFreeArray).toEqual(['a', 'b', 'c']);
+    });
+    it('should not mutate the original array', function () {
+      var arr = ['a', 'b', 'c', 'c'];
+      var duplicateFreeArray = void 0;
+      removeDuplicates(arr, function (result) {
+        duplicateFreeArray = result;
+      });
+      expect(Array.isArray(duplicateFreeArray)).toBe(true);
+      expect(duplicateFreeArray).not.toBe(arr);
+    });
+  });
+});
