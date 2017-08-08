@@ -1,17 +1,22 @@
 // Do not change any of the function names
 
 const getBiggest = (x, y) => {
-  if (x > y){
+  if (x > y) {
     return x;
-  } else {
-    return y;
   }
+  return y;
 
   // x and y are integers.  Return the larger integer
   // if they are the same return either one
 };
 
 const greeting = (language) => {
+  const translations = {
+    German: 'Guten Tag!',
+    Spanish: 'Hola!',
+    Chinese: 'Ni Hao!',
+  };
+  return translations[language] || 'Hello!';
   // return a greeting for three different languages:
   // language: 'German' -> 'Guten Tag!'
   // language: 'Spanish' -> 'Hola!'
@@ -19,25 +24,33 @@ const greeting = (language) => {
   // if language is undefined return 'Hello!'
 };
 
-const isTenOrFive = (num) => {
+const isTenOrFive = num => num === 10 || num === 5;
   // return true if num is 10 or 5
   // otherwise return false
-};
 
-const isInRange = (num) => {
+
+const isInRange = num => num < 50 && num > 20;
   // return true if num is less than 50 and greater than 20
-};
 
-const isInteger = (num) => {
+const isInteger = num => Math.floor(num) === num;
   // return true if num is an integer
   // 0.8 -> false
   // 1 -> true
   // -10 -> true
   // otherwise return false
   // hint: you can solve this using Math.floor
-};
 
 const fizzBuzz = (num) => {
+  if (num % 3 === 0 && num % 5 === 0) {
+    return 'fizzbuzz';
+  }
+  else if (num % 3 === 0) {
+    return 'fizz';
+  }
+  else if (num % 5 === 0) {
+    return 'buzz';
+  }
+  return num;
   // if num is divisible by 3 return 'fizz'
   // if num is divisible by 5 return 'buzz'
   // if num is divisible by 3 & 5 return 'fizzbuzz'
@@ -45,6 +58,18 @@ const fizzBuzz = (num) => {
 };
 
 const isPrime = (num) => {
+  if (num < 2) {
+    return false;
+  }
+  if (num % 2 === 0 && num !== 2) {
+    return false;
+  }
+  for (let i = 3; i < Math.floor(num / 2); i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
   // return true if num is prime.
   // otherwise return false
   // hint: a prime number is only evenly divisible by itself and 1
