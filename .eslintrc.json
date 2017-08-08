@@ -5,6 +5,7 @@
     ],
     "consistent-return": 0,
     "rules": {
+      "no-prototype-builtins": 1,
       "no-param-reassign": 0,
       "max-len": 0,
       "no-plusplus": 0,
