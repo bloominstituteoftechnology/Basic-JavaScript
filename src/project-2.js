@@ -3,7 +3,17 @@
 const getBiggest = (x, y) => {
   // x and y are integers.  Return the larger integer
   // if they are the same return either one
+  if (x > y) {
+    return x;
+  } else if {
+    return y > x
+  } else {
+    return x || y;
+  }
 };
+
+const large = getBiggest (4, 9);
+console.log(large);
 
 const greeting = (language) => {
   // return a greeting for three different languages:
@@ -11,16 +21,42 @@ const greeting = (language) => {
   // language: 'Spanish' -> 'Hola!'
   // language: 'Chinese' -> 'Ni Hao!'
   // if language is undefined return 'Hello!'
+  if (language === 'German') {
+    return 'Guten Tag!';
+  } else if (language === 'Spanish') {
+    return 'Hola!';
+  } else if (language === 'Chinese') {
+    return 'Ni Hao!';
+  } else {
+    return 'Hello1';
+  }
+
 };
+const lang = greeting ('German');
+console.log(lang);
 
 const isTenOrFive = (num) => {
   // return true if num is 10 or 5
   // otherwise return false
+  if (num === 10 || num === 5) {
+    return true;
+  } else {
+    return false;
+  }
 };
+const numb = isTenOrFive(5);
+console.log(numb);
 
 const isInRange = (num) => {
   // return true if num is less than 50 and greater than 20
+  if (num < 50 && num > 20) {
+    return true;
+  } else {
+    return false;
+  }
 };
+const range = isInRange(38);
+console.log(range);
 
 const isInteger = (num) => {
   // return true if num is an integer
@@ -29,7 +65,20 @@ const isInteger = (num) => {
   // -10 -> true
   // otherwise return false
   // hint: you can solve this using Math.floor
+  const answer = Math.floor(num);
+  if (answer === 0.8) {
+    return false;
+  } else if (answer === 1) {
+    return true;
+  } else if (answer === -10) {
+    return true;
+  } else {
+    return false;
+  }
 };
+const int2 = isInteger(1.5);
+console.log(int2);
+
 
 const fizzBuzz = (num) => {
   // if num is divisible by 3 return 'fizz'
