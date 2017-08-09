@@ -76,39 +76,46 @@ const deleteProperty = (object, property) => {
 };
 
 const newUser = (name, email, password) => {
+  return { name, email, password };
+};
   // create a new object with properties matching the arguments passed in.
   // return the new object
-};
 
-const hasEmail = (user) => {
+const hasEmail = user => !!user.email;
   // return true if the user has a value for the property 'email'
   // otherwise return false
-};
 
-const hasProperty = (object, property) => {
+const hasProperty = (object, property) => !!object[property];
   // return true if the object has the value of the property argument
   // property is a string
   // otherwise return false
-};
 
-const verifyPassword = (user, password) => {
+const verifyPassword = (user, password) => user.password === password;
   // check to see if the provided password matches the password property on the user object
   // return true if they match
   // otherwise return false
-};
 
 const updatePassword = (user, newPassword) => {
+  user.password = newPassword;
+  return user;
+};
   // replace the existing password on the user object with the value of newPassword
   // return the object
-};
+
 
 const addFriend = (user, newFriend) => {
+  user.friends.push(newFriend);
+  return user;
   // user has a property called friends that is an array
   // add newFriend to the end of the friends array
   // return the user object
 };
 
 const setUsersToPremium = (users) => {
+  for (let i = 0; i < users.length; i++) {
+    users[i].isPremium = true;
+  }
+  return users;
   // users is an array of user objects.
   // each user object has the property 'isPremium'
   // set each user's isPremium property to true
@@ -116,6 +123,11 @@ const setUsersToPremium = (users) => {
 };
 
 const sumUserPostLikes = (user) => {
+  let sum = 0;
+  for (let i = 0; i < user.posts.length; i++) {
+    sum += user.posts[i].likes;
+  }
+  return sum;
   // user has an array property called 'posts'
   // posts is an array of post objects
   // each post object has an integer property called 'likes'
@@ -124,6 +136,10 @@ const sumUserPostLikes = (user) => {
 };
 
 const addCalculateDiscountPriceMethod = (storeItem) => {
+  storeItem.calculateDiscountPrice = () => {
+    return (1 - this.discountPercentage) * this.price;
+  };
+  return storeItem;
   // Add a method to the storeItem object called 'calculateDiscountPrice'
   // This method should multiply the storeItem's 'price' and 'discountPercentage' to get the discount
   // The method then subtracts the discount from the price and returns the discounted price
