@@ -19,56 +19,9 @@ const contains = (collection, item, cb) => cb(collection.includes(item));
   // Write a function called contains that checks if an item is present inside of the given array.
   // Pass true to the callback if it is, otherwise pass false
 
-const removeDuplicates = (collection, cb) => {
+const removeDuplicates = (collection, cb) => {    
   // Write a function called removeDuplicates that removes all duplicate values from the given array.
   // Pass the array to the callback function.  Do not mutate the original array.
-
-  /*
-   * in: [4,5,4,5]
-   * out: [] => [4] => [4,5]
-   *
-   * create output array
-   * iterate through input array
-   *   push unique values to output array <----- how to test for uniqueness?
-   *
-   *
-   * testForUniqueness(current value)  current value = 4
-   *   iterate through the output array from 0th idx on
-   *      isDuplicate = false
-   *     if(current value is equal to the current element of the output array)
-   *        set isDuplicate to true
-   *
-   *   if isDuplicate is false, push current value to output array
-   *        
-   *      
-   *
-   * i: 1
-   * in: [4,5,4,5]
-   * out: [4]
-   * 
-   *
-   */
-  const out = [];
-  for(let i = 0; i < collection.length; i++){
-    testForUniqueness(collection[i]);
-  }
-  
-  (val) => {
-    let isDuplicate = false;
-    for(let i = 0; i < out.length; i++){
-      if(val === out[i]){
-        isDuplicate = true;
-      }
-    }
-    if(isDuplicate === false){
-      out.push(val);
-    }
-  }
- 
-
-
-  cb(out);
-
 };
 
 module.exports = {
