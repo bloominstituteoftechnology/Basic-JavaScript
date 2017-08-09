@@ -196,8 +196,6 @@ const sumUserPostLikes = (user) => {
    return sum;
 }
  
-const sumUser = sumUserPostLikes(); 
-console.log(sumUser);
 
 const addCalculateDiscountPriceMethod = (storeItem) => {
   // Add a method to the storeItem object called 'calculateDiscountPrice'
@@ -208,8 +206,17 @@ const addCalculateDiscountPriceMethod = (storeItem) => {
   // discountPercentage -> .2
   // discountPrice = 20 - (20 * .2)
   // Make sure you return storeItem after adding the method to it
-  // hint: arrow functions don't bind a this
+  // hint: arrow functions don't bind a this 
+
+const Videogame = {
+  calculateDiscountPrice: () => {
+    const calculate = 20 - (20 * .5);  
+    return discountPrice;
+  } 
+}
+  return Videogame;
 };
+  console.log(addCalculateDiscountPriceMethod()); 
 
 // Do not modify code below this line.
 // --------------------------------
