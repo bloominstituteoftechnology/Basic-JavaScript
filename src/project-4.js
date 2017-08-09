@@ -25,7 +25,8 @@ const getLength = (collection, cb) => {
 
 const black = () => {
   const num = [2, 3, 5]; 
-  console.log(num);
+  const call = num[2];
+  console.log(call); 
 }
 const getLastItem = (collection, cb) => {
   // Write a function called getLastItem which passes the getLastItem item of the array into the callback 
@@ -34,6 +35,7 @@ const getLastItem = (collection, cb) => {
 getLastItem(function(){
   black(); 
 });
+
 const theAnswer = (x, y) => { 
   const sum = x + y; 
   console.log(sum); 
@@ -58,18 +60,8 @@ multiplyNums(function() {
   product(9, 9); 
 }); 
 
-const list = (collection,item, cb) => {
-  let lists = ['a', 'b', 'c'];
-  console.log(lists);
-}
 
-const contains = (collection, item, cb) => {
-  // Write a function called contains that checks if an item is present inside of the given array.
-  // Pass true to the callback if it is, otherwise pass false 
-}; 
-
-  
-const removeDuplicates = (collection, cb) => {
+  const removeDuplicates = (collection, cb) => {
   // Write a function called removeDuplicates that removes all duplicate values from the given array.
   // Pass the array to the callback function.  Do not mutate the original array. 
 return function ()  {
@@ -88,12 +80,13 @@ arr = arr.filter( function( item, index, inputArray ) {
   const solu = removeDuplicates(); 
   solu();
 
-module.exports = {
+
+
+  module.exports = {
   getFirstItem,
   getLength,
   getLastItem,
   sumNums,
   multiplyNums,
-  contains,
   removeDuplicates
 };
