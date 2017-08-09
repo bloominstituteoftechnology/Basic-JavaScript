@@ -1,23 +1,23 @@
 const getFirstItem = (collection, cb) => cb(collection[0]);
-  // invoke the callback function and pass the first item from the collection in as an argument
+// invoke the callback function and pass the first item from the collection in as an argument
 
 const getLength = (collection, cb) => cb(collection.length);
-  // Write a function called getLength that passes the length of the array into the callback
+// Write a function called getLength that passes the length of the array into the callback
 
 const getLastItem = (collection, cb) => cb(collection.pop());
-  // Write a function called getLastItem which passes the getLastItem item of the array into the callback
+// Write a function called getLastItem which passes the getLastItem item of the array into the callback
 
 
 const sumNums = (x, y, cb) => cb(x + y);
-  // Write a function called sumNums that adds two numbers and passes the result to the callback
+// Write a function called sumNums that adds two numbers and passes the result to the callback
 
 const multiplyNums = (x, y, cb) => cb(x * y);
-  // Write a function called multiplyNums that adds two numbers and passes the result to the callback
+// Write a function called multiplyNums that adds two numbers and passes the result to the callback
 
 
 const contains = (collection, item, cb) => cb(collection.includes(item));
-  // Write a function called contains that checks if an item is present inside of the given array.
-  // Pass true to the callback if it is, otherwise pass false
+// Write a function called contains that checks if an item is present inside of the given array.
+// Pass true to the callback if it is, otherwise pass false
 
 const removeDuplicates = (collection, cb) => {
   // Write a function called removeDuplicates that removes all duplicate values from the given array.
@@ -39,36 +39,28 @@ const removeDuplicates = (collection, cb) => {
    *        set isDuplicate to true
    *
    *   if isDuplicate is false, push current value to output array
-   *        
-   *      
    *
    * i: 1
    * in: [4,5,4,5]
    * out: [4]
-   * 
    *
    */
   const out = [];
-  for(let i = 0; i < collection.length; i++){
-    testForUniqueness(collection[i]);
-  }
-  
-  (val) => {
+  const testForUniqueness = (val) => {
     let isDuplicate = false;
-    for(let i = 0; i < out.length; i++){
-      if(val === out[i]){
+    for (let i = 0; i < out.length; i++) {
+      if (val === out[i]) {
         isDuplicate = true;
       }
     }
-    if(isDuplicate === false){
+    if (isDuplicate === false) {
       out.push(val);
     }
+  };
+  for (let i = 0; i < collection.length; i++) {
+    testForUniqueness(collection[i]);
   }
- 
-
-
   cb(out);
-
 };
 
 module.exports = {
