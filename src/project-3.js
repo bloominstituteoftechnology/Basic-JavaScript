@@ -19,10 +19,11 @@ const makeCat = (name, age) => {
     // myCat.meow() = 'Meow!'
 
     // const name = prompt('What\'s your cat\'s name?');
-    // const age = prompt ....
+    // const age = prompt
     // const cat = makeCat(name, age);
   // alert(cat.meow())
   //
+
   //
   //
   //  const obj = {}
@@ -137,7 +138,7 @@ const sumUserPostLikes = (user) => {
 
 const addCalculateDiscountPriceMethod = (storeItem) => {
   storeItem.calculateDiscountPrice = () => {
-    return (1 - this.discountPercentage) * this.price;
+    return (1 - storeItem.discountPercentage) * storeItem.price;
   };
   return storeItem;
   // Add a method to the storeItem object called 'calculateDiscountPrice'
