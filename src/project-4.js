@@ -15,7 +15,7 @@ const sumNums = (x, y, cb) => {
 };
 
 const multiplyNums = (x, y, cb) => {
-  // Write a function called multiplyNums that adds two numbers and passes the result to the callback
+  // Write a function called multiplyNums that multiply two numbers and passes the result to the callback
 };
 
 const contains = (collection, item, cb) => {
