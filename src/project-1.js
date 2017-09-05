@@ -75,26 +75,26 @@ const isEven = (num) => {
   // return true if num is even
   // otherwise return false
   // code here
-  return x % 2 === 0
+  return num % 2 === 0;
 };
 
 const isOdd = (num) => {
   // return true if num is odd
   // otherwise return false
   // code here
-  return x % 2 !== 0;
+  return num % 2 !== 0;
 };
 
 const square = (num) => {
   // square num and return the new value
   // code here
-  return Math.pow(num,2);
+  return Math.pow(num, 2);
 };
 
 const cube = (num) => {
   // cube num and return the new value
   // code here
-  return Math.pow(num,3);
+  return Math.pow(num, 3);
 };
 
 const raiseToPower = (num, exponent) => {
@@ -119,7 +119,7 @@ const addExclamationPoint = (str) => {
   // add an exclamation point to the end of str and return the new string
   // 'hello world' -> 'hello world!'
   // code here
-  let output = str + '!';
+  const output = `${str}!`;
   return output;
 };
 
@@ -127,7 +127,7 @@ const combineNames = (firstName, lastName) => {
   // return firstName and lastName combined as one string and separated by a space.
   // 'Lambda', 'School' -> 'Lambda School'
   // code here
-  return `${firstName} ${lastname}`;
+  return `${firstName} ${lastName}`;
 };
 
 const getGreeting = (name) => {
@@ -148,7 +148,7 @@ const getRectangleArea = (length, width) => {
 const getTriangleArea = (base, height) => {
   // return the area of the triangle by using base and height
   // code here
-  return (length * width) / 2;
+  return (base * height) / 2;
 };
 
 const getCircleArea = (radius) => {
