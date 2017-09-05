@@ -106,7 +106,7 @@ const raiseToPower = (num, exponent) => {
 const roundNumber = (num) => {
   // round num and return it
   // code here
-  return num.round();
+  return Math.round();
 };
 
 const roundUp = (num) => {
@@ -154,7 +154,7 @@ const getTriangleArea = (base, height) => {
 const getCircleArea = (radius) => {
   // return the rounded area of the circle given the radius
   // code here
-  return Math.PI * Math.pow(radius, 2);
+  return Math.round(Math.PI * Math.pow(radius, 2));
 };
 
 const getRectangularPrismVolume = (length, width, height) => {
