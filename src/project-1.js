@@ -1,4 +1,4 @@
-// Do not change any of the funcxtion names
+// Do not change any of the function names
 
 const multiplyByTen = (num) => {
   // return num after multiplying it by ten
@@ -106,7 +106,7 @@ const raiseToPower = (num, exponent) => {
 const roundNumber = (num) => {
   // round num and return it
   // code here
-  return Math.round();
+  return Math.round(num);
 };
 
 const roundUp = (num) => {
