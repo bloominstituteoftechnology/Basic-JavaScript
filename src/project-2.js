@@ -29,7 +29,7 @@ const isTenOrFive = (num) => {
 
 const isInRange = (num) => {
   // return true if num is less than 50 and greater than 20
-  return (num < 50 || num > 20);
+  return (num < 50 && num > 20);
 };
 
 const isInteger = (num) => {
@@ -47,14 +47,11 @@ const fizzBuzz = (num) => {
   // if num is divisible by 5 return 'buzz'
   // if num is divisible by 3 & 5 return 'fizzbuzz'
   // otherwise return num
-  if (num % 3 === 0 && num % 5 === 0) {
-    return 'fizz';
-  } else if (num % 3 === 0) {
-    return 'buzz';
-  } else if (num % 5 === 0) {
-    return 'fizzBuzz';
-  }
-  return num;
+  let message = ' ';
+  if (num % 3 === 0) message += 'fizz';
+  if (num % 5 === 0) message += 'buzz';
+  if (message === '') return num;
+  return message;
 };
 
 const isPrime = (num) => {
@@ -65,7 +62,8 @@ const isPrime = (num) => {
   // note: 0 and 1 are NOT considered prime numbers
   if (num === 0 || num === 1) {
     return false;
-  } for (let i = 2; i < num; i++) {
+  } 
+  for (let i = 2; i < num; i++) {
     return false;
   }
   return true;
@@ -120,7 +118,7 @@ const wordsToSentence = (words) => {
 const contains = (arr, item) => {
   // check to see if item is inside of arr
   // return true if it is, otherwise return false
-  return arr.includes(item);
+  return arr.includes(item); 
 };
 
 const addNumbers = (numbers) => {

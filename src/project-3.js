@@ -5,11 +5,12 @@ const makeCat = (name, age) => {
   // add an age property to the object with the value set to the age argument
   // add a method called meow that returns the string 'Meow!'
   // return the object
-  return {
+  const cat = {
     name,
     age,
-    Meow: () => 'Meow!'
+    meow: () => 'Meow!'
   };
+  return cat;
 };
 
 const addProperty = (object, property) => {
@@ -43,6 +44,12 @@ const deleteProperty = (object, property) => {
 const newUser = (name, email, password) => {
   // create a new object with properties matching the arguments passed in.
   // return the new object
+  const user = {
+    name,
+    email,
+    password
+  };
+  return user;
 };
 
 const hasEmail = (user) => {
@@ -91,7 +98,7 @@ const setUsersToPremium = (users) => {
   // each user object has the property 'isPremium'
   // set each user's isPremium property to true
   // return the users array
-  for (let i = 0; i < users.lenght; i++) {
+  for (let i = 0; i < users.length; i++) {
     users[i].isPremium = true;
   }
   return users;
@@ -104,7 +111,7 @@ const sumUserPostLikes = (user) => {
   // sum together the likes from all the post objects
   // return the sum
   let sum = 0;
-  for (let i = 0; i < user.posts.lenght; i++) {
+  for (let i = 0; i < user.posts.length; i++) {
     sum += user.posts[i].likes;
   }
   return sum;
