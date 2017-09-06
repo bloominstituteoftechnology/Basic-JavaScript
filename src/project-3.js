@@ -1,6 +1,15 @@
 // Do not change any of the function names
 
 const makeCat = (name, age) => {
+  const obj = {
+    age,
+    name,
+    meow = () => {
+      return 'Meow!';
+    }
+    return obj;
+  };
+  
   // create a new object with a name property with the value set to the name argument
   // add an age property to the object with the value set to the age argument
   // add a method called meow that returns the string 'Meow!'
@@ -17,7 +26,6 @@ const invokeMethod = (object, method) => {
   // method is a string that contains the name of a method on the object
   // invoke this method
   // nothing needs to be returned
-  sdfsdfsdf
 };
 
 const multiplyMysteryNumberByFive = (mysteryNumberObject) => {
