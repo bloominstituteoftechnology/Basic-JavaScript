@@ -3,12 +3,13 @@
 const getBiggest = (x, y) => {
   // x and y are integers.  Return the larger integer
   // if they are the same return either one
-  if (x > y) {
-    return x;
-  } else if (x === y) {
-    return y;
-  }
-  return y;
+  // if (x > y) {
+  //   return x;
+  // } else if (x === y) {
+  //   return y;
+  // }
+  // return y;
+  return Math.max(x, y);
 };
 
 const greeting = (language) => {
@@ -53,7 +54,7 @@ const isInteger = (num) => {
   // -10 -> true
   // otherwise return false
   // hint: you can solve this using Math.floor
-  if ((Math.floor(num) - num === 0)) {
+  if ((Math.floor(num) === num)) {
     return true;
   }
   return false;
@@ -80,9 +81,9 @@ const isPrime = (num) => {
   // hint: a prime number is only evenly divisible by itself and 1
   // hint2: you can solve this using a for loop
   // note: 0 and 1 are NOT considered prime numbers
-  if (num < 0) {
-    return false;
-  }
+  // if (num < 0) {
+  //   return false;
+  // }
   if (num === 1 || num === 0) {
     return false;
   }
