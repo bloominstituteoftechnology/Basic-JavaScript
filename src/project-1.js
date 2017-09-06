@@ -1,5 +1,5 @@
 // Do not change any of the funcxtion names
-// Jonathan Chiang
+// partner: Jonathan Chiang
 
 const multiplyByTen = (num) => {
   // return num after multiplying it by ten
