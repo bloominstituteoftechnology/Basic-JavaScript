@@ -8,7 +8,7 @@ const makeCat = (name, age) => {
   const cat = {
     name,
     age,
-    meow: () => { return 'Meow!'; }
+    meow: () => 'Meow!'
   };
   return cat;
   // pass
@@ -48,8 +48,12 @@ const deleteProperty = (object, property) => {
 const newUser = (name, email, password) => {
   // create a new object with properties matching the arguments passed in.
   // return the new object
-  const newObj = { name, email, password };
-  return newObj;
+  const user = {
+    name,
+    email,
+    password
+  };
+  return user;
 };
 
 const hasEmail = (user) => {

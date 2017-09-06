@@ -78,37 +78,32 @@ const isEven = (num) => {
   // return true if num is even
   // otherwise return false
   // code here
-  if (num % 2 === 0) return true;
-  return false;
+  return (num % 2 === 0);
 };
 
 const isOdd = (num) => {
   // return true if num is odd
   // otherwise return false
   // code here
-  if (num % 2 === 0) return false;
-  return true;
+  return (num % 2 === 1);
 };
 
 const square = (num) => {
   // square num and return the new value
   // code here
-  num = Math.pow(num, 2);
-  return num;
+  return num * num;
 };
 
 const cube = (num) => {
   // cube num and return the new value
   // code here
-  num = Math.pow(num, 3);
-  return num;
+  return num * num * num;
 };
 
 const raiseToPower = (num, exponent) => {
   // raise num to whatever power is passed in as exponent
   // code here
-  num = Math.pow(num, exponent);
-  return num;
+  return Math.pow(num, exponent);
 };
 
 const roundNumber = (num) => {
@@ -161,13 +156,13 @@ const getTriangleArea = (base, height) => {
 const getCircleArea = (radius) => {
   // return the rounded area of the circle given the radius
   // code here
-  return Math.round(3.14 * radius * radius);
+  return Math.round(Math.PI * radius * radius);
 };
 
 const getRectangularPrismVolume = (length, width, height) => {
   // return the volume of the 3D rectangular prism given the length, width, and height
   // code here
-  return length * width * height;
+  return width * length * height;
 };
 
 // Do not modify code below this line.

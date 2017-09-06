@@ -3,7 +3,9 @@
 const getBiggest = (x, y) => {
   // x and y are integers.  Return the larger integer
   // if they are the same return either one
-  if (x >= y) return x;
+  if (x >= y) {
+    return x;
+  }
   return y;
 };
 
@@ -22,14 +24,12 @@ const greeting = (language) => {
 const isTenOrFive = (num) => {
   // return true if num is 10 or 5
   // otherwise return false
-  if (num === 10 || num === 5) return true;
-  return false;
+  return (num === 10 || num === 5);
 };
 
 const isInRange = (num) => {
   // return true if num is less than 50 and greater than 20
-  if (num < 50 && num > 20) return true;
-  return false;
+  return (num < 50 && num > 20);
 };
 
 const isInteger = (num) => {
@@ -39,8 +39,7 @@ const isInteger = (num) => {
   // -10 -> true
   // otherwise return false
   // hint: you can solve this using Math.floor
-  if (num % 1 === 0) return true;
-  return false;
+  return num === Math.floor(num);
 };
 
 const fizzBuzz = (num) => {
@@ -87,9 +86,7 @@ const incrementByOne = (arr) => {
   // arr is an array of integers
   // increase each integer by one
   // return the array
-  for (let x = 0; x < arr.length; x++) {
-    arr[x]++;
-  }
+  arr = arr.map(x => x + 1);
   return arr;
 };
 
@@ -119,20 +116,15 @@ const wordsToSentence = (words) => {
 const contains = (arr, item) => {
   // check to see if item is inside of arr
   // return true if it is, otherwise return false
-  for (let x = 0; x < arr.length; x++) {
-    if (arr[x] === item) {
-      return true;
-    }
-  }
-  return false;
+  return arr.includes(item);
 };
 
 const addNumbers = (numbers) => {
   // numbers is an array of integers.
   // add all of the integers and return the value
   let sum = 0;
-  for (let x = 0; x < numbers.length; x++) {
-    sum += numbers[x];
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
   }
   return sum;
 };
@@ -150,11 +142,11 @@ const averageTestScore = (testScores) => {
 const largestNumber = (numbers) => {
   // numbers is an array of integers
   // return the largest integer
-  let largest = numbers[0];
-  for (let x = 0; x < numbers.length; x++) {
-    if (largest <= numbers[x]) largest = numbers[x];
+  let max = numbers[0];
+  for (let i = 0; i < numbers.length; i++) {
+    if (max <= numbers[i]) max = numbers[i];
   }
-  return largest;
+  return max;
 };
 
 // Do not modify code below this line.
