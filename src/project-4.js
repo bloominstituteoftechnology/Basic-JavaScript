@@ -12,10 +12,12 @@ const getLastItem = (collection, cb) => {
 
 const sumNums = (x, y, cb) => {
   // Write a function called sumNums that adds two numbers and passes the result to the callback
+  return cb(x + y);
 };
 
 const multiplyNums = (x, y, cb) => {
   // Write a function called multiplyNums that multiplies two numbers and passes the result to the callback
+  return cb(x * y);
 };
 
 const contains = (collection, item, cb) => {
