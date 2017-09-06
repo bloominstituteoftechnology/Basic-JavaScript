@@ -26,7 +26,7 @@ const multiplyNums = (x, y, cb) => {
 const contains = (collection, item, cb) => {
   /*
   cb(collection.includes(item));
-  I think I know why this doesn't work!
+  No idea why this doesn't work. Copied and pasted into my partner's program, it does!
   */
   cb(collection.indexOf(item) !== -1);
   // Write a function called contains that checks if an item is present inside of the given array.
