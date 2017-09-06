@@ -74,14 +74,14 @@ const isEven = (num) => {
   // return true if num is even
   // otherwise return false
   // code here
-  return Math.abs(num) % 2 === 0;
+  return num % 2 === 0;
 };
 
 const isOdd = (num) => {
   // return true if num is odd
   // otherwise return false
   // code here
-  return Math.abs(num) % 2 !== 0;
+  return num % 2 !== 0;
 };
 
 const square = (num) => {

@@ -91,9 +91,7 @@ const sumUserPostLikes = (user) => {
   // each post object has an integer property called 'likes'
   // sum together the likes from all the post objects
   // return the sum
-  let sum = 0;
-  user.posts.map((post) => { sum += post.likes; return post; });
-  return sum;
+  return user.posts.reduce((sum, post) => { sum.likes += post.likes; return sum; }).likes;
 };
 
 const addCalculateDiscountPriceMethod = (storeItem) => {

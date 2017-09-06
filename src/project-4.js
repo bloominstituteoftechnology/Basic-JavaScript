@@ -34,7 +34,7 @@ const removeDuplicates = (collection, cb) => {
   // Pass the array to the callback function.  Do not mutate the original array.
   const array = [];
   for (let i = 0; i < collection.length; i++) {
-    if (!array.includes(collection[i])) {
+    if (array.indexOf(collection[i]) < 0) {
       array.push(collection[i]);
     }
   }
