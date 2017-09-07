@@ -1,7 +1,7 @@
 const getFirstItem = (collection, cb) => {
   // invoke the callback function and pass the first item from the collection in as an argument
-  const length = collection.length[0];
-  cb(length);
+  const firstItem = collection[0];
+  cb(firstItem);
 };
 
 const getLength = (collection, cb) => {
@@ -12,7 +12,9 @@ const getLength = (collection, cb) => {
 
 const getLastItem = (collection, cb) => {
   // Write a function called getLastItem which passes the getLastItem item of the array into the callback
+  const lastItem = collection[collection.length - 1];
 };
+
 
 const sumNums = (x, y, cb) => {
   // Write a function called sumNums that adds two numbers and passes the result to the callback
@@ -34,6 +36,9 @@ const contains = (collection, item, cb) => {
 const removeDuplicates = (collection, cb) => {
   // Write a function called removeDuplicates that removes all duplicate values from the given array.
   // Pass the array to the callback function.  Do not mutate the original array.
+  // uses set data structure and from function (see notes)
+  const uniqueArray = Array.from(new Set(collection));
+  cb(uniqueArray);
 };
 
 module.exports = {
