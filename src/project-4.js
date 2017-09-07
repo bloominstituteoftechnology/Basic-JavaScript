@@ -1,9 +1,13 @@
 const getFirstItem = (collection, cb) => {
   // invoke the callback function and pass the first item from the collection in as an argument
+  const length = collection.length[0];
+  cb(length);
 };
 
 const getLength = (collection, cb) => {
   // Write a function called getLength that passes the length of the array into the callback
+  const length = collection.length;
+  cb(length);
 };
 
 const getLastItem = (collection, cb) => {
@@ -12,10 +16,14 @@ const getLastItem = (collection, cb) => {
 
 const sumNums = (x, y, cb) => {
   // Write a function called sumNums that adds two numbers and passes the result to the callback
+  const sum = x + y;
+  cb(sum);
 };
 
 const multiplyNums = (x, y, cb) => {
   // Write a function called multiplyNums that multiplies two numbers and passes the result to the callback
+  const sum = x * y;
+  cb(sum);
 };
 
 const contains = (collection, item, cb) => {
