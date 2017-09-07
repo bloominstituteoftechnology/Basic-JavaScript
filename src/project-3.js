@@ -106,7 +106,7 @@ const setUsersToPremium = (users) => {
   // set each user's isPremium property to true
   // return the users array
   users.forEach((user) => {
-    users.isPremium = true;
+    user.isPremium = true;
   });
   return users;
 };

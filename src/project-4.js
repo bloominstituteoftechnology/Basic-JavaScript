@@ -13,6 +13,7 @@ const getLength = (collection, cb) => {
 const getLastItem = (collection, cb) => {
   // Write a function called getLastItem which passes the getLastItem item of the array into the callback
   const lastItem = collection[collection.length - 1];
+  cb(lastItem);
 };
 
 
@@ -31,6 +32,14 @@ const multiplyNums = (x, y, cb) => {
 const contains = (collection, item, cb) => {
   // Write a function called contains that checks if an item is present inside of the given array.
   // Pass true to the callback if it is, otherwise pass false
+  for (let i = 0; i < collection.length; i++) {
+    if (collection[i] !== item) {
+      cb(false);
+    } else if (collection[i] === item) {
+      cb(true);
+  // cb(true);
+    }
+  }
 };
 
 const removeDuplicates = (collection, cb) => {
