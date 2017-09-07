@@ -37,7 +37,6 @@ const contains = (collection, item, cb) => {
       cb(false);
     } else if (collection[i] === item) {
       cb(true);
-  // cb(true);
     }
   }
 };
