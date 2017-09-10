@@ -19,24 +19,14 @@ const greeting = (language) => {
   // language: 'Chinese' -> 'Ni Hao!'
   // if language is undefined return 'Hello!'
   // let greeting = ('Guten Tag!');
-  if (language === 'German') {
-    return ('Guten Tag!');
-  }
-  // language = 'English';
-  // greeting = ('Hello!');
-  if (language === 'Chinese') {
-    return ('Ni Hao!');
-  }
-  // language = 'Spanish';
-  // greeting = ('Hola!');
-  if (language === 'Spanish') {
-    return ('Hola!');
-  }
-  // if language is undefined return 'Hello!'
-  // language !== 'German' || 'Spanish' || 'English';
-  if (language !== 'German' || 'Spanish' || 'Chinese') {
-    return ('Hello!');
-  }
+  const greetings = {
+    German: 'Guten Tag',
+    Spanish: 'Hola',
+    Chinese: 'Ni Hao',
+  };
+
+  const translated = greetings[language] ? greetings[language] : 'Hello';
+  return `${translated}!`;
 };
 
 const isTenOrFive = (num) => {
@@ -62,13 +52,20 @@ const isInRange = (num) => {
 };
 
 const isInteger = (num) => {
+  if (isNaN(num)) {
+    return false;
+  }
+  const x = parseFloat(num);
+  if (x > 0 && x < 1) {
+    return false;
+  }
+  return (x || 0) === x;
   // return true if num is an integer
   // 0.8 -> false
   // 1 -> true
   // -10 -> true
   // otherwise return false
   // hint: you can solve this using Math.floor
-
 };
 
 const fizzBuzz = (num) => {
@@ -168,10 +165,8 @@ const contains = (arr, item) => {
 const addNumbers = (numbers) => {
   // numbers is an array of integers.
   // add all of the integers and return the value
-  let total = 0;
-  for (let i = 0; i < numbers.length; i++) {
-    total += numbers[i];
-  }
+  const sum = numbers.reduce((a, b) => a + b, 0);
+  return sum;
 };
 
 const averageTestScore = (testScores) => {
