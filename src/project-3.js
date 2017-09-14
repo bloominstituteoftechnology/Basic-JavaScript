@@ -4,9 +4,9 @@ const makeCat = (name, age) => {
   const Cat = {
     name,
     age,
-  // Cat.meow = ('Meow!') => {
-  // return meow();
-  // };
+  };
+  Cat.meow = function () {
+    return ('Meow!');
   };
   return Cat;
 };
@@ -64,15 +64,24 @@ const hasEmail = (user) => {
 
 const hasProperty = (object, property) => {
   // return true if the object has the value of the property argument
-  return object.property === property;
+  if (property === object.property) {
+    return true;
+  }
 };
 
 const verifyPassword = (user, password) => {
-  return user.password === password;
+  const User = {
+    user,
+    password,
+  };
+  if (password === user.password) {
+    return true;
+  }
+  return false;
+};
   // check to see if the provided password matches the password property on the user object
   // return true if they match
   // otherwise return false
-};
 
 const updatePassword = (user, newPassword) => {
   // replace the existing password on the user object with the value of newPassword
