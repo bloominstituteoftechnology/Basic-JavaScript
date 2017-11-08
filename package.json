@@ -1,7 +1,7 @@
 {
-  "name": "basic-javascript",
+  "name": "js-homework-1",
   "version": "1.0.0",
-  "description": "LambdaSchool Basic JavaScript",
+  "description": "LambdaSchool's JavaScript Mini-Bootcamp Homework 1",
   "main": "index.js",
   "scripts": {
     "test": "eslint tests/*.js && eslint src/*.js && jest --verbose",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SunJieMing/basic-javascript.git"
+    "url": "git+https://github.com/SunJieMing/js-minicamp-homework-1.git"
   },
   "author": "Ben Nelson",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SunJieMing/basic-javascript/issues"
+    "url": "https://github.com/SunJieMing/js-minicamp-homework-1/issues"
   },
-  "homepage": "https://github.com/SunJieMing/basic-javascript#readme",
+  "homepage": "https://github.com/SunJieMing/js-minicamp-homework-1#readme",
   "devDependencies": {
     "babel-jest": "^19.0.0",
     "eslint": "^3.17.1",
