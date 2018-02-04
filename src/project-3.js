@@ -5,6 +5,12 @@ const makeCat = (name, age) => {
   // add an age property to the object with the value set to the age argument
   // add a method called meow that returns the string 'Meow!'
   // return the object
+  const cat = {
+    name,
+    age,
+    meow() { return 'Meow!'; },
+  };
+  return cat;
 };
 
 const addProperty = (object, property) => {
@@ -38,6 +44,8 @@ const deleteProperty = (object, property) => {
 const newUser = (name, email, password) => {
   // create a new object with properties matching the arguments passed in.
   // return the new object
+  const user = { name, email, password, };
+  return user;
 };
 
 const hasEmail = (user) => {
@@ -95,8 +103,8 @@ const sumUserPostLikes = (user) => {
   let sum = 0;
   const posts = user.posts;
 
-  function addLikes(item) {
-    sum += posts.likes;
+  function addLikes(object) {
+    sum += object.likes;
     return sum;
   }
 
@@ -114,7 +122,7 @@ const addCalculateDiscountPriceMethod = (storeItem) => {
   // discountPrice = 20 - (20 * .2)
   // Make sure you return storeItem after adding the method to it
   // hint: arrow functions don't bind a this
-  storeItem.calculateDiscountPrice = function () {
+  storeItem.calculateDiscountPrice = function disc() {
     const discount = storeItem.price * storeItem.discountPercentage;
     return this.price - discount;
   };
