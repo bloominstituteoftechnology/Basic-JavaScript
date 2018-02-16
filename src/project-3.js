@@ -81,6 +81,8 @@ const addFriend = (user, newFriend) => {
   // user has a property called friends that is an array
   // add newFriend to the end of the friends array
   // return the user object
+  user.friends.push(newFriend);
+  return user;
 };
 
 const setUsersToPremium = (users) => {
@@ -88,6 +90,10 @@ const setUsersToPremium = (users) => {
   // each user object has the property 'isPremium'
   // set each user's isPremium property to true
   // return the users array
+  for (let i = 0; i < users.length; i++) {
+    users[i].isPremium = true;
+  }
+  return users;
 };
 
 const sumUserPostLikes = (user) => {
@@ -96,6 +102,11 @@ const sumUserPostLikes = (user) => {
   // each post object has an integer property called 'likes'
   // sum together the likes from all the post objects
   // return the sum
+  let output = 0;
+  for (let i = 0; i < user.posts.length; i++) {
+    output += user.posts[i].likes;
+  }
+  return output;
 };
 
 const addCalculateDiscountPriceMethod = (storeItem) => {
