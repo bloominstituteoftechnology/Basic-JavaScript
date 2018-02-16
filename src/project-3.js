@@ -23,26 +23,37 @@ const invokeMethod = (object, method) => {
   // method is a string that contains the name of a method on the object
   // invoke this method
   // nothing needs to be returned
+  object[method]();
 };
 
 const multiplyMysteryNumberByFive = (mysteryNumberObject) => {
   // mysteryNumberObject has a property called mysteryNumber
   // multiply the mysteryNumber property by 5 and return the product
+  return mysteryNumberObject.mysteryNumber * 5;
 };
 
 const deleteProperty = (object, property) => {
   // remove the property from the object
   // return the object
+  delete object[property];
+  return object;
 };
 
 const newUser = (name, email, password) => {
   // create a new object with properties matching the arguments passed in.
   // return the new object
+  const user = {
+    name,
+    email,
+    password
+  };
+  return user;
 };
 
 const hasEmail = (user) => {
   // return true if the user has a value for the property 'email'
   // otherwise return false
+  return 'email' in user;
 };
 
 const hasProperty = (object, property) => {
