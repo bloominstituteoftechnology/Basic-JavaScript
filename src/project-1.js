@@ -118,21 +118,21 @@ const addExclamationPoint = (str) => {
   // add an exclamation point to the end of str and return the new string
   // 'hello world' -> 'hello world!'
   // code here
-  return str + '!';
+  return `${str}!`;
 };
 
 const combineNames = (firstName, lastName) => {
   // return firstName and lastName combined as one string and separated by a space.
   // 'Lambda', 'School' -> 'Lambda School'
   // code here
-  return firstName + ' ' + lastName;
+  return `${firstName} ${lastName}`;
 };
 
 const getGreeting = (name) => {
   // Take the name string and concatenate other strings onto it so it takes the following form:
   // 'Sam' -> 'Hello Sam!'
   // code here
-  return 'Hello ' + name + '!';
+  return `Hello ${name}!`;
 };
 
 // If you can't remember these area formulas then head over to Google or look at the test code.
@@ -152,7 +152,7 @@ const getTriangleArea = (base, height) => {
 const getCircleArea = (radius) => {
   // return the rounded area of the circle given the radius
   // code here
-  return (Math.pi * (Math.pow(radius, 2)));
+  return Math.round((Math.pi * (Math.pow(radius, 2))));
 };
 
 const getRectangularPrismVolume = (length, width, height) => {
