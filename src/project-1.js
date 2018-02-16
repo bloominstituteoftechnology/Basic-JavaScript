@@ -3,7 +3,7 @@
 const multiplyByTen = (num) => {
   // return num after multiplying it by ten
   // code here
-  return num*10;
+  return num * 10;
 };
 
 const subtractFive = (num) => {
@@ -16,90 +16,90 @@ const areSameLength = (str1, str2) => {
   // return true if the two strings have the same length
   // otherwise return false
   // code here
-  return str1.length===str2.length;
+  return str1.length === str2.length;
 };
 
 const areEqual = (x, y) => {
   // return true if x and y are the same
   // otherwise return false
   // code here
-  return x===y;
+  return x === y;
 };
 
 const lessThanNinety = (num) => {
   // return true if num is less than ninety
   // otherwise return false
   // code here
-  return num<90;
+  return num < 90;
 };
 
 const greaterThanFifty = (num) => {
   // return true if num is greater than fifty
   // otherwise return false
   // code here
-  return num>50;
+  return num > 50;
 };
 
 const add = (x, y) => {
   // add x and y together and return the value
   // code here
-  return x+y;
+  return x + y;
 };
 
 const subtract = (x, y) => {
   // subtract y from x and return the value
   // code here
-  return x-y;
+  return x - y;
 };
 
 const divide = (x, y) => {
   // divide x by y and return the value
   // code here
-  return x/y;
+  return x / y;
 };
 
 const multiply = (x, y) => {
   // multiply x by y and return the value
   // code here
-  return x*y;
+  return x * y;
 };
 
 const getRemainder = (x, y) => {
   // return the remainder from dividing x by y
   // code here
-  return x%y;
+  return x % y;
 };
 
 const isEven = (num) => {
   // return true if num is even
   // otherwise return false
   // code here
-  return num%2===0;
+  return num % 2 === 0;
 };
 
 const isOdd = (num) => {
   // return true if num is odd
   // otherwise return false
   // code here
-  return num%2>0;
+  return num % 2 > 0;
 };
 
 const square = (num) => {
   // square num and return the new value
   // code here
-  return num*num;
+  return num * num;
 };
 
 const cube = (num) => {
   // cube num and return the new value
   // code here
-  return Math.pow(num,3);
+  return Math.pow(num, 3);
 };
 
 const raiseToPower = (num, exponent) => {
   // raise num to whatever power is passed in as exponent
   // code here
-  return Math.pow(num,exponent);
+  return Math.pow(num, exponent);
 };
 
 const roundNumber = (num) => {
@@ -118,7 +118,7 @@ const addExclamationPoint = (str) => {
   // add an exclamation point to the end of str and return the new string
   // 'hello world' -> 'hello world!'
   // code here
-  return str+="!";
+  return str += '!';
 };
 
 const combineNames = (firstName, lastName) => {
