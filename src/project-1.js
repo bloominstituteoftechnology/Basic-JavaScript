@@ -1,3 +1,4 @@
+/* eslint-disable */
 // Do not change any of the funcxtion names
 
 const multiplyByTen = (num) => {
