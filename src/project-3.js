@@ -53,24 +53,28 @@ const newUser = (name, email, password) => {
 const hasEmail = (user) => {
   // return true if the user has a value for the property 'email'
   // otherwise return false
-  return 'email' in user;
+  return (user.email !== null) && (user.email !== '') && (Object.prototype.hasOwnProperty.call(user, 'email'));
 };
 
 const hasProperty = (object, property) => {
   // return true if the object has the value of the property argument
   // property is a string
   // otherwise return false
+  return Object.prototype.hasOwnProperty.call(object, property);
 };
 
 const verifyPassword = (user, password) => {
   // check to see if the provided password matches the password property on the user object
   // return true if they match
   // otherwise return false
+  return user.password === password;
 };
 
 const updatePassword = (user, newPassword) => {
   // replace the existing password on the user object with the value of newPassword
   // return the object
+  user.password = newPassword;
+  return user;
 };
 
 const addFriend = (user, newFriend) => {
