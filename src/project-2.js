@@ -151,7 +151,7 @@ const averageTestScore = (testScores) => {
 const largestNumber = (numbers) => {
   // numbers is an array of integers
   // return the largest integer
-  return numbers.reduce((x, y) => (y > x) ? y : x);
+  return numbers.reduce((x, y) => { return Math.max(x, y); });
 };
 
 // Do not modify code below this line.
