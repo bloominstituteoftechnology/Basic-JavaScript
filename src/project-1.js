@@ -125,12 +125,14 @@ const combineNames = (firstName, lastName) => {
   // return firstName and lastName combined as one string and separated by a space.
   // 'Lambda', 'School' -> 'Lambda School'
   // code here
+  return `${firstName} ${lastName}`;
 };
 
 const getGreeting = (name) => {
   // Take the name string and concatenate other strings onto it so it takes the following form:
   // 'Sam' -> 'Hello Sam!'
   // code here
+  return `Hello ${name}!`;
 };
 
 // If you can't remember these area formulas then head over to Google or look at the test code.
@@ -138,21 +140,25 @@ const getGreeting = (name) => {
 const getRectangleArea = (length, width) => {
   // return the area of the rectangle by using length and width
   // code here
+  return length * width;
 };
 
 const getTriangleArea = (base, height) => {
   // return the area of the triangle by using base and height
   // code here
+  return 0.5 * base * height;
 };
 
 const getCircleArea = (radius) => {
   // return the rounded area of the circle given the radius
   // code here
+  return Math.round(Math.PI * radius * radius);
 };
 
 const getRectangularPrismVolume = (length, width, height) => {
   // return the volume of the 3D rectangular prism given the length, width, and height
   // code here
+  return length * width * height;
 };
 
 // Do not modify code below this line.
