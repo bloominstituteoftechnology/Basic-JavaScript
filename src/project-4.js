@@ -1,5 +1,6 @@
 const getFirstItem = (collection, cb) => {
   // invoke the callback function and pass the first item from the collection in as an argument
+  cb(collection[0]);
 };
 
 const getLength = (collection, cb) => {
