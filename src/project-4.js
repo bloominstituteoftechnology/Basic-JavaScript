@@ -5,10 +5,12 @@ const getFirstItem = (collection, cb) => {
 
 const getLength = (collection, cb) => {
   // Write a function called getLength that passes the length of the array into the callback
+  cb(collection.length);
 };
 
 const getLastItem = (collection, cb) => {
   // Write a function called getLastItem which passes the getLastItem item of the array into the callback
+  cb(collection[collection.length - 1]);
 };
 
 const sumNums = (x, y, cb) => {
