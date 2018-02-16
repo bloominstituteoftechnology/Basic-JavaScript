@@ -119,6 +119,10 @@ const addCalculateDiscountPriceMethod = (storeItem) => {
   // discountPrice = 20 - (20 * .2)
   // Make sure you return storeItem after adding the method to it
   // hint: arrow functions don't bind a this
+  storeItem.calculateDiscountPrice = function () {
+    return storeItem.price - (storeItem.price * storeItem.discountPercentage);
+  };
+  return storeItem;
 };
 
 // Do not modify code below this line.
