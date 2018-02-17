@@ -1,5 +1,5 @@
 // Do not change any of the funcxtion names
-
+//Kenny
 const multiplyByTen = (num) => {
   // return num after multiplying it by ten
   // code here
