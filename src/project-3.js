@@ -40,7 +40,7 @@ const hasEmail = (user) => {
 };
 
 const hasProperty = (object, property) => {
-  // return true if the object has the value of the property argument
+  // return true if the object has the property argument
   // property is a string
   // otherwise return false
 };
