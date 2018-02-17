@@ -131,11 +131,23 @@ const addNumbers = (numbers) => {
 const averageTestScore = (testScores) => {
   // testScores is an array.  Iterate over testScores and compute the average.
   // return the average
+  let rawTotal = 0;
+  for (let i = 0; i < testScores.length; i++) {
+    rawTotal += testScores[i];
+  }
+  return rawTotal / testScores.length;
 };
 
 const largestNumber = (numbers) => {
   // numbers is an array of integers
   // return the largest integer
+  let largest = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] > largest) {
+      largest = numbers[i];
+    }
+  }
+  return largest;
 };
 
 // Do not modify code below this line.
