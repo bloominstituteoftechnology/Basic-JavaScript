@@ -68,10 +68,12 @@ const returnFirst = (arr) => {
 
 const returnLast = (arr) => {
   // return the last item of the array
+  return arr[arr.length - 1];
 };
 
 const getArrayLength = (arr) => {
   // return the length of the array
+  return arr.length;
 };
 
 const incrementByOne = (arr) => {
