@@ -1,3 +1,4 @@
+/* eslint-disable */
 // Do not change any of the function names
 
 const getBiggest = (x, y) => {
@@ -89,27 +90,37 @@ const returnFirst = (arr) => {
 
 const returnLast = (arr) => {
   // return the last item of the array
+  return arr.pop();
 };
 
 const getArrayLength = (arr) => {
   // return the length of the array
+  return arr.length;
 };
 
 const incrementByOne = (arr) => {
   // arr is an array of integers
   // increase each integer by one
   // return the array
+  for (let i in arr) {
+    arr[i]++;
+  }
+  return arr;
 };
 
 const addItemToArray = (arr, item) => {
   // add the item to the end of the array
   // return the array
+  arr.push(item);
+  return arr;
 };
 
 const addItemToFront = (arr, item) => {
   // add the item to the front of the array
   // return the array
   // hint: use the array method .unshift
+  arr.unshift(item);
+  return arr;
 };
 
 const wordsToSentence = (words) => {
@@ -117,26 +128,46 @@ const wordsToSentence = (words) => {
   // return a string that is all of the words concatenated together
   // spaces need to be between each word
   // example: ['Hello', 'world!'] -> 'Hello world!'
+  return words.join(' ');
 };
 
 const contains = (arr, item) => {
   // check to see if item is inside of arr
   // return true if it is, otherwise return false
+  if (arr.length === 0) {
+    return false;
+  }
+  for (let i in arr) {
+    if (item === arr[i]) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 };
 
 const addNumbers = (numbers) => {
   // numbers is an array of integers.
   // add all of the integers and return the value
+  return numbers.reduce((total, amount) => total + amount);
 };
 
 const averageTestScore = (testScores) => {
   // testScores is an array.  Iterate over testScores and compute the average.
   // return the average
+  return testScores.reduce((total, amount) => total + amount) / testScores.length;
 };
 
 const largestNumber = (numbers) => {
   // numbers is an array of integers
   // return the largest integer
+  let largest = 0;
+  for (let i in numbers) {
+    if (numbers[i] > largest) {
+      largest = numbers[i];
+    }
+  }
+  return largest;
 };
 
 // Do not modify code below this line.
