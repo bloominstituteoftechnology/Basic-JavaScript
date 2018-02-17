@@ -89,12 +89,16 @@ const incrementByOne = (arr) => {
 const addItemToArray = (arr, item) => {
   // add the item to the end of the array
   // return the array
+  arr.push(item);
+  return arr;
 };
 
 const addItemToFront = (arr, item) => {
   // add the item to the front of the array
   // return the array
   // hint: use the array method .unshift
+  arr.unshift(item);
+  return arr;
 };
 
 const wordsToSentence = (words) => {
@@ -102,6 +106,7 @@ const wordsToSentence = (words) => {
   // return a string that is all of the words concatenated together
   // spaces need to be between each word
   // example: ['Hello', 'world!'] -> 'Hello world!'
+  return words.join(' ');
 };
 
 const contains = (arr, item) => {
@@ -112,6 +117,11 @@ const contains = (arr, item) => {
 const addNumbers = (numbers) => {
   // numbers is an array of integers.
   // add all of the integers and return the value
+  let total = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    total += numbers[i];
+  }
+  return total;
 };
 
 const averageTestScore = (testScores) => {
