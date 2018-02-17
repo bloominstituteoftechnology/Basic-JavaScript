@@ -32,7 +32,11 @@ const contains = (collection, item, cb) => {
 const removeDuplicates = (collection, cb) => {
   // Write a function called removeDuplicates that removes all duplicate values from the given array.
   // Pass the array to the callback function.  Do not mutate the original array.
-  
+  const arr = [];
+  collection.forEach((item) => {
+    if (!arr.includes(item)) arr.push(item);
+  });
+  cb(arr);
 };
 
 module.exports = {
