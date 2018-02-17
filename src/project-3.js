@@ -5,6 +5,11 @@ const makeCat = (name, age) => {
   // add an age property to the object with the value set to the age argument
   // add a method called meow that returns the string 'Meow!'
   // return the object
+  const cat = {};
+  cat.name = name;
+  cat.age = age;
+  cat.meow = () => 'Meow!';
+  return cat;
 };
 
 const addProperty = (object, property) => {
