@@ -112,6 +112,10 @@ const wordsToSentence = (words) => {
 const contains = (arr, item) => {
   // check to see if item is inside of arr
   // return true if it is, otherwise return false
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === item) return true;
+  }
+  return false;
 };
 
 const addNumbers = (numbers) => {
