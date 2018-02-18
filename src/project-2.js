@@ -1,11 +1,22 @@
 // Do not change any of the function names
 
 const getBiggest = (x, y) => {
-  // x and y are integers.  Return the larger integer
-  // if they are the same return either one
+  if ( x > y) {
+    return x;
+  } 
+  
+  else if (y > x){
+    return y;
+  }
+
+  else if (x === y) {
+    return x || y;
+  }
+
 };
 
 const greeting = (language) => {
+
   // return a greeting for three different languages:
   // language: 'German' -> 'Guten Tag!'
   // language: 'Spanish' -> 'Hola!'
@@ -14,57 +25,69 @@ const greeting = (language) => {
 };
 
 const isTenOrFive = (num) => {
-  // return true if num is 10 or 5
-  // otherwise return false
+  if (num ==== 10 || num 5){
+    return true;
+  } return false;
 };
 
 const isInRange = (num) => {
-  // return true if num is less than 50 and greater than 20
+if (num < 50) || (num > 20){
+  return true;
+} return false;
+
 };
 
 const isInteger = (num) => {
-  // return true if num is an integer
-  // 0.8 -> false
-  // 1 -> true
-  // -10 -> true
-  // otherwise return false
-  // hint: you can solve this using Math.floor
+    if (Math.floor(num) === num){
+        return true;
+    } return false;
 };
 
 const fizzBuzz = (num) => {
-  // if num is divisible by 3 return 'fizz'
-  // if num is divisible by 5 return 'buzz'
-  // if num is divisible by 3 & 5 return 'fizzbuzz'
-  // otherwise return num
+    if ((num % 3 === 0 && num % 5 === 0)){
+        return fizzbuzz;
+    } return num;
+
+    if else (num % 3 === 0){
+        return fizz;
+    } return num;
+
+    if else (num % 5 === 0){
+        return buzz;
+    } return num;
+  
 };
 
 const isPrime = (num) => {
-  // return true if num is prime.
-  // otherwise return false
-  // hint: a prime number is only evenly divisible by itself and 1
-  // hint2: you can solve this using a for loop
-  // note: 0 and 1 are NOT considered prime numbers
+    if(num % 1 === 0 || num % num === 0){
+        return true;
+    } return false;
 };
 
 const returnFirst = (arr) => {
-  // return the first item from the array
+  let arr = [pink, green, crimson, creme, purple , gold];
+    return arr.shift();
 };
 
 const returnLast = (arr) => {
-  // return the last item of the array
+  let arr = [pink, green,crimson,creme,purple,gold];
+  return arr.pop();
 };
 
 const getArrayLength = (arr) => {
-  // return the length of the array
+    let arr = [frog, elephant, dove, poodle];
+    return arr.length;
 };
 
-const incrementByOne = (arr) => {
-  // arr is an array of integers
-  // increase each integer by one
-  // return the array
+const incrementByOne = (arr) => { 
+let arr = [1,2,3,4,5]
+function myfunction(){
+    arr.map(++1);
+}
 };
 
 const addItemToArray = (arr, item) => {
+
   // add the item to the end of the array
   // return the array
 };
