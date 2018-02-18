@@ -125,7 +125,7 @@ const combineNames = (firstName, lastName) => {
   // return firstName and lastName combined as one string and separated by a space.
   // 'Lambda', 'School' -> 'Lambda School'
   // code here
-  return firstName + ' ' + lastName;
+  return `${firstName} ${lastName}`;
 };
 
 const getGreeting = (name) => {
@@ -152,8 +152,8 @@ const getTriangleArea = (base, height) => {
 const getCircleArea = (radius) => {
   // return the rounded area of the circle given the radius
   // code here
-  return Math.PI * Math.pow(radius,2);
-
+  return 3.14 * Math.pow(radius, 2);
+};
 
 const getRectangularPrismVolume = (length, width, height) => {
   // return the volume of the 3D rectangular prism given the length, width, and height
