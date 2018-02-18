@@ -1,4 +1,3 @@
-/* eslint-disable */
 
 const getFirstItem = (collection, cb) => {
   // invoke the callback function and pass the first item from the collection in as an argument

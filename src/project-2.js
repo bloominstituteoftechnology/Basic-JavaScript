@@ -1,4 +1,3 @@
-/* eslint-disable */
 // Do not change any of the function names
 
 const getBiggest = (x, y) => {
