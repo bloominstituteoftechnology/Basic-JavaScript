@@ -2,138 +2,168 @@
 
 const multiplyByTen = (num) => {
   // return num after multiplying it by ten
-  // code here
+  const m = num * 10;
+  return m;
 };
 
 const subtractFive = (num) => {
   // return num after subtracting five
-  // code here
+  const s = num - 5;
+  return s;
 };
 
 const areSameLength = (str1, str2) => {
   // return true if the two strings have the same length
   // otherwise return false
-  // code here
+  if (str1.length === str2.length) {
+    return true;
+  } return false;
 };
 
 const areEqual = (x, y) => {
   // return true if x and y are the same
   // otherwise return false
-  // code here
+  if (x === y) {
+    return true;
+  } return false;
 };
 
 const lessThanNinety = (num) => {
   // return true if num is less than ninety
   // otherwise return false
-  // code here
+  if (num < 90) {
+    return true;
+  } return false;
 };
 
 const greaterThanFifty = (num) => {
   // return true if num is greater than fifty
   // otherwise return false
-  // code here
+  if (num > 50) {
+    return true;
+  } return false;
 };
 
 const add = (x, y) => {
   // add x and y together and return the value
-  // code here
+  const sum = x + y;
+  return sum;
 };
 
 const subtract = (x, y) => {
   // subtract y from x and return the value
-  // code here
+  const dif = x - y;
+  return dif;
 };
 
 const divide = (x, y) => {
   // divide x by y and return the value
-  // code here
+  const quo = x / y;
+  return quo;
 };
 
 const multiply = (x, y) => {
   // multiply x by y and return the value
-  // code here
+  const prod = x * y;
+  return prod;
 };
 
 const getRemainder = (x, y) => {
   // return the remainder from dividing x by y
-  // code here
+  return x % y;
 };
 
 const isEven = (num) => {
   // return true if num is even
   // otherwise return false
-  // code here
+  if (num % 2 === 0) {
+    return true;
+  } return false;
 };
 
 const isOdd = (num) => {
   // return true if num is odd
   // otherwise return false
-  // code here
+  if (num % 2 === 0) {
+    return false;
+  } return true;
 };
 
 const square = (num) => {
   // square num and return the new value
-  // code here
+  const expTwo = Math.pow(num, 2);
+  return expTwo;
 };
 
 const cube = (num) => {
   // cube num and return the new value
-  // code here
+  const expThree = Math.pow(num, 3);
+  return expThree;
 };
 
 const raiseToPower = (num, exponent) => {
   // raise num to whatever power is passed in as exponent
-  // code here
+  const exp = Math.pow(num, exponent);
+  return exp;
 };
 
 const roundNumber = (num) => {
   // round num and return it
-  // code here
+  const round = Math.round(num);
+  return round;
 };
 
 const roundUp = (num) => {
   // round num up and return it
-  // code here
+  const ceil = Math.ceil(num);
+  return ceil;
 };
 
 const addExclamationPoint = (str) => {
   // add an exclamation point to the end of str and return the new string
   // 'hello world' -> 'hello world!'
-  // code here
+  const addExclam = `${str}!`;
+  return addExclam;
 };
 
 const combineNames = (firstName, lastName) => {
   // return firstName and lastName combined as one string and separated by a space.
   // 'Lambda', 'School' -> 'Lambda School'
-  // code here
+  const fullName = `${firstName} ${lastName}`;
+  return fullName;
 };
 
 const getGreeting = (name) => {
   // Take the name string and concatenate other strings onto it so it takes the following form:
   // 'Sam' -> 'Hello Sam!'
-  // code here
+  const toGreeting = `Hello ${name}!`;
+  return toGreeting;
 };
 
 // If you can't remember these area formulas then head over to Google or look at the test code.
 
 const getRectangleArea = (length, width) => {
   // return the area of the rectangle by using length and width
-  // code here
+  const a = length * width;
+  return a;
 };
 
 const getTriangleArea = (base, height) => {
   // return the area of the triangle by using base and height
-  // code here
+  const aTri = (base * height) / 2;
+  return aTri;
 };
 
 const getCircleArea = (radius) => {
   // return the rounded area of the circle given the radius
-  // code here
+  const aCirc = Math.round(3.14159 * Math.pow(radius, 2));
+  return aCirc;
 };
 
 const getRectangularPrismVolume = (length, width, height) => {
   // return the volume of the 3D rectangular prism given the length, width, and height
-  // code here
+  const vol = length * width * height;
+  return vol;
 };
 
 // Do not modify code below this line.
