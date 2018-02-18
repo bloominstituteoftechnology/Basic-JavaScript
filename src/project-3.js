@@ -5,13 +5,13 @@ const makeCat = (name, age) => {
   // add an age property to the object with the value set to the age argument
   // add a method called meow that returns the string 'Meow!'
   // return the object
-  let cat = {
-    name : name,
-    age : age,
-    meow : function() {
+  const cat = {
+    name,
+    age,
+    meow() {
       return 'Meow!';
-    } 
-  }
+    }
+  };
   return cat;
 };
 
@@ -46,7 +46,7 @@ const deleteProperty = (object, property) => {
 const newUser = (name, email, password) => {
   // create a new object with properties matching the arguments passed in.
   // return the new object
-  let user = {};
+  const user = {};
   user.name = name;
   user.email = email;
   user.password = password;
@@ -63,18 +63,17 @@ const hasProperty = (object, property) => {
   // return true if the object has the value of the property argument
   // property is a string
   // otherwise return false
-  return !!object.hasOwnProperty(property);
+  return !!Object.prototype.hasOwnProperty.call(object, property);
 };
 
 const verifyPassword = (user, password) => {
   // check to see if the provided password matches the password property on the user object
   // return true if they match
   // otherwise return false
-  if(user['password'] === password) {
+  if (user.password === password) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 };
 
 const updatePassword = (user, newPassword) => {
@@ -97,7 +96,7 @@ const setUsersToPremium = (users) => {
   // each user object has the property 'isPremium'
   // set each user's isPremium property to true
   // return the users array
-  for(let i in users) {
+  for (let i = 0; i < users.length; i++) {
     users[i].isPremium = true;
   }
   return users;
@@ -110,7 +109,7 @@ const sumUserPostLikes = (user) => {
   // sum together the likes from all the post objects
   // return the sum
   let result = 0;
-  for(let i in user.posts) {
+  for (let i = 0; i < user.posts.length; i++) {
     result += user.posts[i].likes;
   }
   return result;
@@ -126,10 +125,10 @@ const addCalculateDiscountPriceMethod = (storeItem) => {
   // discountPrice = 20 - (20 * .2)
   // Make sure you return storeItem after adding the method to it
   // hint: arrow functions don't bind a this
-  storeItem.calculateDiscountPrice = function() {
-    let discountPrice = this.price - (this.price * this.discountPercentage);
+  storeItem.calculateDiscountPrice = function () {
+    const discountPrice = this.price - (this.price * this.discountPercentage);
     return discountPrice;
-  }; 
+  };
   return storeItem;
 };
 

@@ -20,9 +20,8 @@ const greeting = (language) => {
     return 'Hola!';
   } else if (language === 'Chinese') {
     return 'Ni Hao!';
-  } else {
-    return 'Hello!';
   }
+  return 'Hello!';
 };
 
 const isTenOrFive = (num) => {
@@ -57,9 +56,8 @@ const fizzBuzz = (num) => {
     return 'buzz';
   } else if (num % 3 === 0) {
     return 'fizz';
-  } else {
-    return num;
   }
+  return num;
 };
 
 const isPrime = (num) => {
@@ -75,9 +73,8 @@ const isPrime = (num) => {
     for (let i = 2; i < num; i++) {
       if (num % i === 0) {
         return false;
-      } else {
-        return true;
       }
+      return true;
     }
   }
 };
@@ -101,7 +98,7 @@ const incrementByOne = (arr) => {
   // arr is an array of integers
   // increase each integer by one
   // return the array
-  for (let i in arr) {
+  for (let i = 0; i < arr.length; i++) {
     arr[i]++;
   }
   return arr;
@@ -136,12 +133,11 @@ const contains = (arr, item) => {
   if (arr.length === 0) {
     return false;
   }
-  for (let i in arr) {
+  for (let i = 0; i < arr.length; i++) {
     if (item === arr[i]) {
       return true;
-    } else {
-      return false;
     }
+    return false;
   }
 };
 
@@ -161,7 +157,7 @@ const largestNumber = (numbers) => {
   // numbers is an array of integers
   // return the largest integer
   let largest = 0;
-  for (let i in numbers) {
+  for (let i = 0; i < numbers.length; i++) {
     if (numbers[i] > largest) {
       largest = numbers[i];
     }
