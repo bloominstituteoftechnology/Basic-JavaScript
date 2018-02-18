@@ -30,34 +30,51 @@ const invokeMethod = (object, method) => {
 const multiplyMysteryNumberByFive = (mysteryNumberObject) => {
   // mysteryNumberObject has a property called mysteryNumber
   // multiply the mysteryNumber property by 5 and return the product
-  
+  return mysteryNumberObject.mysteryNumber * 5;
 };
 
 const deleteProperty = (object, property) => {
   // remove the property from the object
   // return the object
+  delete object[property];
+  return object;
 };
 
 const newUser = (name, email, password) => {
   // create a new object with properties matching the arguments passed in.
   // return the new object
+  const user = {};
+  user.name = name;
+  user.email = email;
+  user.password = password;
+  return user;
 };
 
 const hasEmail = (user) => {
   // return true if the user has a value for the property 'email'
   // otherwise return false
+  if (!user.email) return false;
+  return true;
 };
 
 const hasProperty = (object, property) => {
   // return true if the object has the value of the property argument
   // property is a string
   // otherwise return false
+  const entries = Object.entries(object);
+  for (let i = 0; i < entries.length; i++) {
+    if (entries[i][0] === property) {
+      return true;
+    }
+  }
+  return false;
 };
 
 const verifyPassword = (user, password) => {
   // check to see if the provided password matches the password property on the user object
   // return true if they match
   // otherwise return false
+  return user.password === password;
 };
 
 const updatePassword = (user, newPassword) => {
