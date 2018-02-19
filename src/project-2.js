@@ -96,20 +96,25 @@ const incrementByOne = (arr) => {
   // arr is an array of integers
   // increase each integer by one
   // return the array
-
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] += 1;
+  }
+  return arr;
 };
 
 const addItemToArray = (arr, item) => {
   // add the item to the end of the array
   // return the array
-  return arr.push(item);
+  const newItem = arr.push(item);
+  return arr;
 };
 
 const addItemToFront = (arr, item) => {
   // add the item to the front of the array
   // return the array
   // hint: use the array method .unshift
-  return arr.unshift(item);
+  const newItem = arr.unshift(item);
+  return arr;
 };
 
 const wordsToSentence = (words) => {
@@ -123,25 +128,40 @@ const wordsToSentence = (words) => {
 const contains = (arr, item) => {
   // check to see if item is inside of arr
   // return true if it is, otherwise return false
-  if (item in arr) {
-    return true;
-  }
+  return (arr.includes(item));
 };
 
 const addNumbers = (numbers) => {
   // numbers is an array of integers.
   // add all of the integers and return the value
-  
+  let num = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    num += numbers[i];
+  }
+  return num;
 };
 
 const averageTestScore = (testScores) => {
   // testScores is an array.  Iterate over testScores and compute the average.
   // return the average
+  let num = 0;
+  for (let i = 0; i < testScores.length; i++) {
+    num += testScores[i];
+  }
+  const average = num / testScores.length;
+  return average;
 };
 
 const largestNumber = (numbers) => {
   // numbers is an array of integers
   // return the largest integer
+  let num = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] > num) {
+      num = numbers[i];
+    }
+  }
+  return num;
 };
 
 // Do not modify code below this line.
