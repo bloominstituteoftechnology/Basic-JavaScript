@@ -1,25 +1,28 @@
 // Do not change any of the function names
 
-const makeCat = (name, age) => {
-  // create a new object with a name property with the value set to the name argument
-  // add an age property to the object with the value set to the age argument
-  // add a method called meow that returns the string 'Meow!'
-  // return the object
+const makeCat=(name, age)=> {
+  let makeCat={
+    name: name;
+    age: age;
+    meow: function (makeCat){
+      let meow= 'meow!';
+      return meow;
+    }
+  }
+  
 };
 
-const addProperty = (object, property) => {
-  // add the property to the object with a value of null
-  // return the object
-  // note: the property name is NOT 'property'.  The name is the value of the argument called property (a string)
+const addProperty=(object, property)=> {
+ object[property]= null;
+ return object;
 };
 
-const invokeMethod = (object, method) => {
-  // method is a string that contains the name of a method on the object
-  // invoke this method
-  // nothing needs to be returned
+const invokeMethod=(object, method) => {
+  return object[method]();
 };
 
 const multiplyMysteryNumberByFive = (mysteryNumberObject) => {
+
   // mysteryNumberObject has a property called mysteryNumber
   // multiply the mysteryNumber property by 5 and return the product
 };
@@ -52,29 +55,28 @@ const verifyPassword = (user, password) => {
 };
 
 const updatePassword = (user, newPassword) => {
-  // replace the existing password on the user object with the value of newPassword
-  // return the object
+  user.password= newPassword;
+  return user
 };
 
 const addFriend = (user, newFriend) => {
-  // user has a property called friends that is an array
-  // add newFriend to the end of the friends array
-  // return the user object
+  user.friends.push(newfriend);
+  return user;
+  
 };
 
 const setUsersToPremium = (users) => {
-  // users is an array of user objects.
-  // each user object has the property 'isPremium'
-  // set each user's isPremium property to true
-  // return the users array
+  for (let i = 0; i < users.length; i++)
+  users[i].isPremium = true;
+  return users;
 };
 
 const sumUserPostLikes = (user) => {
-  // user has an array property called 'posts'
-  // posts is an array of post objects
-  // each post object has an integer property called 'likes'
-  // sum together the likes from all the post objects
-  // return the sum
+  let postsLikeSum = 0
+  user.post.forEach(funtion(posts){
+    postsLikeSum += posts.likes;
+  });
+  return postLikeSum;
 };
 
 const addCalculateDiscountPriceMethod = (storeItem) => {
