@@ -80,47 +80,51 @@ const getArrayLength = (arr) => {
 };
 
 const incrementByOne = (arr) => { 
-let arr = [1,2,3,4,5]
-function myfunction(){
+let arr = [1,2,3,4,5];
     arr.map(++1);
+    return arr;
 }
 };
 
 const addItemToArray = (arr, item) => {
-
-  // add the item to the end of the array
-  // return the array
+  let arr = [item];
+arr.push(item);
+return arr;
 };
 
 const addItemToFront = (arr, item) => {
-  // add the item to the front of the array
-  // return the array
-  // hint: use the array method .unshift
+ let arr = [item];
+ arr.shift(item);
+ return arr;
 };
 
 const wordsToSentence = (words) => {
-  // words is an array of strings
-  // return a string that is all of the words concatenated together
-  // spaces need to be between each word
-  // example: ['Hello', 'world!'] -> 'Hello world!'
+  words = ['hello', 'world', 'computer', 'science', 'Lambda'];
+  words.join(' ');
+  return words;
+  
 };
 
 const contains = (arr, item) => {
-  // check to see if item is inside of arr
-  // return true if it is, otherwise return false
+  let arr=['dog','cat','letter','ring'];
+  arr.includes();
 };
 
 const addNumbers = (numbers) => {
-  // numbers is an array of integers.
-  // add all of the integers and return the value
+  let arr = [1,2,3,4,5];
+  let sum = arr.reduce(const(numbers));
+  return numbers;
+
 };
 
 const averageTestScore = (testScores) => {
-  // testScores is an array.  Iterate over testScores and compute the average.
-  // return the average
+  testScores=[100,80,19,60,80,88,50];
+  let sum = testScores.reduce(const(testScores))=>(testScores)/testScores.length;
+  return sum;
 };
 
 const largestNumber = (numbers) => {
+  
   // numbers is an array of integers
   // return the largest integer
 };
