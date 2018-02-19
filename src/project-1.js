@@ -23,7 +23,9 @@ const areEqual = (x, y) => {
   // return true if x and y are the same
   // otherwise return false
   // code here
-  return x === y;
+  if (x === y) {
+    return true;
+  } return false;
 };
 
 const lessThanNinety = (num) => {
@@ -152,7 +154,7 @@ const getTriangleArea = (base, height) => {
 const getCircleArea = (radius) => {
   // return the rounded area of the circle given the radius
   // code here
-  return 3.14 * Math.pow(radius, 2);
+  return Math.round(Math.PI * Math.pow(radius, 2));
 };
 
 const getRectangularPrismVolume = (length, width, height) => {
