@@ -34,8 +34,8 @@ const contains = (collection, item, cb) => {
   cb(results);
 };
 
-const animals = ['ant', 'bison', 'camel', 'duck', 'elephant', 'duck', 'elephant'];
-const arr = ['a', 'b', 'c', 'c'];
+// const animals = ['ant', 'bison', 'camel', 'duck', 'elephant', 'duck', 'elephant'];
+// const arr = ['a', 'b', 'c', 'c'];
 
 const removeDuplicates = (collection, cb) => {
   // Write a function called removeDuplicates that removes all duplicate values from the given array.
@@ -50,12 +50,12 @@ const removeDuplicates = (collection, cb) => {
   }
   cb(newArr);
 };
-removeDuplicates(animals, function(x) {
-  console.log(x);
-});
-removeDuplicates(arr, function(x) {
-  console.log(x);
-});
+// removeDuplicates(animals, function(x) {
+//   console.log(x);
+// });
+// removeDuplicates(arr, function(x) {
+//   console.log(x);
+// });
 
 module.exports = {
   getFirstItem,
