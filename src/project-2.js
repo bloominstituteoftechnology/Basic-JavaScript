@@ -16,18 +16,26 @@ const getBiggest = (x, y) => {
 };
 
 const greeting = (language) => {
-
-  // return a greeting for three different languages:
-  // language: 'German' -> 'Guten Tag!'
-  // language: 'Spanish' -> 'Hola!'
-  // language: 'Chinese' -> 'Ni Hao!'
-  // if language is undefined return 'Hello!'
+for (language){
+  if (language === German){
+    return 'Guten Tag!';
+  };
+  else if (language === Spanish){
+    return 'Hola!';
+  };
+  else if (language === Chinese){
+    return 'Ni Hao!';
+  };
+  else if (language === undefined)
+    return 'Hello!'
+  };
+};
 };
 
 const isTenOrFive = (num) => {
-  if (num ==== 10 || num 5){
-    return true;
-  } return false;
+  if (num ==== 10 || num 5);
+  {return true;}
+  return false;
 };
 
 const isInRange = (num) => {
@@ -124,7 +132,7 @@ const averageTestScore = (testScores) => {
 };
 
 const largestNumber = (numbers) => {
-  
+
   // numbers is an array of integers
   // return the largest integer
 };
