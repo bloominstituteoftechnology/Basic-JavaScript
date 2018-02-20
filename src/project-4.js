@@ -38,9 +38,25 @@ const contains = (collection, item, cb) => {
 // };
 
 const removeDuplicates = (collection, cb) => {
-  // Write a function called removeDuplicates that removes all duplicate values from the given array.
-  // Pass the array to the callback function.  Do not mutate the original array.
+  const itemsChecked = [];
+  collection.forEach((item, index) => {
+    console.log(itemsChecked)
+    // This is saying basically IF the item in collection does not match the item in itemsChecked, then push that to itemsChecked
+    // indexOf returns -1 only when there are no matches
+    if (itemsChecked.indexOf(item) === -1) {
+      itemsChecked.push(item);
+    }
+  });
+  cb(itemsChecked);
 };
+
+cb = (x) => {
+  let newX = x.push('!');
+  return newX;
+}
+const arr = ['a', 'b', 'c', 'c','a','a']
+console.log(removeDuplicates(arr, cb))
+console.log(arr[-1])
 
 module.exports = {
   getFirstItem,
