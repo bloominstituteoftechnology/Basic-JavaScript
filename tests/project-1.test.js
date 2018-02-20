@@ -1,4 +1,4 @@
-/* eslint-disable no-undef */
+ /* eslint-disable no-undef */
 const {
   multiplyByTen,
   subtractFive,
@@ -103,7 +103,7 @@ describe('Project 1', () => {
       expect(multiply(10, -5)).toBe(-50);
       expect(multiply(11, 0)).toBe(0);
     });
-  });
+  });4
 
   describe('getRemainder(x, y)', () => {
     it('should return the division remainder of the two arguments', () => {
