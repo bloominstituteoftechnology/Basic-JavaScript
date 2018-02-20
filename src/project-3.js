@@ -5,7 +5,8 @@ const makeCat = (name, age) => {
     name,
     age,
   };
-  Cat.meow = function () {
+  Cat.meow = () => {
+  // Cat.meow = function () = {
     return ('Meow!');
   };
   return Cat;

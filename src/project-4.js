@@ -29,6 +29,10 @@ const contains = (collection, item, cb) => {
   cb(collection.includes(item));
 };
 
+// for (let i = 0: i < collection.length; i ++) {
+// cb(item === collection[i]);
+// };
+
 const removeDuplicates = (collection, cb) => {
   // Write a function called removeDuplicates that removes all duplicate values from the given array.
   // Pass the array to the callback function.  Do not mutate the original array.
