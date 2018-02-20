@@ -64,9 +64,7 @@ const hasEmail = (user) => {
 
 const hasProperty = (object, property) => {
   // return true if the object has the value of the property argument
-  if (property === object.property) {
-    return true;
-  }
+  return (object[property] !== undefined);
 };
 
 const verifyPassword = (user, password) => {

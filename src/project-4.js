@@ -35,6 +35,14 @@ const removeDuplicates = (collection, cb) => {
   cb(Array.from(new Set(collection)));
 };
 
+/* const newCollection = collection.slice();
+For (let i = 0; i< collection.length; I++) {
+if (collection.includes(collection[I], I+ 1)) {
+newCollection.pop(collection[i]);
+}
+cb(newCollection);
+}; */
+
 module.exports = {
   getFirstItem,
   getLength,
