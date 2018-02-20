@@ -16,16 +16,23 @@ const sumNums = (x, y, cb) => {
 
 const multiplyNums = (x, y, cb) => {
   // Write a function called multiplyNums that multiplies two numbers and passes the result to the callback
+  cb(x*y);
 };
 
 const contains = (collection, item, cb) => {
   // Write a function called contains that checks if an item is present inside of the given array.
   // Pass true to the callback if it is, otherwise pass false
+  cb(collection.includes(item));
 };
 
 const removeDuplicates = (collection, cb) => {
   // Write a function called removeDuplicates that removes all duplicate values from the given array.
   // Pass the array to the callback function.  Do not mutate the original array.
+const newCollection = collection.slice();
+for (let i = 0; i < collenction.length; i++){
+  if (collection.includes(collection[i], i +1))
+}
+cb(newCollection);
 };
 
 module.exports = {
