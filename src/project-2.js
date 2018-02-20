@@ -3,8 +3,7 @@
 const getBiggest = (x, y) => {
   // x and y are integers.  Return the larger integer
   // if they are the same return either one
-  if (x === y) return x;
-  if (x > y) {
+  if (x >= y) {
     return x;
   }
   return y;
@@ -25,6 +24,16 @@ const greeting = (language) => {
   } if (language !== 'German' || language !== 'Spanish' || language !== 'Chinese') {
     return 'Hello!';
   }
+  // switch (language) {
+  //   case 'German':
+  //     return 'Guten Tag!';
+  //   case 'Spanish':
+  //     return 'Hola!';
+  //   case 'Chinese':
+  //     return 'Ni Hao!';
+  //   default:
+  //     return 'Hello!';
+  // }
 };
 
 const isTenOrFive = (num) => {
@@ -39,9 +48,10 @@ const isTenOrFive = (num) => {
 
 const isInRange = (num) => {
   // return true if num is less than 50 and greater than 20
-  if (num < 50 && num > 20) {
-    return true;
-  } return false;
+  // if (num < 50 && num > 20) {
+  //   return true;
+  // } return false;
+  return num < 50 && num > 20;
 };
 
 const isInteger = (num) => {
@@ -51,17 +61,18 @@ const isInteger = (num) => {
   // -10 -> true
   // otherwise return false
   // hint: you can solve this using Math.floor
-  if (Number.isInteger(num)) return true;
-  switch (num) {
-    case 0.8:
-      return false;
-    case 1:
-      return true;
-    case -10:
-      return true;
-    default:
-      return false;
-  }
+  // if (Number.isInteger(num)) return true;
+  // switch (num) {
+  //   case 0.8:
+  //     return false;
+  //   case 1:
+  //     return true;
+  //   case -10:
+  //     return true;
+  //   default:
+  //     return false;
+  // }
+  return num % 1 === 0;
 };
 
 const fizzBuzz = (num) => {
@@ -177,10 +188,11 @@ const averageTestScore = (testScores) => {
 const largestNumber = (numbers) => {
   // numbers is an array of integers
   // return the largest integer
-  numbers.sort((a, b) => {
-    return b > a;
-  });
-  return numbers[0];
+  // numbers.sort((a, b) => {
+  //   return b > a;
+  // });
+  // return numbers[0];
+  return Math.max(...numbers);
 };
 
 // Do not modify code below this line.

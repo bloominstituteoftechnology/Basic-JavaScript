@@ -106,7 +106,7 @@ const updatePassword = (user, newPassword) => {
 
 const obj = { username: 'SunJieMing', email: '', password: 'I love js!' };
 
-console.log(updatePassword(obj, 'ok'));
+// console.log(updatePassword(obj, 'ok'));
 const addFriend = (user, newFriend) => {
   // user has a property called friends that is an array
   // add newFriend to the end of the friends array
@@ -162,9 +162,9 @@ const addCalculateDiscountPriceMethod = (storeItem) => {
   // hint: arrow functions don't bind a this
   // let discountPrice = 0;
   storeItem.calculateDiscountPrice = () => {
-    console.log(storeItem.price);
-    return storeItem.price;
+    return storeItem.price - (storeItem.price * storeItem.discountPercentage);
   };
+  return storeItem;
 };
 const storeItem = {
   price: 80,
