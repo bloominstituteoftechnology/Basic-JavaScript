@@ -55,33 +55,39 @@ const newUser = (name, email, password) => {
 const hasEmail = (user) => {
   // return true if the user has a value for the property 'email'
   // otherwise return false
-  if (user.email === undefined) {
-    return false;
-  }
-  return true;
+  if (user.email) return true;
+  return false;
 };
 
 const hasProperty = (object, property) => {
   // return true if the object has the value of the property argument
   // property is a string
   // otherwise return false
+  if (object[property]) return true;
+  return false;
 };
 
 const verifyPassword = (user, password) => {
   // check to see if the provided password matches the password property on the user object
   // return true if they match
   // otherwise return false
+  if (user.password === password) return true;
+  return false;
 };
 
 const updatePassword = (user, newPassword) => {
   // replace the existing password on the user object with the value of newPassword
   // return the object
+  user.password = newPassword;
+  return user;
 };
 
 const addFriend = (user, newFriend) => {
   // user has a property called friends that is an array
   // add newFriend to the end of the friends array
   // return the user object
+  user.friends.push(newFriend);
+  return user;
 };
 
 const setUsersToPremium = (users) => {
@@ -89,6 +95,8 @@ const setUsersToPremium = (users) => {
   // each user object has the property 'isPremium'
   // set each user's isPremium property to true
   // return the users array
+  users.map(user => user.isPremium = true);
+  return users;
 };
 
 const sumUserPostLikes = (user) => {
@@ -97,6 +105,11 @@ const sumUserPostLikes = (user) => {
   // each post object has an integer property called 'likes'
   // sum together the likes from all the post objects
   // return the sum
+  let ans = 0;
+  for (let i = 0; i < user.posts.length; i++) {
+    ans += user.posts[i].likes;
+  }
+  return ans;
 };
 
 const addCalculateDiscountPriceMethod = (storeItem) => {
