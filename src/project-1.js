@@ -48,7 +48,7 @@ const divide = (x, y) => {
 };
 
 const multiply = (x, y) => {
-  let sum - x * y;
+  let sum = x * y;
   return sum;
 };
 
