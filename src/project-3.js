@@ -5,12 +5,21 @@ const makeCat = (name, age) => {
   // add an age property to the object with the value set to the age argument
   // add a method called meow that returns the string 'Meow!'
   // return the object
+  return {
+    name,
+    age,
+    meow() {
+      return 'Meow!';
+    }
+  };
 };
 
 const addProperty = (object, property) => {
   // add the property to the object with a value of null
   // return the object
   // note: the property name is NOT 'property'.  The name is the value of the argument called property (a string)
+  object[property] = null;
+  return object;
 };
 
 const invokeMethod = (object, method) => {
@@ -27,6 +36,8 @@ const multiplyMysteryNumberByFive = (mysteryNumberObject) => {
 const deleteProperty = (object, property) => {
   // remove the property from the object
   // return the object
+  delete object[property];
+  return object;
 };
 
 const newUser = (name, email, password) => {
