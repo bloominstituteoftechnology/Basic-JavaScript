@@ -28,6 +28,7 @@ const {
 } = require('../src/project-1');
 
 describe('Project 1', () => {
+  
   describe('multiplyByTen(num)', () => {
     it('should return the argument after multiplying by ten', () => {
       expect(multiplyByTen(10)).toBe(100);
