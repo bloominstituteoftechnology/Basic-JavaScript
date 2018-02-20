@@ -68,7 +68,9 @@ const hasProperty = (object, property) => {
   // return true if the object has the value of the property argument
   // property is a string
   // otherwise return false
-  return object === object.property;
+  if (property in object) {
+    return true;
+  } return false;
 };
 
 const verifyPassword = (user, password) => {
@@ -110,6 +112,13 @@ const sumUserPostLikes = (user) => {
   // each post object has an integer property called 'likes'
   // sum together the likes from all the post objects
   // return the sum
+  let count = 0;
+  for (const objects in user.posts) {
+    if (true) {
+      count += objects.likes;
+    }
+    return count;
+  }
 };
 
 const addCalculateDiscountPriceMethod = (storeItem) => {
@@ -128,8 +137,8 @@ const addCalculateDiscountPriceMethod = (storeItem) => {
   return storeItem;
 };
 
-// Do not modify code below this line.
-// --------------------------------
+  // Do not modify code below this line.
+  // --------------------------------
 
 module.exports = {
   makeCat,
