@@ -92,7 +92,7 @@ const returnLast = (arr) => {
 
 const getArrayLength = (arr) => {
   // return the length of the array
-  return arr.length;
+  return arr.length;fa
 };
 
 const incrementByOne = (arr) => {
